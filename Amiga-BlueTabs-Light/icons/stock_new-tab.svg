@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.0"
+   x="0.0000000"
+   y="0.0000000"
+   width="30.000000"
+   height="30.000000"
+   id="svg871">
+  <defs
+     id="defs873">
+    <linearGradient
+       id="linearGradient890">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop891" />
+      <stop
+         style="stop-color:#ffffd5;stop-opacity:0.83443707;"
+         offset="0.50000000"
+         id="stop893" />
+      <stop
+         style="stop-color:#ffff00;stop-opacity:0.0000000;"
+         offset="1.0000000"
+         id="stop892" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient885">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop886" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0.0000000;"
+         offset="1.0000000"
+         id="stop887" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient880">
+      <stop
+         style="stop-color:#727272;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop881" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0.0000000;"
+         offset="1.0000000"
+         id="stop882" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient875">
+      <stop
+         style="stop-color:#c0c0c0;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop876" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0.0000000;"
+         offset="1.0000000"
+         id="stop877" />
+    </linearGradient>
+    <linearGradient
+       x1="0.49777779"
+       y1="0.0093457941"
+       x2="0.49777779"
+       y2="0.97196263"
+       id="linearGradient878"
+       xlink:href="#linearGradient875" />
+    <linearGradient
+       x1="0.50597608"
+       y1="0.0083682006"
+       x2="0.50597608"
+       y2="0.96234310"
+       id="linearGradient879"
+       xlink:href="#linearGradient880" />
+    <linearGradient
+       x1="0.50597608"
+       y1="0.0083682006"
+       x2="0.50597608"
+       y2="0.96234310"
+       id="linearGradient884"
+       xlink:href="#linearGradient885" />
+    <radialGradient
+       cx="0.50000000"
+       cy="0.50000000"
+       r="0.39977235"
+       fx="0.50000000"
+       fy="0.50000000"
+       id="radialGradient889"
+       xlink:href="#linearGradient890" />
+  </defs>
+  <path
+     d="M 29.326808,26.279528 L 0.72887811,26.279528 L 0.72887811,2.7165354 L 17.362205,2.7165354 C 17.362205,2.7165354 17.362205,12.226258 17.362205,12.226258 L 29.326808,12.226258 L 17.362205,12.226258 L 17.362205,6.9850745 L 29.326808,6.9850745"
+     style="fill:url(#linearGradient878);fill-opacity:0.75000000;fill-rule:evenodd;stroke:url(#linearGradient879);stroke-linejoin:bevel;"
+     id="path874" />
+  <path
+     d="M 1.7208379,27.247011 L 1.7208379,3.7205068 L 16.851625,3.6840185 M 17.377821,13.230229 L 29.305936,13.230229"
+     style="fill:none;fill-rule:evenodd;stroke:url(#linearGradient884);stroke-linejoin:bevel;"
+     id="path883" />
+  <path
+     d="M 26.707477,2.8228011 C 26.708231,1.1099684 19.777163,-0.71681572 18.064330,-0.71681572 C 16.351497,-0.71681572 8.8944300,1.1099684 8.8951830,2.8228011 C 8.8944300,4.5356338 16.211636,6.3989063 17.924469,6.3989063 C 19.637303,6.3989063 26.708231,4.5356338 26.707477,2.8228011 L 26.707477,2.8228011 z "
+     style="fill:url(#radialGradient889);fill-opacity:0.75000000;fill-rule:evenodd;stroke-width:3.0000000pt;"
+     id="path888" />
+  <metadata
+     id="metadata24">
+    <RDF
+       id="RDF25">
+      <Work
+         about=""
+         id="Work26">
+        <format
+           id="format27">image/svg+xml</format>
+        <type
+           id="type29"
+           resource="http://purl.org/dc/dcmitype/StillImage" />
+      </Work>
+    </RDF>
+    <rdf:RDF
+       id="RDF30">
+      <cc:Work
+         rdf:about=""
+         id="Work31">
+        <dc:format
+           id="format32">image/svg+xml</dc:format>
+        <dc:type
+           id="type34"
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.0"
+   x="0"
+   y="0"
+   width="29.9999695"
+   height="30"
+   viewBox="0 0 24 23"
+   id="svg783">
+  <defs
+     id="defs786">
+    <linearGradient
+       id="linearGradient812">
+      <stop
+         style="stop-color:#f09a55;stop-opacity:1.0000;"
+         offset="0"
+         id="stop813" />
+      <stop
+         style="stop-color:#fad490;stop-opacity:1.0000;"
+         offset="1"
+         id="stop814" />
+    </linearGradient>
+    <linearGradient
+       x1="0.371429"
+       y1="0.674877"
+       x2="0.371429"
+       y2="0.546798"
+       id="linearGradient815"
+       xlink:href="#linearGradient812" />
+    <linearGradient
+       x1="0.474286"
+       y1="0.418719"
+       x2="0.474286"
+       y2="0.290640"
+       id="linearGradient816"
+       xlink:href="#linearGradient812" />
+    <radialGradient
+       cx="0.318328"
+       cy="1.207692"
+       r="0.902656"
+       fx="0.331190"
+       fy="0.433334"
+       id="radialGradient818"
+       xlink:href="#linearGradient812" />
+    <radialGradient
+       cx="0.314286"
+       cy="0.615764"
+       r="0.500000"
+       fx="0.311429"
+       fy="0.623153"
+       id="radialGradient819"
+       xlink:href="#linearGradient812" />
+  </defs>
+  <path
+     d="M 11.33860 15.70473 C 11.33860 15.70473 4.960635 9.326770 4.960635 9.326770 C 4.960635 9.326770 11.33860 2.948811 11.33860 2.948811 C 11.33860 2.948811 11.33860 6.492121 11.33860 6.492121 C 17.71655 6.492121 18.98862 10.17214 19.13388 12.87008 C 19.13388 17.12205 16.29923 20.66536 13.46458 20.66536 C 17.00789 17.12205 18.41117 12.11462 11.33860 12.16142 C 11.33860 12.16142 11.33860 15.70473 11.33860 15.70473 z "
+     style="font-size:12.000;fill:url(#radialGradient818);stroke:#000000;stroke-width:0.800001;"
+     id="path790" />
+</svg>

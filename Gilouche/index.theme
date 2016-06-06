@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=openSUSE 11 Gilouche
+Name[cs]=openSUSE 11 Gilouche
+Comment=openSUSE 11.0 default GNOME theme
+Comment[cs]=Implicitní téma GNOME v openSUSE 11.0
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Gilouche
+MetacityTheme=Gilouche
+IconTheme=Gilouche

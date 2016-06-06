@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Ambiance-ZRAVE-Yellow-Pro
+Comment=Ubuntu Ambiance theme, In New Colors By RAVEfinity 14.04 Build
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Ambiance-ZRAVE-Yellow-Pro
+MetacityTheme=Ambiance-ZRAVE-Yellow-Pro
+IconTheme=ubuntu-mono-dark
+CursorTheme=DMZ-White
+ButtonLayout=close,minimize,maximize:

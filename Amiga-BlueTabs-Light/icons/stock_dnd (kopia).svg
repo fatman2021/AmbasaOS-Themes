@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.0"
+   x="0.0000000"
+   y="0.0000000"
+   width="30.000000"
+   height="30.000000"
+   id="svg1">
+  <defs
+     id="defs3">
+    <linearGradient
+       id="linearGradient784">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop785" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1.0000000;"
+         offset="0.45801526"
+         id="stop854" />
+      <stop
+         style="stop-color:#d9d9d9;stop-opacity:1.0000000;"
+         offset="1.0000000"
+         id="stop786" />
+    </linearGradient>
+    <radialGradient
+       cx="12.507806"
+       cy="12.443700"
+       r="11.175685"
+       fx="12.507807"
+       fy="12.717640"
+       id="radialGradient787"
+       xlink:href="#linearGradient784"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.006273,0.000000,0.000000,0.993766,-1.760000,0.240000)" />
+    <radialGradient
+       cx="17.155087"
+       cy="13.704453"
+       r="18.445322"
+       fx="17.155087"
+       fy="13.704453"
+       id="radialGradient855"
+       xlink:href="#linearGradient784"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(1.004664,0.995357)" />
+  </defs>
+  <path
+     d="M 26.589758,2.2410630 L 27.648401,3.2997060 L 27.648401,26.585023 L 26.589758,27.643666 L 3.4411420,27.643666 L 2.3824990,26.585023 L 2.3824990,3.2997060 L 3.4411420,2.2410630 L 26.589758,2.2410630 z "
+     style="fill:url(#radialGradient855);fill-opacity:1.0000000;fill-rule:evenodd;stroke:#000000;stroke-width:1.0000000;stroke-linejoin:bevel;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000"
+     id="path783" />
+  <path
+     d="M 26.427609,3.4343970 L 26.427609,26.425023 L 3.5589930,26.425022 L 3.5589930,3.4343970 L 26.427609,3.4343970 z "
+     style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.3750000;stroke-linejoin:bevel;stroke-miterlimit:4.0000000"
+     id="path788" />
+</svg>

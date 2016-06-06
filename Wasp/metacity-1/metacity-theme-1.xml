@@ -1,0 +1,725 @@
+<?xml version="1.0"?>
+<metacity_theme>
+<info>
+  <name>Wasp</name>
+  <author>Lapo Calamandrei &lt;lapo@it.gnome.org&gt;</author>
+  <copyright>&#194; Lapo Calamandrei, 2003, based on Simple theme by Tigert.</copyright>
+  <date>December, 2003</date>
+  <description>BeOS-ish theme</description>
+</info>
+
+<frame_geometry name="normal">
+  <distance name="left_width" value="5"/>
+  <distance name="right_width" value="5"/>
+  <distance name="bottom_height" value="5"/>
+  <distance name="left_titlebar_edge" value="4"/>
+  <distance name="right_titlebar_edge" value="4"/>
+  <distance name="title_vertical_pad" value="0"/>
+  <distance name="button_height" value="14"/>
+  <distance name="button_width" value="14"/>
+  <!-- <aspect_ratio name="button" value="1"/> -->
+  <border name="title_border" left="2" right="2" top="2" bottom="5"/>
+  <!-- <border name="button_border" left="1" right="1" top="0" bottom="0"/> -->
+  <border name="button_border" left="1" right="1" top="3" bottom="5"/>
+</frame_geometry>
+
+<frame_geometry name="shaded">
+  <distance name="left_width" value="5"/>
+  <distance name="right_width" value="5"/>
+  <distance name="bottom_height" value="5"/>
+  <distance name="left_titlebar_edge" value="4"/>
+  <distance name="right_titlebar_edge" value="4"/>
+  <distance name="title_vertical_pad" value="0"/>
+  <distance name="button_height" value="14"/>
+  <distance name="button_width" value="14"/>
+  <!-- <aspect_ratio name="button" value="1"/> -->
+  <border name="title_border" left="2" right="2" top="2" bottom="2"/>
+  <!-- <border name="button_border" left="1" right="1" top="0" bottom="0"/> -->
+  <border name="button_border" left="1" right="1" top="3" bottom="3"/>
+</frame_geometry>
+
+<!-- strip borders off the normal geometry -->
+<frame_geometry name="normal_small_borders" parent="normal">
+  <distance name="left_width" value="0"/>
+  <distance name="right_width" value="0"/>
+  <distance name="bottom_height" value="0"/>
+  <distance name="left_titlebar_edge" value="0"/>
+  <distance name="right_titlebar_edge" value="0"/>
+</frame_geometry>
+
+<frame_geometry name="utility" title_scale="x-small">
+  <distance name="left_width" value="4"/>
+  <distance name="right_width" value="4"/>
+  <distance name="bottom_height" value="4"/>
+  <distance name="left_titlebar_edge" value="4"/>
+  <distance name="right_titlebar_edge" value="4"/>
+  <distance name="button_width" value="10"/>
+  <distance name="button_height" value="10"/>
+  <distance name="title_vertical_pad" value="1"/>
+  <border name="title_border" left="2" right="2" top="2" bottom="5"/>
+  <border name="button_border" left="0" right="0" top="2" bottom="4"/>
+</frame_geometry>
+
+<frame_geometry name="border" has_title="false">
+  <distance name="left_width" value="4"/>
+  <distance name="right_width" value="4"/>
+  <distance name="bottom_height" value="4"/>
+  <distance name="left_titlebar_edge" value="0"/>
+  <distance name="right_titlebar_edge" value="0"/>
+  <distance name="button_width" value="0"/>
+  <distance name="button_height" value="0"/>
+  <distance name="title_vertical_pad" value="4"/>
+  <border name="title_border" left="0" right="0" top="0" bottom="0"/>
+  <border name="button_border" left="0" right="0" top="0" bottom="0"/>
+</frame_geometry>
+
+<!-- define constants -->
+<constant name="ArrowWidth" value="8"/>
+<constant name="ArrowHeight" value="4"/>
+<constant name="ButtonIPad" value="4"/>
+<constant name="ThickLineWidth" value="3"/>
+<constant name="IconTitleSpacing" value="6"/>
+<constant name="SpacerWidth" value="2"/>
+<constant name="SpacerHeight" value="10"/>
+
+<!-- Buttons -->
+
+<draw_ops name="menu_button">
+  <icon  x="1"
+         y="1"
+         width="width-2" height="height-2"/>
+</draw_ops>
+
+<draw_ops name="menu_button_secondo_piano">
+  <icon  x="1"
+         y="1"
+         width="width-2" height="height-2" alpha="0.5"/>
+</draw_ops>
+
+
+<draw_ops name="menu_button_pressed">
+  <include name="menu_button"/>
+</draw_ops>
+
+<draw_ops name="minimize_button_secondo_piano">
+  <rectangle
+  	x="0" y="height - 5"
+	width="width" height="5"
+	color="shade/gtk:bg[NORMAL]/0.85" filled="true"
+  />
+  <rectangle
+  	x="1" y="height - 4"
+	width="width - 1" height="4"
+	color="shade/gtk:bg[NORMAL]/1.5" filled="true"
+  />
+  <rectangle
+  	x="2" y="height - 3"
+	width="width - 3" height="2"
+	color="shade/gtk:bg[NORMAL]/0.85" filled="true"
+  />
+  <gradient x="2" y="height - 3" width="width - 4" height="1" type="diagonal">
+	<color value="shade/gtk:bg[NORMAL]/1.5"/>
+	<color value="shade/gtk:bg[NORMAL]/0.9"/>
+  </gradient>
+</draw_ops>
+
+<draw_ops name="minimize_button_pressed_secondo_piano">
+  <rectangle
+  	x="0" y="height - 5"
+	width="width" height="5"
+	color="shade/gtk:bg[NORMAL]/0.85" filled="true"
+  />
+  <rectangle
+  	x="1" y="height - 4"
+	width="width - 1" height="4"
+	color="shade/gtk:bg[NORMAL]/1.5" filled="true"
+  />
+  <gradient x="1" y="height - 4" width="width - 2" height="3" type="diagonal">
+	<color value="shade/gtk:bg[NORMAL]/0.9"/>
+	<color value="shade/gtk:bg[NORMAL]/1.5"/>
+  </gradient>
+</draw_ops>
+
+<draw_ops name="minimize_button">
+  <rectangle
+  	x="0" y="height - 5"
+	width="width" height="5"
+	color="shade/gtk:bg[SELECTED]/0.85" filled="true"
+  />
+  <rectangle
+  	x="1" y="height - 4"
+	width="width - 1" height="4"
+	color="shade/gtk:bg[SELECTED]/1.5" filled="true"
+  />
+  <rectangle
+  	x="2" y="height - 3"
+	width="width - 3" height="2"
+	color="shade/gtk:bg[SELECTED]/0.85" filled="true"
+  />
+  <gradient x="2" y="height - 3" width="width - 4" height="1" type="diagonal">
+	<color value="shade/gtk:bg[SELECTED]/1.5"/>
+	<color value="shade/gtk:bg[SELECTED]/0.9"/>
+  </gradient>
+</draw_ops>
+
+<draw_ops name="minimize_button_pressed">
+  <rectangle
+  	x="0" y="height - 5"
+	width="width" height="5"
+	color="shade/gtk:bg[SELECTED]/0.85" filled="true"
+  />
+  <rectangle
+  	x="1" y="height - 4"
+	width="width - 1" height="4"
+	color="shade/gtk:bg[SELECTED]/1.5" filled="true"
+  />
+  <gradient x="1" y="height - 4" width="width - 2" height="3" type="diagonal">
+	<color value="shade/gtk:bg[SELECTED]/0.9"/>
+	<color value="shade/gtk:bg[SELECTED]/1.5"/>
+  </gradient>
+</draw_ops>
+
+<draw_ops name="maximize_button">
+  <rectangle
+  	x="3" y="3"
+	width="width - 3" height="height - 3"
+	color="shade/gtk:bg[SELECTED]/0.85" filled="true"
+  />
+  <rectangle
+  	x="4" y="4"
+	width="width - 4" height="height - 4"
+	color="shade/gtk:bg[SELECTED]/1.5" filled="true"
+  />
+  <rectangle
+  	x="5" y="5"
+	width="width - 6" height="height - 6"
+	color="shade/gtk:bg[SELECTED]/0.85" filled="true"
+  />
+  <gradient x="5" y="5" width="width - 7" height="height - 7" type="diagonal">
+	<color value="shade/gtk:bg[SELECTED]/1.5"/>
+	<color value="shade/gtk:bg[SELECTED]/0.9"/>
+  </gradient>
+  
+  <rectangle
+  	x="0" y="0"
+	width="width - 6" height="height - 6"
+	color="shade/gtk:bg[SELECTED]/0.85" filled="true"
+  />
+  <rectangle
+  	x="1" y="1"
+	width="width - 6" height="height - 6"
+	color="shade/gtk:bg[SELECTED]/1.5" filled="true"
+  />
+  <rectangle
+  	x="2" y="2"
+	width="width - 8" height="height - 8"
+	color="shade/gtk:bg[SELECTED]/0.85" filled="true"
+  />
+  <gradient x="2" y="2" width="width - 9" height="height - 9" type="diagonal">
+	<color value="shade/gtk:bg[SELECTED]/1.5"/>
+	<color value="shade/gtk:bg[SELECTED]/0.9"/>
+  </gradient>
+</draw_ops>
+
+<draw_ops name="maximize_button_pressed">
+    <rectangle
+  	x="3" y="3"
+	width="width - 3" height="height - 3"
+	color="shade/gtk:bg[SELECTED]/0.85" filled="true"
+  />
+  <rectangle
+  	x="4" y="4"
+	width="width - 4" height="height - 4"
+	color="shade/gtk:bg[SELECTED]/1.5" filled="true"
+  />
+  <gradient x="4" y="4" width="width - 5" height="height - 5" type="diagonal">
+	<color value="shade/gtk:bg[SELECTED]/0.9"/>
+	<color value="shade/gtk:bg[SELECTED]/1.5"/>
+  </gradient>
+  
+  <rectangle
+  	x="0" y="0"
+	width="width - 6" height="height - 6"
+	color="shade/gtk:bg[SELECTED]/0.85" filled="true"
+  />
+  <rectangle
+  	x="1" y="1"
+	width="width - 6" height="height - 6"
+	color="shade/gtk:bg[SELECTED]/1.5" filled="true"
+  />
+  <gradient x="1" y="1" width="width - 7" height="height - 7" type="diagonal">
+	<color value="shade/gtk:bg[SELECTED]/0.9"/>
+	<color value="shade/gtk:bg[SELECTED]/1.5"/>
+  </gradient>
+</draw_ops>
+
+<draw_ops name="maximize_button_secondo_piano">
+  <rectangle
+  	x="3" y="3"
+	width="width - 3" height="height - 3"
+	color="shade/gtk:bg[NORMAL]/0.85" filled="true"
+  />
+  <rectangle
+  	x="4" y="4"
+	width="width - 4" height="height - 4"
+	color="shade/gtk:bg[NORMAL]/1.5" filled="true"
+  />
+  <rectangle
+  	x="5" y="5"
+	width="width - 6" height="height - 6"
+	color="shade/gtk:bg[NORMAL]/0.85" filled="true"
+  />
+  <gradient x="5" y="5" width="width - 7" height="height - 7" type="diagonal">
+	<color value="shade/gtk:bg[NORMAL]/1.5"/>
+	<color value="shade/gtk:bg[NORMAL]/0.9"/>
+  </gradient>
+  
+  <rectangle
+  	x="0" y="0"
+	width="width - 6" height="height - 6"
+	color="shade/gtk:bg[NORMAL]/0.85" filled="true"
+  />
+  <rectangle
+  	x="1" y="1"
+	width="width - 6" height="height - 6"
+	color="shade/gtk:bg[NORMAL]/1.5" filled="true"
+  />
+  <rectangle
+  	x="2" y="2"
+	width="width - 8" height="height - 8"
+	color="shade/gtk:bg[NORMAL]/0.85" filled="true"
+  />
+  <gradient x="2" y="2" width="width - 9" height="height - 9" type="diagonal">
+	<color value="shade/gtk:bg[NORMAL]/1.5"/>
+	<color value="shade/gtk:bg[NORMAL]/0.9"/>
+  </gradient>
+</draw_ops>
+
+<draw_ops name="maximize_button_pressed_secondo_piano">
+    <rectangle
+  	x="3" y="3"
+	width="width - 3" height="height - 3"
+	color="shade/gtk:bg[NORMAL]/0.85" filled="true"
+  />
+  <rectangle
+  	x="4" y="4"
+	width="width - 4" height="height - 4"
+	color="shade/gtk:bg[NORMAL]/1.5" filled="true"
+  />
+  <gradient x="4" y="4" width="width - 5" height="height - 5" type="diagonal">
+	<color value="shade/gtk:bg[NORMAL]/0.9"/>
+	<color value="shade/gtk:bg[NORMAL]/1.5"/>
+  </gradient>
+  
+  <rectangle
+  	x="0" y="0"
+	width="width - 6" height="height - 6"
+	color="shade/gtk:bg[NORMAL]/0.85" filled="true"
+  />
+  <rectangle
+  	x="1" y="1"
+	width="width - 6" height="height - 6"
+	color="shade/gtk:bg[NORMAL]/1.5" filled="true"
+  />
+  <gradient x="1" y="1" width="width - 7" height="height - 7" type="diagonal">
+	<color value="shade/gtk:bg[NORMAL]/0.9"/>
+	<color value="shade/gtk:bg[NORMAL]/1.5"/>
+  </gradient>
+</draw_ops>
+
+
+<draw_ops name="restore_button">
+  <include name="maximize_button"/>
+</draw_ops>
+
+<draw_ops name="restore_button_pressed">
+  <include name="maximize_button_pressed"/>
+</draw_ops>
+
+<draw_ops name="close_button">
+  <rectangle
+  	x="0" y="0"
+	width="width" height="height"
+	color="shade/gtk:bg[SELECTED]/0.85" filled="true"
+  />
+  <rectangle
+  	x="1" y="1"
+	width="width - 1" height="height - 1"
+	color="shade/gtk:bg[SELECTED]/1.5" filled="true"
+  />
+  <rectangle
+  	x="2" y="2"
+	width="width - 3" height="height - 3"
+	color="shade/gtk:bg[SELECTED]/0.85" filled="true"
+  />
+  <gradient x="2" y="2" width="width - 4" height="height - 4" type="diagonal">
+	<color value="shade/gtk:bg[SELECTED]/1.5"/>
+	<color value="shade/gtk:bg[SELECTED]/0.9"/>
+  </gradient>
+</draw_ops>
+
+<draw_ops name="close_button_pressed">
+  <rectangle
+  	x="0" y="0"
+	width="width" height="height"
+	color="shade/gtk:bg[SELECTED]/0.85" filled="true"
+  />
+  <rectangle
+  	x="1" y="1"
+	width="width - 1" height="height - 1"
+	color="shade/gtk:bg[SELECTED]/1.5" filled="true"
+  />
+  <gradient x="1" y="1" width="width - 2" height="height - 2" type="diagonal">
+	<color value="shade/gtk:bg[SELECTED]/0.9"/>
+	<color value="shade/gtk:bg[SELECTED]/1.5"/>
+  </gradient>
+</draw_ops>
+
+<draw_ops name="close_button_pressed_secondo_piano">
+  <rectangle
+  	x="0" y="0"
+	width="width" height="height"
+	color="shade/gtk:bg[NORMAL]/0.85" filled="true"
+  />
+  <rectangle
+  	x="1" y="1"
+	width="width - 1" height="height - 1"
+	color="shade/gtk:bg[NORMAL]/1.5" filled="true"
+  />
+  <gradient x="1" y="1" width="width - 2" height="height - 2" type="diagonal">
+	<color value="shade/gtk:bg[NORMAL]/0.9"/>
+	<color value="shade/gtk:bg[NORMAL]/1.5"/>
+  </gradient>
+</draw_ops>
+
+<draw_ops name="close_button_secondo_piano">
+  <rectangle
+  	x="0" y="0"
+	width="width" height="height"
+	color="shade/gtk:bg[NORMAL]/0.85" filled="true"
+  />
+  <rectangle
+  	x="1" y="1"
+	width="width - 1" height="height - 1"
+	color="shade/gtk:bg[NORMAL]/1.5" filled="true"
+  />
+  <rectangle
+  	x="2" y="2"
+	width="width - 3" height="height - 3"
+	color="shade/gtk:bg[NORMAL]/0.85" filled="true"
+  />
+  <gradient x="2" y="2" width="width - 4" height="height - 4" type="diagonal">
+	<color value="shade/gtk:bg[NORMAL]/1.5"/>
+	<color value="shade/gtk:bg[NORMAL]/0.9"/>
+  </gradient>
+</draw_ops>
+
+
+<draw_ops name="bordo_interno">
+  <line color="shade/gtk:dark[NORMAL]/1.3"
+  	x1="left_width - 2" x2="left_width - 2" 
+	y1="top_height - 2" y2="height - bottom_height + 1"/>
+  <line color="gtk:light[NORMAL]"
+  	x1="left_width - 1" x2="width - right_width" 
+	y1="height - bottom_height + 1" y2="height - bottom_height + 1"/>
+  <line color="gtk:light[NORMAL]"
+  	x1="width - right_width + 1" x2="width - right_width + 1"
+	y1="top_height - 1" y2="height - bottom_height + 1"/>
+  <line color="shade/gtk:dark[NORMAL]/1.3"
+  	x1="left_width - 1" x2="width - right_width + 1"
+	y1="top_height - 2" y2="top_height - 2"/>
+  <rectangle color="gtk:dark[NORMAL]" filled="false"
+  	x="left_width - 1" y="top_height - 1"
+	width="width - left_width - right_width + 1" height="height - top_height - bottom_height + 1"/>
+</draw_ops>
+
+<draw_ops name="bordo_interno_secondo_piano">
+  <line color="shade/gtk:dark[NORMAL]/1.4"
+  	x1="left_width - 2" x2="left_width - 2" 
+	y1="top_height - 2" y2="height - bottom_height + 1"/>
+  <line color="shade/gtk:light[NORMAL]/0.9"
+  	x1="left_width - 1" x2="width - right_width" 
+	y1="height - bottom_height + 1" y2="height - bottom_height + 1"/>
+  <line color="shade/gtk:light[NORMAL]/0.9"
+  	x1="width - right_width + 1" x2="width - right_width + 1"
+	y1="top_height - 1" y2="height - bottom_height + 1"/>
+  <line color="shade/gtk:dark[NORMAL]/1.4"
+  	x1="left_width - 1" x2="width - right_width + 1"
+	y1="top_height - 2" y2="top_height - 2"/>
+  <rectangle color="shade/gtk:dark[NORMAL]/1.3" filled="false"
+  	x="left_width - 1" y="top_height - 1"
+	width="width - left_width - right_width + 1" height="height - top_height - bottom_height + 1"/>
+</draw_ops>
+
+<draw_ops name="bordo_esterno">
+  <rectangle color="shade/gtk:dark[NORMAL]/0.5"
+             x="0" y="0" width="width" height="height" filled="true"/>
+  <rectangle color="shade/gtk:dark[NORMAL]/0.7"
+             x="0" y="0" width="width - 1" height="height - 1" filled="true"/>
+  <rectangle color="gtk:bg[NORMAL]"
+             x="1" y="1" width="width - 2" height="height - 2" filled="true"/>
+  <line color="gtk:light[NORMAL]"
+        x1="1" y1="1" x2="1" y2="height - 2"/>
+  <line color="gtk:light[NORMAL]"
+        x1="1" y1="1" x2="width-3" y2="1"/>
+  <line color="gtk:dark[NORMAL]"
+        x1="width - 2" y1="1" x2="width - 2" y2="height - 2"/> 
+  <line color="gtk:dark[NORMAL]"
+        x1="1" y1="height - 2" x2="width - 2" y2="height - 2"/>
+</draw_ops>
+
+<draw_ops name="bordo_esterno_secondo_piano">
+  <rectangle color="shade/gtk:dark[NORMAL]/0.8"
+             x="0" y="0" width="width" height="height" filled="true"/>
+  <rectangle color="gtk:dark[NORMAL]"
+             x="0" y="0" width="width - 1" height="height - 1" filled="true"/>
+  <rectangle color="gtk:bg[NORMAL]"
+             x="1" y="1" width="width - 2" height="height - 2" filled="true"/>
+  <line color="gtk:light[NORMAL]"
+        x1="1" y1="1" x2="1" y2="height - 2"/>
+  <line color="gtk:light[NORMAL]"
+        x1="1" y1="1" x2="width-3" y2="1"/>
+  <line color="shade/gtk:dark[NORMAL]/1.1"
+        x1="width - 2" y1="1" x2="width - 2" y2="height - 2"/> 
+  <line color="shade/gtk:dark[NORMAL]/1.1"
+        x1="1" y1="height - 2" x2="width - 2" y2="height - 2"/>
+</draw_ops>
+
+<draw_ops name="focus_outline">
+</draw_ops>
+<draw_ops name="titolo_primo_piano">
+  <rectangle color="blend/#383838/gtk:bg[SELECTED]/0.15"
+             x="0" y="0" width="width" height="top_height - 4" filled="true"/>
+  <rectangle color="blend/#707070/gtk:bg[SELECTED]/0.15"
+             x="0" y="0" width="width - 1" height="top_height - 4" filled="true"/>
+  <rectangle color="gtk:bg[SELECTED]"
+             x="1" y="1" width="width - 2" height="top_height - 5" filled="true"/>
+  <line color="shade/gtk:bg[SELECTED]/1.3"
+        x1="1" y1="1" x2="1" y2="top_height - 5"/>
+  <line color="shade/gtk:bg[SELECTED]/1.3"
+        x1="1" y1="1" x2="width-3" y2="1"/>
+  <line color="shade/gtk:bg[SELECTED]/0.8"
+        x1="width - 2" y1="1" x2="width - 2" y2="top_height - 5"/> 
+<!-- linea trasparente -->
+  <line color="blend/gtk:bg[NORMAL]/gtk:bg[SELECTED]/0.4"
+  	y1="top_height - 4" y2="top_height - 4"
+	x1="2" x2="width - 3"/>       
+</draw_ops>
+
+<draw_ops name="titolo_secondo_piano">
+  <rectangle color="blend/#383838/gtk:bg[NORMAL]/0.4"
+             x="0" y="0" width="width" height="top_height - 4" filled="true"/>
+  <rectangle color="blend/#707070/gtk:bg[NORMAL]/0.4"
+             x="0" y="0" width="width - 1" height="top_height - 4" filled="true"/>
+  <rectangle color="shade/gtk:bg[NORMAL]/1.05"
+             x="1" y="1" width="width - 2" height="top_height - 5" filled="true"/>
+  <line color="shade/gtk:bg[NORMAL]/1.4"
+        x1="1" y1="1" x2="1" y2="top_height - 5"/>
+  <line color="shade/gtk:bg[NORMAL]/1.4"
+        x1="1" y1="1" x2="width-3" y2="1"/>
+  <line color="shade/gtk:bg[NORMAL]/0.9"
+        x1="width - 2" y1="1" x2="width - 2" y2="top_height - 5"/> 
+<!-- linea trasparente
+  <line color="shade/gtk:bg[NORMAL]/1.05"
+  	y1="top_height - 4" y2="top_height - 4"
+	x1="2" x2="width - 3"/>
+-->       
+</draw_ops>
+
+<draw_ops name="bordi_colorati">
+  <rectangle color="blend/#383838/gtk:bg[SELECTED]/0.15"
+             x="0" y="0" width="width" height="height" filled="true"/>
+  <rectangle color="blend/#707070/gtk:bg[SELECTED]/0.15"
+             x="0" y="0" width="width - 1" height="height - 1" filled="true"/>
+  <rectangle color="gtk:bg[SELECTED]"
+             x="1" y="1" width="width - 2" height="height - 2" filled="true"/>
+  <line color="shade/gtk:bg[SELECTED]/1.3"
+        x1="1" y1="1" x2="1" y2="height - 2"/>
+  <line color="shade/gtk:bg[SELECTED]/1.3"
+        x1="1" y1="1" x2="width-3" y2="1"/>
+  <line color="shade/gtk:bg[SELECTED]/0.8"
+        x1="width - 2" y1="1" x2="width - 2" y2="height - 2"/> 
+  <line color="shade/gtk:bg[SELECTED]/0.8"
+        x1="1" y1="height - 2" x2="width - 2" y2="height - 2"/>   
+</draw_ops>
+
+<draw_ops name="primo_piano">
+  <include name="bordo_esterno"/>
+  <include name="bordo_interno"/>
+  <include name="titolo_primo_piano"/>
+</draw_ops>
+
+<draw_ops name="bordi_shaded">
+  <include name="bordo_esterno"/>
+  <include name="titolo_primo_piano"/>  
+</draw_ops>
+
+<draw_ops name="bordi_shaded_secondo_piano">
+  <include name="bordo_esterno_secondo_piano"/>
+  <include name="titolo_secondo_piano"/>  
+</draw_ops>
+
+<draw_ops name="secondo_piano">
+  <include name="bordo_esterno_secondo_piano"/>
+  <include name="bordo_interno_secondo_piano"/>
+  <include name="titolo_secondo_piano"/>
+</draw_ops>
+
+<draw_ops name="border_secondo_piano">
+  <include name="bordo_esterno_secondo_piano"/>
+  <include name="bordo_interno_secondo_piano"/>
+</draw_ops>
+
+<draw_ops name="border_primo_piano">
+  <include name="bordo_esterno"/>
+  <include name="bordo_interno"/>
+</draw_ops>
+
+<draw_ops name="blank">
+<!-- nothing -->
+</draw_ops>
+
+<draw_ops name="title_text_focused">
+  <clip x="0" y="0" width="width-SpacerWidth" height="height"/>
+  <title color="gtk:fg[SELECTED]"
+         x="(0 `max` (width-title_width-mini_icon_width-IconTitleSpacing)) / 2 + mini_icon_width + IconTitleSpacing"
+         y="((height - title_height) / 2) `max` 0"/>
+</draw_ops>
+
+<draw_ops name="title_text">
+  <clip x="0" y="0" width="width-SpacerWidth" height="height"/>
+  <title color="blend/gtk:dark[NORMAL]/#000000/0.5"
+         x="(0 `max` (width-title_width-mini_icon_width-IconTitleSpacing)) / 2 + mini_icon_width + IconTitleSpacing"
+         y="((height - title_height) / 2) `max` 0"/>
+</draw_ops>
+
+<draw_ops name="title_normal">
+  <include name="title_text"/>
+</draw_ops>
+
+<draw_ops name="title_focused">
+  <include name="title_text_focused"/>
+</draw_ops>
+
+<draw_ops name="title_utility">
+  <include name="title_text"/>
+</draw_ops>
+
+<draw_ops name="title_utility_focused">
+  <include name="title_text_focused"/>
+</draw_ops>
+
+<frame_style name="normal_unfocused" geometry="normal">
+  <piece position="entire_background" draw_ops="secondo_piano"/>
+  <piece position="title" draw_ops="title_normal"/>
+
+  <!-- we don't specify for prelight, so normal is used -->
+  <button function="close" state="normal" draw_ops="close_button_secondo_piano"/>
+  <button function="close" state="pressed" draw_ops="close_button_pressed_secondo_piano"/>
+  <button function="minimize" state="normal" draw_ops="minimize_button_secondo_piano"/>
+  <button function="minimize" state="pressed" draw_ops="minimize_button_pressed_secondo_piano"/>
+  <button function="maximize" state="normal" draw_ops="maximize_button_secondo_piano"/>
+  <button function="maximize" state="pressed" draw_ops="maximize_button_pressed_secondo_piano"/>
+  <button function="menu" state="normal" draw_ops="menu_button_secondo_piano"/>
+  <button function="menu" state="pressed" draw_ops="menu_button_pressed"/>
+</frame_style>
+
+<frame_style name="normal_focused" geometry="normal">
+  <piece position="entire_background" draw_ops="primo_piano"/>
+  <piece position="title" draw_ops="title_focused"/>
+  <button function="close" state="normal" draw_ops="close_button"/>
+  <button function="close" state="pressed" draw_ops="close_button_pressed"/>
+  <button function="minimize" state="normal" draw_ops="minimize_button"/>
+  <button function="minimize" state="pressed" draw_ops="minimize_button_pressed"/>
+  <button function="maximize" state="normal" draw_ops="maximize_button"/>
+  <button function="maximize" state="pressed" draw_ops="maximize_button_pressed"/>
+  <button function="menu" state="normal" draw_ops="menu_button"/>
+  <button function="menu" state="pressed" draw_ops="menu_button_pressed"/>
+</frame_style>
+
+<frame_style name="shaded_focused" geometry="normal" parent="normal_focused">
+  <piece position="title" draw_ops="title_focused"/>
+  <piece position="entire_background" draw_ops="bordi_shaded"/>
+</frame_style>
+
+<frame_style name="shaded_unfocused" geometry="normal" parent="normal_unfocused">
+  <piece position="title" draw_ops="title_focused"/>
+  <piece position="entire_background" draw_ops="bordi_shaded_secondo_piano"/>
+</frame_style>
+
+<frame_style name="utility_shaded_focused" geometry="utility" parent="normal_focused">
+  <piece position="title" draw_ops="title_focused"/>
+  <piece position="entire_background" draw_ops="bordi_shaded"/>
+</frame_style>
+
+<frame_style name="utility_shaded_unfocused" geometry="utility" parent="normal_unfocused">
+  <piece position="title" draw_ops="title_focused"/>
+  <piece position="entire_background" draw_ops="bordi_shaded_secondo_piano"/>
+</frame_style>
+
+<frame_style name="utility_unfocused" geometry="utility" parent="normal_unfocused">
+  <piece position="title" draw_ops="title_utility"/>
+</frame_style>
+
+<frame_style name="utility_focused" geometry="utility" parent="normal_focused">
+  <piece position="title" draw_ops="title_utility_focused"/>
+</frame_style>
+
+<frame_style name="border" geometry="border" parent="normal_focused">
+  <piece position="entire_background" draw_ops="border_primo_piano"/>
+  <piece position="title" draw_ops="blank"/>
+</frame_style>
+
+<frame_style name="border_unfocused" geometry="border" parent="normal_unfocused">
+  <piece position="entire_background" draw_ops="border_secondo_piano"/>
+  <piece position="title" draw_ops="blank"/>
+</frame_style>
+
+<frame_style_set name="normal">
+<frame focus="yes" state="normal" resize="both" style="normal_focused"/>
+<frame focus="no" state="normal" resize="both" style="normal_unfocused"/>
+<frame focus="yes" state="maximized" style="normal_focused"/>
+<frame focus="no" state="maximized" style="normal_unfocused"/>
+<frame focus="yes" state="shaded" style="shaded_focused"/>
+<frame focus="no" state="shaded" style="shaded_unfocused"/>
+<frame focus="yes" state="maximized_and_shaded" style="shaded_focused"/>
+<frame focus="no" state="maximized_and_shaded" style="shaded_unfocused"/>
+</frame_style_set>
+
+<frame_style_set name="utility" parent="normal">
+<frame focus="yes" state="normal" resize="both" style="utility_focused"/>
+<frame focus="no" state="normal" resize="both" style="utility_unfocused"/>
+<!-- this is a bunch of crack since utility windows shouldn't be maximized -->
+<frame focus="yes" state="maximized" style="utility_focused"/>
+<frame focus="no" state="maximized" style="utility_unfocused"/>
+<frame focus="yes" state="shaded" style="utility_shaded_focused"/>
+<frame focus="no" state="shaded" style="utility_shaded_unfocused"/>
+<frame focus="yes" state="maximized_and_shaded" style="utility_shaded_focused"/>
+<frame focus="no" state="maximized_and_shaded" style="utility_shaded_unfocused"/>
+</frame_style_set>
+
+<frame_style_set name="border" parent="normal">
+<frame focus="yes" state="normal" resize="both" style="border"/>
+<frame focus="no" state="normal" resize="both" style="border_unfocused"/>
+<!-- this is a bunch of crack since utility windows shouldn't be maximized -->
+<frame focus="yes" state="maximized" style="utility_focused"/>
+<frame focus="no" state="maximized" style="utility_unfocused"/>
+<frame focus="yes" state="shaded" style="utility_shaded_focused"/>
+<frame focus="no" state="shaded" style="utility_shaded_unfocused"/>
+<frame focus="yes" state="maximized_and_shaded" style="utility_focused"/>
+<frame focus="no" state="maximized_and_shaded" style="utility_unfocused"/>
+</frame_style_set>
+
+<window type="normal" style_set="normal"/>
+<window type="dialog" style_set="normal"/>
+<window type="modal_dialog" style_set="normal"/>
+<window type="menu" style_set="normal"/>
+<window type="utility" style_set="utility"/>
+<window type="border" style_set="border"/>
+
+<menu_icon function="close" state="normal" draw_ops="close_button"/>
+<menu_icon function="maximize" state="normal" draw_ops="maximize_button"/>
+<menu_icon function="unmaximize" state="normal" draw_ops="restore_button"/>
+<menu_icon function="minimize" state="normal" draw_ops="minimize_button"/>
+
+</metacity_theme>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
+<svg
+   id="svg548"
+   sodipodi:version="0.32"
+   width="140.28pt"
+   height="141.89pt"
+   sodipodi:docbase="/home/defendguin/art/amaranth-mcity-icons/"
+   sodipodi:docname="/home/defendguin/art/amaranth-mcity-icons/wm-max-focus.svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs
+     id="defs550">
+    <linearGradient
+       id="linearGradient563">
+      <stop
+         style="stop-color:#858785;stop-opacity:1;"
+         offset="0.000000"
+         id="stop564" />
+      <stop
+         style="stop-color:#f8f8f8;stop-opacity:1;"
+         offset="1.000000"
+         id="stop565" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient560">
+      <stop
+         style="stop-color:#bec0c0;stop-opacity:1;"
+         offset="0.000000"
+         id="stop561" />
+      <stop
+         style="stop-color:#f8f8f8;stop-opacity:1;"
+         offset="1.000000"
+         id="stop562" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient553">
+      <stop
+         style="stop-color:#858785;stop-opacity:1;"
+         offset="0.000000"
+         id="stop554" />
+      <stop
+         style="stop-color:#f8f8f8;stop-opacity:1;"
+         offset="1.000000"
+         id="stop555" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient553"
+       id="linearGradient556"
+       x1="95.7369766"
+       y1="158.718201"
+       x2="95.7369766"
+       y2="43.5607300"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="pad" />
+    <radialGradient
+       xlink:href="#linearGradient553"
+       id="radialGradient558"
+       cx="76.9090042"
+       cy="80.1021957"
+       fx="76.9090042"
+       fy="80.1021957"
+       r="141.359680"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="pad" />
+    <linearGradient
+       xlink:href="#linearGradient563"
+       id="linearGradient677" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     showgrid="true"
+     snaptogrid="false" />
+  <rect
+     style="font-size:12;fill:url(#radialGradient558);fill-rule:evenodd;stroke-width:1pt;fill-opacity:0.213873;"
+     id="rect557"
+     width="177.165344"
+     height="177.165375"
+     x="0.000011"
+     y="-0.175865"
+     ry="21.3285828" />
+  <rect
+     style="font-size:12;fill:url(#linearGradient556);fill-rule:evenodd;stroke-width:7.375;stroke:#000000;stroke-opacity:1;stroke-dasharray:none;"
+     id="rect552"
+     width="141.732300"
+     height="141.732269"
+     x="19.926666"
+     y="18.093220"
+     ry="16.5888977" />
+  <path
+     transform="matrix(1.000000,6.398693e-4,4.776882e-2,-0.998858,-1.088090,1.104596)"
+     style="font-size:12;fill:#010000;fill-rule:evenodd;stroke-width:1pt;"
+     d="M 47.3661 -95.9135 C 43.2778 -95.9135 39.9866 -92.6222 39.9866 -88.534 L 39.9866 -88.534 C 39.9866 -84.4458 43.2778 -81.1545 47.3661 -81.1545 L 142.122 -81.1545 C 146.21 -81.1545 149.502 -84.4458 149.502 -88.534 L 149.502 -88.534 C 149.502 -92.6222 146.21 -95.9135 142.122 -95.9135 L 47.3661 -95.9135 z "
+     id="path570" />
+  <path
+     transform="matrix(-2.459789e-3,0.999998,-0.998831,4.835343e-2,177.9203,-0.916725)"
+     style="font-size:12;fill:#010000;fill-rule:evenodd;stroke-width:1pt;"
+     d="M 38.6179 81.3271 C 34.5288 81.3271 31.2369 84.619 31.2369 88.7081 C 31.2369 92.7972 34.5288 96.0891 38.6179 96.0891 L 132.815 96.0891 C 136.904 96.0891 140.196 92.7972 140.196 88.7081 C 140.196 84.619 136.904 81.3271 132.815 81.3271 L 38.6179 81.3271 z "
+     id="path569" />
+  <rect
+     style="font-size:12;fill:#fefffe;fill-rule:evenodd;stroke-width:7.375;stroke:none;stroke-opacity:1;stroke-dasharray:none;fill-opacity:0.58;"
+     id="rect676"
+     width="148.510513"
+     height="148.510482"
+     x="16.537555"
+     y="14.704128"
+     ry="17.3822452" />
+</svg>

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=SlicknesS
+Type=X-GNOME-Metatheme
+Comment=A dark black and white theme for gnome desktop, a HUGE thank you to Taner for making the amazing wallpaper!!!
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=SlicknesS
+MetacityTheme=SlicknesS
+IconTheme=Tok-tok-mix
+CursorTheme=default
+CursorSize=18
+BackgroundImage=/usr/share/themes/SlicknesS/Slickness.jpg

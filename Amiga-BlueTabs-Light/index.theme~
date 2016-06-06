@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Amiga-BlueTabs
+Type=X-GNOME-Metatheme
+Comment=This is my latest theme based on Amiga OS4 screenshots. -Aitvo
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Amiga-BlueTabs
+MetacityTheme=Amiga-BlueTabs
+IconTheme=Amiga-Newbreed

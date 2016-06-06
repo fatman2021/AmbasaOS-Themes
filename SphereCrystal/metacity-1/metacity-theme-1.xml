@@ -1,0 +1,455 @@
+<?xml version="1.0"?>
+<metacity_theme>
+	<info>
+		<name>Koynacity Blue v1</name>
+		<author>Spencer Wysinger &lt;spencer@wysinger.com&gt;</author>
+		<copyright>Copyright &#194; 2002 Spencer Wysinger</copyright>
+		<date>December 14, 2002</date>
+		<description>Part of the Koynesque Theme Pack for GNOME</description>
+	</info>
+
+	<!-- Frame Geometry =================================================== -->
+
+	<frame_geometry name="FrameGeometry_Normal" rounded_bottom_left="true" rounded_bottom_right="true">
+		<distance name="left_width"          value="6"/>
+		<distance name="right_width"         value="6"/>
+		<distance name="bottom_height"       value="6"/>
+		<distance name="left_titlebar_edge"  value="1"/>
+		<distance name="right_titlebar_edge" value="3"/>
+		<distance name="title_vertical_pad"  value="0"/>
+		<distance name="button_width"        value="20"/>
+		<distance name="button_height"       value="25"/>
+		<border   name="title_border"  left="0" right="0" top="1" bottom="0"/>
+		<border   name="button_border" left="0" right="0" top="1" bottom="0"/>
+	</frame_geometry>
+
+	<frame_geometry name="FrameGeometry_NormalMaximized" parent="FrameGeometry_Normal" rounded_bottom_left="false" rounded_bottom_right="false">
+		<distance name="left_width"          value="0"/>
+		<distance name="right_width"         value="0"/>
+		<distance name="bottom_height"       value="0"/>
+		<distance name="left_titlebar_edge"  value="0"/>
+		<distance name="right_titlebar_edge" value="0"/>
+	</frame_geometry>
+
+	<frame_geometry name="FrameGeometry_NormalShaded" parent="FrameGeometry_Normal" rounded_bottom_left="false" rounded_bottom_right="false">
+		<!-- intentionally blank -->
+		<border   name="button_border" left="0" right="0" top="1" bottom="0"/>
+	</frame_geometry>
+
+	<frame_geometry name="FrameGeometry_Border" has_title="false" rounded_bottom_left="true" rounded_bottom_right="true">
+		<distance name="left_width"          value="6"/>
+		<distance name="right_width"         value="6"/>
+		<distance name="bottom_height"       value="6"/>
+		<distance name="left_titlebar_edge"  value="0"/>
+		<distance name="right_titlebar_edge" value="0"/>
+		<distance name="button_width"        value="0"/>
+		<distance name="button_height"       value="0"/>
+		<distance name="title_vertical_pad"  value="6"/>
+		<border   name="title_border"  left="0" right="0" top="0" bottom="1"/>
+		<border   name="button_border" left="0" right="0" top="0" bottom="1"/>
+	</frame_geometry>
+
+	<!-- Constants ======================================================== -->
+
+	<constant name="TitleOffsetX"    value="3"/>
+	<constant name="AppIconOffsetX"  value="3"/>
+	<constant name="AppIconOffsetY"  value="4"/>
+	<constant name="AppIconWidth"    value="16"/>
+	<constant name="AppIconHeight"   value="16"/>
+
+	<!-- Drawing Operations =============================================== -->
+
+	<draw_ops name="DrawOp_LightenIcon">
+		<tint color="#FFFFFF" alpha="0.2" x="1" y="3" width="width-2" height="height-7"/>
+	</draw_ops>
+
+	<!-- Application Icon -->
+
+	<draw_ops name="DrawOp_ApplicationIcon">
+		<image filename="titlebar-left-iconbg.png" x="0" y="0" width="object_width" height="object_height"/>
+ 		<icon x="AppIconOffsetX" y="AppIconOffsetY" width="AppIconWidth" height="AppIconHeight" alpha="1.0"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_ApplicationIcon_Pressed">
+		<image filename="titlebar-left-iconbg.png" x="0" y="0" width="object_width" height="object_height"/>
+ 		<icon x="AppIconOffsetX" y="AppIconOffsetY + 1" width="AppIconWidth" height="AppIconHeight" alpha="0.6"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_ApplicationIcon_Unfocused">
+		<image colorize="#999999" filename="titlebar-left-iconbg.png" x="0" y="0" width="object_width" height="object_height"/>
+		<icon x="AppIconOffsetX" y="AppIconOffsetY" width="AppIconWidth" height="AppIconHeight" alpha="0.5" />
+	</draw_ops>
+
+	<draw_ops name="DrawOp_ApplicationIconShaded">
+		<image filename="titlebar-left-iconbg-shaded.png" x="0" y="0" width="object_width" height="object_height"/>
+ 		<icon x="AppIconOffsetX" y="AppIconOffsetY" width="AppIconWidth" height="AppIconHeight" alpha="1.0"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_ApplicationIconShaded_Pressed">
+		<image filename="titlebar-left-iconbg-shaded.png" x="0" y="0" width="object_width" height="object_height"/>
+ 		<icon x="AppIconOffsetX" y="AppIconOffsetY + 1" width="AppIconWidth" height="AppIconHeight" alpha="0.6"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_ApplicationIconShaded_Unfocused">
+		<image colorize="#999999" filename="titlebar-left-iconbg-shaded.png" x="0" y="0" width="object_width" height="object_height"/>
+		<icon x="AppIconOffsetX" y="AppIconOffsetY" width="AppIconWidth" height="AppIconHeight" alpha="0.5" />
+	</draw_ops>
+
+	<!-- Minimize Icon -->
+
+	<draw_ops name="DrawOp_MinimizeIcon">
+		<image filename="button-minimize-up.png" x="0" y="0" width="object_width" height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_MinimizeIcon_Hover">
+		<include name="DrawOp_MinimizeIcon"/>
+		<include name="DrawOp_LightenIcon"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_MinimizeIcon_Pressed">
+		<image filename="button-minimize-down.png" x="0" y="0" width="object_width" height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_MinimizeIcon_Unfocused">
+		<image filename="button-minimize-up.png" colorize="#999999" x="0" y="0" width="object_width" height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_MinimizeIcon_Hover_Unfocused">
+		<include name="DrawOp_MinimizeIcon_Unfocused"/>
+		<include name="DrawOp_LightenIcon"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_MinimizeIcon_Pressed_Unfocused">
+		<image filename="button-minimize-down.png" colorize="#999999" x="0" y="0" width="object_width" height="object_height"/>
+	</draw_ops>
+
+	<!-- Maximize Icon -->
+
+	<draw_ops name="DrawOp_MaximizeIcon">
+		<image filename="button-maximize-up.png" x="0" y="0" width="object_width" height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_MaximizeIcon_Hover">
+		<include name="DrawOp_MaximizeIcon"/>
+		<include name="DrawOp_LightenIcon"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_MaximizeIcon_Pressed">
+		<image filename="button-maximize-down.png" x="0" y="0" width="object_width" height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_MaximizeIcon_Unfocused">
+		<image filename="button-maximize-up.png" colorize="#999999" x="0" y="0" width="object_width" height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_MaximizeIcon_Hover_Unfocused">
+		<include name="DrawOp_MaximizeIcon_Unfocused"/>
+		<include name="DrawOp_LightenIcon"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_MaximizeIcon_Pressed_Unfocused">
+		<image filename="button-maximize-down.png" colorize="#999999" x="0" y="0" width="object_width" height="object_height"/>
+	</draw_ops>
+
+	<!-- Restore Icon -->
+
+	<draw_ops name="DrawOp_RestoreIcon">
+		<image filename="button-maximize-up.png" x="0" y="0" width="object_width" height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_RestoreIcon_Hover">
+		<include name="DrawOp_RestoreIcon"/>
+		<include name="DrawOp_LightenIcon"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_RestoreIcon_Pressed">
+		<image filename="button-maximize-down.png" x="0" y="0" width="object_width" height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_RestoreIcon_Unfocused">
+		<image filename="button-maximize-up.png" colorize="#999999" x="0" y="0" width="object_width" height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_RestoreIcon_Hover_Unfocused">
+		<include name="DrawOp_RestoreIcon_Unfocused"/>
+		<include name="DrawOp_LightenIcon"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_RestoreIcon_Pressed_Unfocused">
+		<image filename="button-maximize-down.png" colorize="#999999" x="0" y="0" width="object_width" height="object_height"/>
+	</draw_ops>
+
+	<!-- Close Icon -->
+
+	<draw_ops name="DrawOp_CloseIcon">
+		<image filename="button-close-up.png" x="0" y="0" width="object_width" height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_CloseIcon_Hover">
+		<include name="DrawOp_CloseIcon"/>
+		<include name="DrawOp_LightenIcon"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_CloseIcon_Pressed">
+		<image filename="button-close-down.png" x="0" y="0" width="object_width" height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_CloseIcon_Unfocused">
+		<image filename="button-close-up.png" colorize="#999999" x="0" y="0" width="object_width" height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_CloseIcon_Hover_Unfocused">
+		<include name="DrawOp_CloseIcon_Unfocused"/>
+		<include name="DrawOp_LightenIcon"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_CloseIcon_Pressed_Unfocused">
+		<image filename="button-close-down.png" colorize="#999999" x="0" y="0" width="object_width" height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_CloseIconShaded">
+		<image filename="button-close-up-shaded.png" x="0" y="0" width="object_width" height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_CloseIconShaded_Hover">
+		<include name="DrawOp_CloseIconShaded"/>
+		<include name="DrawOp_LightenIcon"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_CloseIconShaded_Pressed">
+		<image filename="button-close-down-shaded.png" x="0" y="0" width="object_width" height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_CloseIconShaded_Unfocused">
+		<image filename="button-close-up-shaded.png" colorize="#999999" x="0" y="0" width="object_width" height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_CloseIconShaded_Hover_Unfocused">
+		<include name="DrawOp_CloseIconShaded_Unfocused"/>
+		<include name="DrawOp_LightenIcon"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_CloseIconShaded_Pressed_Unfocused">
+		<image filename="button-close-down-shaded.png" colorize="#999999" x="0" y="0" width="object_width" height="object_height"/>
+	</draw_ops>
+
+	<!-- Outer Borders (Backgrounds) -->
+
+	<draw_ops name="DrawOp_OuterBorder_Only">
+		<!-- side rails -->
+		<image filename="bg-left-rail.png" x="1" y="top_height-1" width="object_width" height="height - top_height - bottom_height + 1"/>
+		<image filename="bg-right-rail.png" x="width - right_width" y="top_height-1" width="object_width" height="height - top_height - 18"/>
+		<!-- bottom rail -->
+		<image filename="bg-bottom-rail.png" x="6" y="height - bottom_height" width="width - left_width - right_width" height="object_height"/>
+		<!-- bottom corners -->
+		<image filename="corner-left-bottom.png" x="0" y="height - bottom_height" width="object_width" height="object_height"/>
+		<image filename="corner-right-bottom.png" x="width - object_width" y="height - object_height" width="object_width" height="object_height"/>
+		<!-- the outer black border -->
+		<rectangle color="#000000" x="0" y="0" width="width-1" height="height-1"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_OuterBorder_Only_Unfocused">
+		<!-- side rails -->
+		<image filename="bg-left-rail.png" colorize="#999999" x="1" y="top_height-1" width="object_width" height="height - top_height - bottom_height + 1"/>
+		<image filename="bg-right-rail.png" colorize="#999999" x="width - right_width" y="top_height-1" width="object_width" height="height - top_height - 18"/>
+		<!-- bottom rail -->
+		<image filename="bg-bottom-rail.png" colorize="#999999" x="6" y="height - bottom_height" width="width - left_width - right_width" height="object_height"/>
+		<!-- bottom corners -->
+		<image filename="corner-left-bottom.png" colorize="#999999" x="0" y="height - bottom_height" width="object_width" height="object_height"/>
+		<image filename="corner-right-bottom.png" colorize="#999999" x="width - object_width" y="height - object_height" width="object_width" height="object_height"/>
+		<!-- the outer black border -->
+		<rectangle color="#000000" x="0" y="0" width="width-1" height="height-1"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_OuterBorder_NoTitle">
+		<include name="DrawOp_OuterBorder_Only"/>
+		<!-- top rail -->
+		<image filename="border-only-left-corner.png" x="1" y="1" width="object_width" height="object_height"/>
+		<image filename="border-only-top.png" x="23" y="1" width="width - 28" height="object_height"/>
+		<image filename="border-only-right-corner.png" x="width - right_width + 1" y="1" width="object_width" height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_OuterBorder">
+		<include name="DrawOp_OuterBorder_Only"/>
+		<image filename="titlebar-right-bumper.png" x="width-5" y="1" width="object_width" height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_OuterBorder_Unfocused">
+		<include name="DrawOp_OuterBorder_Only_Unfocused"/>
+		<image filename="titlebar-right-bumper.png" colorize="#999999" x="width-5" y="1" width="object_width" height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_BackgroundShaded">
+		<image filename="titlebar-right-bumper.png" x="width-5" y="1" width="object_width" height="object_height"/>
+		<rectangle color="#000000" x="0" y="0" width="width-1" height="height-1"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_BackgroundShaded_Unfocused">
+		<image filename="titlebar-right-bumper.png" colorize="#999999" x="width-5" y="1" width="object_width" height="object_height"/>
+		<rectangle color="#000000" x="0" y="0" width="width-1" height="height-1"/>
+	</draw_ops>
+
+	<!-- Title Bar Components -->
+
+	<draw_ops name="DrawOp_TitleBarBackground">
+		<!-- title background (tile) -->
+		<image filename="titlebar-left-title.png" x="0" y="0" width="object_width" height="object_height"/>
+		<image filename="bg-titlebar.png" fill_type="tile" x="45" y="0" width="width" height="height"/>
+		<!-- alpha="0.0:0.3:0.4:0.4"/> -->
+	</draw_ops>
+
+	<draw_ops name="DrawOp_TitleBarBackground_Unfocused">
+		<!-- title background (tile) -->
+		<image colorize="#999999" filename="titlebar-left-title.png" x="0" y="0" width="object_width" height="object_height"/>
+		<image colorize="#999999" filename="bg-titlebar.png" fill_type="tile" x="45" y="0" width="width" height="height"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_TitleText">
+		<clip x="0" y="0" width="width-8" height="height"/>
+		<title color="#444444" x="TitleOffsetX + 1" y="(((height - title_height) / 2) `max` 0)+1"/>
+		<title color="#FFFFFF" x="TitleOffsetX" y="((height - title_height) / 2) `max` 0"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_TitleText_Unfocused">
+		<clip x="0" y="0" width="width-8" height="height"/>
+		<title color="#444444" x="TitleOffsetX + 1" y="(((height - title_height) / 2) `max` 0)+1"/>
+		<title color="#CCCCCC" x="TitleOffsetX" y="((height - title_height) / 2) `max` 0"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_TitleBar">
+		<include name="DrawOp_TitleBarBackground"/>
+		<include name="DrawOp_TitleText"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_TitleBar_Unfocused">
+		<include name="DrawOp_TitleBarBackground_Unfocused"/>
+		<include name="DrawOp_TitleText_Unfocused"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_TitleBarShaded">
+		<include name="DrawOp_TitleBarBackground"/>
+		<include name="DrawOp_TitleText"/>
+	</draw_ops>
+
+	<draw_ops name="DrawOp_TitleBarShaded_Unfocused">
+		<include name="DrawOp_TitleBarBackground_Unfocused"/>
+		<include name="DrawOp_TitleText_Unfocused"/>
+	</draw_ops>
+
+	<!-- Frame Styles ===================================================== -->
+
+	<frame_style name="FrameStyle_Normal" geometry="FrameGeometry_Normal">
+		<piece  position="entire_background"         draw_ops="DrawOp_OuterBorder"/>
+		<piece  position="title"                     draw_ops="DrawOp_TitleBar"/>
+		<button function="menu"     state="normal"   draw_ops="DrawOp_ApplicationIcon"/>
+		<button function="menu"     state="pressed"  draw_ops="DrawOp_ApplicationIcon_Pressed"/>
+		<button function="minimize" state="normal"   draw_ops="DrawOp_MinimizeIcon"/>
+		<button function="minimize" state="prelight" draw_ops="DrawOp_MinimizeIcon_Hover"/>
+		<button function="minimize" state="pressed"  draw_ops="DrawOp_MinimizeIcon_Pressed"/>
+		<button function="maximize" state="normal"   draw_ops="DrawOp_MaximizeIcon"/>
+		<button function="maximize" state="prelight" draw_ops="DrawOp_MaximizeIcon_Hover"/>
+		<button function="maximize" state="pressed"  draw_ops="DrawOp_MaximizeIcon_Pressed"/>
+		<button function="close"    state="normal"   draw_ops="DrawOp_CloseIcon"/>
+		<button function="close"    state="prelight" draw_ops="DrawOp_CloseIcon_Hover"/>
+		<button function="close"    state="pressed"  draw_ops="DrawOp_CloseIcon_Pressed"/>
+	</frame_style>
+
+	<frame_style name="FrameStyle_Normal_Unfocused" parent="FrameStyle_Normal" geometry="FrameGeometry_Normal">
+		<piece  position="entire_background"         draw_ops="DrawOp_OuterBorder_Unfocused"/>
+		<piece  position="title"                     draw_ops="DrawOp_TitleBar_Unfocused"/>
+		<button function="menu"     state="normal"   draw_ops="DrawOp_ApplicationIcon_Unfocused"/>
+		<button function="minimize" state="normal"   draw_ops="DrawOp_MinimizeIcon_Unfocused"/>
+		<button function="minimize" state="prelight" draw_ops="DrawOp_MinimizeIcon_Hover_Unfocused"/>
+		<button function="minimize" state="pressed"  draw_ops="DrawOp_MinimizeIcon_Pressed_Unfocused"/>
+		<button function="maximize" state="normal"   draw_ops="DrawOp_MaximizeIcon_Unfocused"/>
+		<button function="maximize" state="prelight" draw_ops="DrawOp_MaximizeIcon_Hover_Unfocused"/>
+		<button function="maximize" state="pressed"  draw_ops="DrawOp_MaximizeIcon_Pressed_Unfocused"/>
+		<button function="close"    state="normal"   draw_ops="DrawOp_CloseIcon_Unfocused"/>
+		<button function="close"    state="prelight" draw_ops="DrawOp_CloseIcon_Hover_Unfocused"/>
+		<button function="close"    state="pressed"  draw_ops="DrawOp_CloseIcon_Pressed_Unfocused"/>
+	</frame_style>
+
+	<frame_style name="FrameStyle_NormalShaded" geometry="FrameGeometry_NormalShaded" parent="FrameStyle_Normal">
+		<piece  position="entire_background"         draw_ops="DrawOp_BackgroundShaded"/>
+		<piece  position="title"                     draw_ops="DrawOp_TitleBarShaded"/>
+		<button function="menu"     state="normal"   draw_ops="DrawOp_ApplicationIconShaded"/>
+		<button function="menu"     state="pressed"  draw_ops="DrawOp_ApplicationIconShaded_Pressed"/>
+		<button function="close"    state="normal"   draw_ops="DrawOp_CloseIconShaded"/>
+		<button function="close"    state="prelight" draw_ops="DrawOp_CloseIconShaded_Hover"/>
+		<button function="close"    state="pressed"  draw_ops="DrawOp_CloseIconShaded_Pressed"/>
+	</frame_style>
+
+	<frame_style name="FrameStyle_NormalShaded_Unfocused" geometry="FrameGeometry_Normal" parent="FrameStyle_Normal_Unfocused">
+		<piece  position="entire_background"         draw_ops="DrawOp_BackgroundShaded_Unfocused"/>
+		<piece  position="title"                     draw_ops="DrawOp_TitleBarShaded_Unfocused"/>
+		<button function="menu"     state="normal"   draw_ops="DrawOp_ApplicationIconShaded_Unfocused"/>
+		<button function="close"    state="normal"   draw_ops="DrawOp_CloseIconShaded_Unfocused"/>
+		<button function="close"    state="prelight" draw_ops="DrawOp_CloseIconShaded_Hover_Unfocused"/>
+		<button function="close"    state="pressed"  draw_ops="DrawOp_CloseIconShaded_Pressed_Unfocused"/>
+	</frame_style>
+
+	<frame_style name="FrameStyle_NormalMaximized" parent="FrameStyle_Normal" geometry="FrameGeometry_NormalMaximized">
+		<button function="maximize" state="normal"   draw_ops="DrawOp_RestoreIcon"/>
+		<button function="maximize" state="prelight" draw_ops="DrawOp_RestoreIcon_Hover"/>
+		<button function="maximize" state="pressed"  draw_ops="DrawOp_RestoreIcon_Pressed"/>
+	</frame_style>
+
+	<frame_style name="FrameStyle_NormalMaximized_Unfocused" parent="FrameStyle_Normal_Unfocused" geometry="FrameGeometry_NormalMaximized">
+		<button function="maximize" state="normal"   draw_ops="DrawOp_RestoreIcon_Unfocused"/>
+		<button function="maximize" state="prelight" draw_ops="DrawOp_RestoreIcon_Hover_Unfocused"/>
+		<button function="maximize" state="pressed"  draw_ops="DrawOp_RestoreIcon_Pressed_Unfocused"/>
+		<piece  position="entire_background"><draw_ops/><!-- null --></piece>
+	</frame_style>
+
+	<frame_style name="FrameStyle_NormalMaximizedShaded" geometry="FrameGeometry_NormalMaximized" parent="FrameStyle_NormalMaximized">
+	</frame_style>
+
+	<frame_style name="FrameStyle_NormalMaximizedShaded_Unfocused" geometry="FrameGeometry_NormalMaximized" parent="FrameStyle_NormalMaximized_Unfocused">
+	</frame_style>
+
+	<frame_style name="FrameStyle_Border" geometry="FrameGeometry_Border" parent="FrameStyle_Normal">
+		<piece position="entire_background" draw_ops="DrawOp_OuterBorder_NoTitle"/>
+		<piece position="title"><draw_ops/><!-- null --></piece>
+	</frame_style>
+
+	<!-- Frame Style Sets ================================================= -->
+
+	<frame_style_set name="FrameStyleSet_Normal">
+		<frame focus="yes" state="normal" resize="both" style="FrameStyle_Normal"/>
+		<frame focus="no"  state="normal" resize="both" style="FrameStyle_Normal_Unfocused"/>
+		<frame focus="yes" state="maximized"            style="FrameStyle_NormalMaximized"/>
+		<frame focus="no"  state="maximized"            style="FrameStyle_NormalMaximized_Unfocused"/>
+		<frame focus="yes" state="shaded"               style="FrameStyle_NormalShaded"/>
+		<frame focus="no"  state="shaded"               style="FrameStyle_NormalShaded_Unfocused"/>
+		<frame focus="yes" state="maximized_and_shaded" style="FrameStyle_NormalMaximizedShaded"/>
+		<frame focus="no"  state="maximized_and_shaded" style="FrameStyle_NormalMaximizedShaded_Unfocused"/>
+	</frame_style_set>
+
+	<frame_style_set name="FrameStyleSet_Border">
+		<frame focus="yes" state="normal" resize="both" style="FrameStyle_Border"/>
+		<frame focus="no"  state="normal" resize="both" style="FrameStyle_Border"/>
+		<frame focus="yes" state="maximized"            style="FrameStyle_Border"/>
+		<frame focus="no"  state="maximized"            style="FrameStyle_Border"/>
+		<frame focus="yes" state="shaded"               style="FrameStyle_Border"/>
+		<frame focus="no"  state="shaded"               style="FrameStyle_Border"/>
+		<frame focus="yes" state="maximized_and_shaded" style="FrameStyle_Border"/>
+		<frame focus="no"  state="maximized_and_shaded" style="FrameStyle_Border"/>
+	</frame_style_set>
+
+	<!-- Window Definitions =============================================== -->
+
+	<window type="normal"       style_set="FrameStyleSet_Normal"/>
+	<window type="dialog"       style_set="FrameStyleSet_Normal"/>
+	<window type="modal_dialog" style_set="FrameStyleSet_Normal"/>
+	<window type="menu"         style_set="FrameStyleSet_Normal"/>
+	<window type="utility"      style_set="FrameStyleSet_Normal"/>
+	<window type="border"       style_set="FrameStyleSet_Border"/>
+	
+	<!-- Menu Icons ======================================================= -->
+
+	<menu_icon function="close"      state="normal" draw_ops="DrawOp_CloseIcon"/>
+	<menu_icon function="maximize"   state="normal" draw_ops="DrawOp_MaximizeIcon"/>
+	<menu_icon function="unmaximize" state="normal" draw_ops="DrawOp_RestoreIcon"/>
+	<menu_icon function="minimize"   state="normal" draw_ops="DrawOp_MinimizeIcon"/>
+
+</metacity_theme>

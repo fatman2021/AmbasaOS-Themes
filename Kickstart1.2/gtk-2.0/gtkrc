@@ -1,0 +1,621 @@
+
+include "Scrollbars/scrollbar.rc"
+include "Tabs/tabs.rc"
+
+gtk-color-scheme = "base_color:#0055AA\nfg_color:#FFFFFF\ntooltip_fg_color:#000000\nselected_bg_color:#FF8800\nselected_fg_color:#000000\ntext_color:#FFFFFF\nbg_color:#0055AA\ntooltip_bg_color:#FF8800"
+
+
+gtk-icon-sizes="panel-menu=16,16:gtk-menu=16,16:gtk-button=16,16:gtk-small-toolbar=16,16:gtk-large-toolbar=24,24:gtk-dialog=32,32:gtk-dnd=32,32"
+
+
+style "default" {
+	xthickness = 1
+	ythickness = 1
+
+	#######################
+	# Style Properties
+	#######################
+	GtkButton::child-displacement-x = 1
+	GtkButton::child-displacement-y = 1
+	GtkButton::default-border = { 0, 0, 0, 0 }
+
+	GtkCheckButton::indicator-size = 14
+
+	GtkPaned::handle-size = 6
+
+	GtkRange::trough-border = 2
+	GtkRange::slider-width = 20
+	GtkRange::stepper-size = 20
+
+	GtkScale::slider-length = 20
+	GtkScale::slider-width  = 20
+	GtkScale::trough-border = 2
+
+	GtkScrollbar::min-slider-length = 20
+	GtkMenuBar::internal-padding = 0
+	GtkExpander::expander-size = 16
+	GtkToolbar::internal-padding = 1
+	GtkTreeView::expander-size = 14
+	GtkTreeView::vertical-separator = 2
+
+	GtkMenu::horizontal-padding = 0
+	GtkMenu::vertical-padding = 0
+
+	WnckTasklist::fade-overlay-rect = 0
+	# The following line hints to gecko (and possibly other appliations)
+	# that the entry should be drawn transparently on the canvas.
+	# Without this, gecko will fill in the background of the entry.
+	GtkEntry::honors-transparent-bg-hint = 1
+
+	GtkEntry::progress-border = { 4, 4, 4, 4 }
+
+	GtkWidget::focus-line-width = 0
+
+	####################
+	# Color Definitions
+	####################
+	bg[NORMAL]        = @bg_color
+	bg[PRELIGHT]      = @bg_color
+	bg[SELECTED]      = @selected_bg_color
+	bg[INSENSITIVE]   = @bg_color
+	bg[ACTIVE]        = @bg_color
+
+	fg[NORMAL]        = @fg_color
+	fg[PRELIGHT]      = @fg_color
+	fg[SELECTED]      = @selected_fg_color
+	fg[INSENSITIVE]   = @bg_color
+	fg[ACTIVE]        = @fg_color
+
+	text[NORMAL]      = @text_color
+	text[PRELIGHT]    = @text_color
+	text[SELECTED]    = @selected_fg_color
+	text[INSENSITIVE] = @bg_color
+	text[ACTIVE]      = @selected_fg_color
+
+	base[NORMAL]      = @base_color
+	base[PRELIGHT]    = @bg_color
+	base[SELECTED]    = @selected_bg_color
+	base[INSENSITIVE] = @bg_color
+	base[ACTIVE]      = @selected_bg_color
+
+	engine "clearlooks" {
+		colorize_scrollbar = FALSE
+		reliefstyle = 1
+		menubarstyle = 0
+		toolbarstyle = 0
+		animation = FALSE
+		radius = 0.0
+		style = CLASSIC
+
+		# Set a hint to disable backward compatibility fallbacks.
+		hint = "use-hints"
+	}
+}
+
+style "wide" {
+	xthickness = 2
+	ythickness = 2
+}
+
+style "wider" {
+	xthickness = 3
+	ythickness = 3
+}
+
+style "entry" {
+	xthickness = 3
+	ythickness = 3
+
+	bg[SELECTED] = @base_color
+	fg[SELECTED] = @text_color
+
+	engine "clearlooks" {
+		focus_color = @selected_bg_color
+	}
+}
+
+style "spinbutton" {
+
+	engine "clearlooks" {
+		hint = "spinbutton"
+	}
+}
+
+
+style "button"
+{
+  xthickness    = 1
+  ythickness    = 1
+  
+	
+  engine "pixmap"
+  {
+    image
+    {
+      function		= BOX
+      detail		= "buttondefault"
+      recolorable	= TRUE
+      file		= "Buttons/button-default.png"
+      border		= { 5, 5, 5, 5 }
+      stretch		= TRUE
+    }
+    image
+    {
+      function		= BOX
+      state		= PRELIGHT
+      recolorable	= TRUE
+      file		= "Buttons/button-normal.png"
+      border		= { 5, 5, 5, 5 }
+      stretch		= TRUE
+    }
+    image
+    {
+      function		= BOX
+      state		= ACTIVE
+      file		= "Buttons/button-selected.png"
+      border		= { 5, 5, 5, 5 }
+      stretch		= TRUE
+    }
+    image
+    {
+      function		= BOX
+      recolorable	= TRUE
+      state		= SELECTED
+      file		= "Buttons/button-selected.png"
+      border		= { 5, 5, 5, 5 }
+      stretch		= TRUE
+    }	
+    image 
+    {
+      function		= BOX
+      state		= INSENSITIVE
+      file		= "Buttons/button-insensitive.png"
+      border		= { 5, 5, 5, 5 }
+      stretch		= TRUE
+    }
+    image 
+    {
+      function		= BOX
+      file		= "Buttons/button-normal.png"
+      border		= { 5, 5, 5, 5 }
+      stretch		= TRUE
+    }
+	
+  }
+}
+
+class "GtkButton" 	style "button"
+class "*Font*"  	style "button"
+class "GtkToggleButton" style "button"
+
+#class "GtkSpinButton"   style "button"
+#class "GtkCombo" style "button" # combo style applied
+#class "GtkComboBox" style "button" 
+class "GtkToolbar"    	style "button"
+class "GtkToolButton"    	style "button"
+
+style "Scales"
+{
+    engine "pixmap" 
+    {
+        image 
+	{
+        	function        = BOX
+        	recolorable     = TRUE
+            	detail          = "trough"
+            	file            = "Scales/trough-vert.png"
+            	border          = { 6, 6, 6, 6 }
+            	stretch         = TRUE
+            	orientation     = VERTICAL
+        }
+
+        image 
+	{
+            	function        = BOX
+            	recolorable     = TRUE
+            	detail          = "trough"
+            	file            = "Scales/trough-horz.png"
+            	border          = { 6, 6, 6, 6 }
+            	stretch         = TRUE
+            	orientation     = HORIZONTAL
+        }
+
+        image 
+        {
+            	function	= SLIDER
+            	recolorable	= TRUE
+            	state           = NORMAL
+            	file		= "Scales/slider.png"
+            	border		= { 6, 6, 6, 6 }
+            	stretch		= TRUE
+            	overlay_file	= "Scales/grip.png"
+            	overlay_stretch	= FALSE
+            	orientation	= HORIZONTAL
+        }
+
+        image 
+        {
+            	function	= SLIDER
+            	recolorable	= TRUE
+            	state           = PRELIGHT
+           	 file		= "Scales/slider.png"
+            	border		= { 6, 6, 6, 6 }
+            	stretch		= TRUE
+            	overlay_file	= "Scales/grip.png"
+            	overlay_stretch	= FALSE
+            	orientation	= HORIZONTAL
+        }
+
+        image 
+        {
+            	function	= SLIDER
+            	recolorable	= TRUE
+            	state           = INSENSITIVE
+            	file		= "Scales/slider.png"
+            	border		= { 6, 6, 6, 6 }
+            	stretch		= TRUE
+            	overlay_file	= "Scales/grip-inac.png"
+            	overlay_stretch	= FALSE
+            	orientation	= HORIZONTAL
+        }
+
+        image 
+        {
+            	function	= SLIDER
+            	recolorable	= TRUE
+            	state           = NORMAL
+            	file		= "Scales/slider.png"
+            	border		= { 6, 6, 6, 6 }
+            	stretch		= TRUE
+            	overlay_file	= "Scales/grip-vert.png"
+            	overlay_stretch	= FALSE
+            	orientation	= VERTICAL
+        }
+
+        image 
+        {
+            	function	= SLIDER
+            	recolorable	= TRUE
+            	state           = PRELIGHT
+            	file		= "Scales/slider.png"
+            	border		= { 6, 6, 6, 6 }
+            	stretch		= TRUE
+            	overlay_file	= "Scales/grip-vert.png"
+            	overlay_stretch	= FALSE
+            	orientation	= VERTICAL
+        }
+ 
+       image 
+        {
+            	function	= SLIDER
+            	recolorable	= TRUE
+            	state           = INSENSITIVE
+            	file		= "Scales/slider.png"
+            	border		= { 6, 6, 6, 6 }
+            	stretch		= TRUE
+            	overlay_file	= "Scales/grip-vert-inac.png"
+            	overlay_stretch	= FALSE
+            	orientation	= VERTICAL
+        }
+    }
+}
+
+class "GtkScale" style "Scales"
+
+style "theme-progressbar"	= "default"
+{
+        GtkProgressBar::trough_border = 4
+	xthickness = 1
+        ythickness = 1
+  	engine "pixmap"
+  	{
+  		# Horizontal progressbar background
+  		image
+		{
+            function        = BOX
+            recolorable     = TRUE
+            detail          = "trough"
+            file            = "ProgressBar/trough-progressbar-horiz.png"
+	    border          = { 2, 2, 2, 2}
+            stretch         = TRUE
+            orientation     = HORIZONTAL
+        }
+
+		# Horizontal progressbar
+		image
+		{
+            function        = BOX
+            recolorable     = TRUE
+            detail          = "bar"
+            file            = "ProgressBar/progressbar.png"
+	    border          = { 7, 7, 7, 7}
+            stretch         = TRUE
+            orientation		= HORIZONTAL
+        }
+
+		# Vertical progressbar background
+		image
+		{
+		    function        = BOX
+            recolorable     = TRUE
+            detail          = "trough"
+            file            = "ProgressBar/trough-progressbar-vert.png"
+	    border          = { 2, 2, 2, 2}
+            stretch         = TRUE
+		    orientation		= VERTICAL
+		}
+
+		# Vertical progressbar
+	    image
+	    {
+		    function        = BOX
+            recolorable     = TRUE
+            detail          = "bar"
+            file            = "ProgressBar/progressbar.png"
+	    border          = { 7, 7, 7, 7}
+            stretch         = TRUE
+		    orientation		= VERTICAL
+	    }
+	}
+}
+
+class "GtkProgressBar"     		style "theme-progressbar"
+widget_class "*MenuItem.*ProgressBar*" style "theme-progressbar"
+
+
+style "comboboxentry" {
+
+	engine "clearlooks" {
+		# Note:
+		# If you set the appears-as-list option on comboboxes in the theme,
+		# then you should set this hint on the combobox instead.
+		hint = "comboboxentry"
+	}
+}
+
+style "menubar" {
+
+	bg[NORMAL]	= @fg_color
+	fg[NORMAL]	= @fg_color
+	fg[ACTIVE]	= @fg_color
+	text[NORMAL]	= @fg_color
+	text[ACTIVE]	= @fg_color
+	fg[PRELIGHT]	= @fg_color
+
+	engine "clearlooks" {
+		hint = "menubar"
+	}
+}
+
+style "menu" {
+	xthickness = 2
+	ythickness = 2
+
+	bg[NORMAL]	= "#FFFFFF"
+	bg[ACTIVE]	= "#000000"
+	fg[NORMAL]	= @fg_color
+	fg[PRELIGHT]	= "#FFFFFF"
+	fg[ACTIVE]	= "#FFFFFF"
+	bg[SELECTED]	= "#000000"
+	bg[PRELIGHT]	= "#000000"
+	base[ACTIVE]	= "#000000"	
+
+	engine "clearlooks" {
+		radius = 0.0
+	}
+}
+
+style "menu_item" {
+	xthickness = 2
+	ythickness = 3
+
+	bg[NORMAL]	= "#FFFFFF"
+	bg[ACTIVE]	= "#000000"
+	fg[NORMAL]	= "#0055AA"
+	fg[ACTIVE]	= "#0055AA"
+	bg[SELECTED]	= "#000000"
+	fg[PRELIGHT]	= "#FF8800"
+	bg[PRELIGHT]	= "#FFFFFF"	
+	fg[INSENSITIVE]	= "#A8C6E4"
+engine "clearlooks" {
+		radius = 0.0
+	}
+}
+
+# This style is there to modify the separator menu items. The goals are:
+# 1. Get a specific height.
+# 2. The line should go to the edges (ie. no border at the left/right)
+style "separator_menu_item" {
+	xthickness = 1
+	ythickness = 0
+
+	GtkSeparatorMenuItem::horizontal-padding = 0
+	GtkWidget::wide-separators = 1
+	GtkWidget::separator-width = 1
+	GtkWidget::separator-height = 7
+}
+
+style "frame_title" {
+
+	fg[NORMAL]        = @fg_color
+}
+
+style "treeview" {
+
+	engine "clearlooks" {
+		hint = "treeview"
+	}
+}
+
+
+
+# This style is based on the default style, so that the colors from the button
+# style are overriden again.
+style "treeview_header" = "default" {
+	xthickness = 2
+	ythickness = 1
+
+	engine "clearlooks" {
+		hint = "treeview-header"
+	}
+}
+
+style "tooltips" {
+	xthickness = 4
+	ythickness = 4
+
+	bg[NORMAL]        = @tooltip_bg_color
+	fg[NORMAL]        = @tooltip_fg_color
+}
+
+style "nautilus_location" {
+
+	bg[NORMAL]        = @selected_bg_color
+}
+
+style "statusbar" 		= "default"
+{
+	engine "pixmap"{
+    	
+	       image{
+		    	function 	= RESIZE_GRIP
+		    	recolorable 	= TRUE
+		   	detail 		= "statusbar"
+		    	overlay_file 	= "Other/statusgrip.png"
+		    	overlay_border 	= {0,0,0,0}
+		    	overlay_stretch = FALSE
+
+		}
+	}
+}
+
+class "GtkStatusbar"		style "statusbar"
+
+
+
+# Wrokaroudn style for places where the text color is used instead of the fg color.
+style "text_is_fg_color_workaround" {
+
+	bg[NORMAL]	  = @fg_color
+	text[NORMAL]      = "#000000"
+	text[PRELIGHT]    = @selected_bg_color
+	text[SELECTED]    = @selected_fg_color
+	text[ACTIVE]      = @fg_color
+	text[INSENSITIVE] = @bg_color
+}
+style "white-panel" {
+
+	fg[NORMAL]	= @bg_color
+	
+}
+
+# Workaround style for menus where the text color is used instead of the fg color.
+style "menuitem_text_is_fg_color_workaround" {
+
+	bg[NORMAL]	  = @fg_color
+	text[NORMAL]      = "#000000"
+	text[PRELIGHT]    = @selected_bg_color
+	text[SELECTED]    = @selected_fg_color
+	text[ACTIVE]      = @fg_color
+	text[INSENSITIVE] = @bg_color
+}
+
+# Workaround style for places where the fg color is used instead of the text color.
+style "fg_is_text_color_workaround" {
+
+	fg[NORMAL]        = @text_color
+	fg[PRELIGHT]      = @text_color
+	fg[SELECTED]      = @selected_fg_color
+	fg[ACTIVE]        = @selected_fg_color
+	fg[INSENSITIVE]   = @bg_color
+}
+
+# Style to set the toolbar to use a flat style. This is because the "New" button in
+# Evolution is not drawn transparent. So if there is a gradient in the background it will
+# look really wrong.
+# See http://bugzilla.gnome.org/show_bug.cgi?id=446953.
+style "evo_new_button_workaround" {
+
+	engine "clearlooks" {
+		toolbarstyle = 0
+	}
+}
+
+
+###############################################################################
+# The following part of the gtkrc applies the different styles to the widgets.
+###############################################################################
+
+# The default style is applied to every widget
+class "GtkWidget" style "default"
+
+class "GtkSeparator" style "wide"
+class "GtkFrame" style "wide"
+class "GtkCalendar" style "wide"
+class "GtkEntry" style "entry"
+
+class "GtkSpinButton" style "spinbutton"
+
+widget_class "*<GtkButton>" style "button"
+widget_class "*<GtkStatusbar>*" style "statusbar"
+
+widget_class "*<GtkComboBoxEntry>*" style "comboboxentry"
+widget_class "*<GtkCombo>*" style "comboboxentry"
+
+widget_class "*<GtkMenuBar>*" style "menubar"
+widget_class "*<GtkMenu>*" style "menu"
+widget_class "*<GtkMenuItem>*" style "menu_item"
+widget_class "*<GtkSeparatorMenuItem>*" style "separator_menu_item"
+
+widget_class "*.<GtkFrame>.<GtkLabel>" style "frame_title"
+widget_class "*.<GtkTreeView>*" style "treeview"
+
+# Treeview headers (and similar stock GTK+ widgets)
+widget_class "*.<GtkTreeView>.<GtkButton>" style "treeview_header"
+widget_class "*.<GtkCTree>.<GtkButton>" style "treeview_header"
+widget_class "*.<GtkList>.<GtkButton>" style "treeview_header"
+widget_class "*.<GtkCList>.<GtkButton>" style "treeview_header"
+
+# The window of the tooltip is called "gtk-tooltip"
+##################################################################
+# FIXME:
+# This will not work if one embeds eg. a button into the tooltip.
+# As far as I can tell right now we will need to rework the theme
+# quite a bit to get this working correctly.
+# (It will involve setting different priorities, etc.)
+##################################################################
+widget "gtk-tooltip*" style "tooltips"
+
+##########################################################################
+# Following are special cases and workarounds for issues in applications.
+##########################################################################
+
+# Workaround for the evolution ETable (bug #527532)
+widget_class "*.ETable.ECanvas" style "treeview_header"
+# Workaround for the evolution ETree
+widget_class "*.ETree.ECanvas" style "treeview_header"
+
+# Special case the nautilus-extra-view-widget
+# ToDo: A more generic approach for all applications that have a widget like this.
+widget "*.nautilus-extra-view-widget" style : highest "nautilus_location"
+
+# Work around for http://bugzilla.gnome.org/show_bug.cgi?id=382646
+# Note that this work around assumes that the combobox is _not_ in appears-as-list mode.
+widget_class "*.<GtkComboBox>.<GtkCellView>" style "text_is_fg_color_workaround"
+# This is the part of the workaround that fixes the menus
+widget "*.gtk-combobox-popup-menu.*" style "menuitem_text_is_fg_color_workaround"
+
+# Work around the usage of GtkLabel inside GtkListItems to display text.
+# This breaks because the label is shown on a background that is based on the base color.
+widget_class "*<GtkListItem>*" style "fg_is_text_color_workaround"
+# GtkCList also uses the fg color to draw text on top of the base colors.
+widget_class "*<GtkCList>" style "fg_is_text_color_workaround"
+# Nautilus when renaming files, and maybe other places.
+widget_class "*<EelEditableLabel>" style "fg_is_text_color_workaround"
+
+# See the documentation of the style.
+widget_class "EShellWindow.GtkVBox.BonoboDock.BonoboDockBand.BonoboDockItem*" style "evo_new_button_workaround"
+
+class "PanelTopLevel.*" style "white-panel"
+widget_class "*PanelApplet*" style "white-panel"
+widget_class "*PanelWidget*" style "white-panel"

@@ -1,0 +1,13 @@
+
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name[en_EN]=Amiga Ubuntunized
+Name[pl_PL]=Amiga Ubuntunized
+Comment[en]=Amiga theme in Ubuntu
+Comment[pl]=Motyw Amigi w Ubuntu
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Amiga Ubuntunized
+MetacityTheme=Amiga Ubuntunized
+

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.0"
+   x="0.0000000"
+   y="0.0000000"
+   width="29.999969"
+   height="30.000000"
+   viewBox="0 0 24 23"
+   id="svg783">
+  <defs
+     id="defs786">
+    <linearGradient
+       id="linearGradient812">
+      <stop
+         style="stop-color:#ffaa98;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop813" />
+      <stop
+         style="stop-color:#843220;stop-opacity:1.0000000;"
+         offset="1.0000000"
+         id="stop814" />
+    </linearGradient>
+    <linearGradient
+       x1="0.37142855"
+       y1="0.67487687"
+       x2="0.37142855"
+       y2="0.54679805"
+       id="linearGradient815"
+       xlink:href="#linearGradient812" />
+    <linearGradient
+       x1="0.47428572"
+       y1="0.41871923"
+       x2="0.47428572"
+       y2="0.29064041"
+       id="linearGradient816"
+       xlink:href="#linearGradient812" />
+    <radialGradient
+       cx="0.47906977"
+       cy="0.51401871"
+       r="0.55348837"
+       fx="0.30697671"
+       fy="0.31308407"
+       id="radialGradient818"
+       xlink:href="#linearGradient812" />
+    <radialGradient
+       cx="0.31428570"
+       cy="0.61576360"
+       r="0.50000000"
+       fx="0.31142852"
+       fy="0.62315279"
+       id="radialGradient819"
+       xlink:href="#linearGradient812" />
+  </defs>
+  <path
+     d="M 22.677189,11.452756 C 22.677189,5.5820064 17.918006,0.82282355 12.047257,0.82282355 C 6.1765070,0.82282355 1.4173241,5.5820064 1.4173241,11.452756 C 1.4173241,17.323506 6.1765070,22.082688 12.047257,22.082688 C 17.918006,22.082688 22.677189,17.323506 22.677189,11.452756 z "
+     style="fill:url(#radialGradient818);fill-rule:evenodd;stroke:#000000;stroke-width:0.80000103;"
+     id="path827" />
+  <path
+     d="M 16.299229,15.704729 L 7.7952835,7.2007830"
+     style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#393939;stroke-width:3.0000000;stroke-opacity:1.0000000;"
+     id="path835" />
+  <path
+     d="M 16.299229,7.2007830 L 7.7952835,15.704729"
+     style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#393939;stroke-width:3.0000000;stroke-opacity:1.0000000;"
+     id="path836" />
+  <path
+     d="M 12.755918,2.2401481 C 5.0032638,1.9096925 1.1455246,9.6838267 3.5433107,14.996067"
+     style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.95000094;stroke-linecap:round;stroke-opacity:0.39310345;"
+     id="path837" />
+  <metadata
+     id="metadata15">
+    <RDF
+       id="RDF16">
+      <Work
+         about=""
+         id="Work17">
+        <format
+           id="format18">image/svg+xml</format>
+        <type
+           id="type20"
+           resource="http://purl.org/dc/dcmitype/StillImage" />
+      </Work>
+    </RDF>
+    <RDF
+       id="RDF21">
+      <Work
+         about=""
+         id="Work22">
+        <format
+           id="format23">image/svg+xml</format>
+        <type
+           id="type25"
+           resource="http://purl.org/dc/dcmitype/StillImage" />
+      </Work>
+    </RDF>
+    <rdf:RDF
+       id="RDF26">
+      <cc:Work
+         rdf:about=""
+         id="Work27">
+        <dc:format
+           id="format28">image/svg+xml</dc:format>
+        <dc:type
+           id="type30"
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

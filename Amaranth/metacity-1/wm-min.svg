@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
+<svg
+   id="svg548"
+   sodipodi:version="0.32"
+   width="140.28pt"
+   height="141.89pt"
+   sodipodi:docbase="/home/defendguin/WWW/"
+   sodipodi:docname="/home/defendguin/WWW/wm-min.svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs
+     id="defs550">
+    <linearGradient
+       id="linearGradient563">
+      <stop
+         style="stop-color:#858785;stop-opacity:1;"
+         offset="0.000000"
+         id="stop564" />
+      <stop
+         style="stop-color:#f8f8f8;stop-opacity:1;"
+         offset="1.000000"
+         id="stop565" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient560">
+      <stop
+         style="stop-color:#bec0c0;stop-opacity:1;"
+         offset="0.000000"
+         id="stop561" />
+      <stop
+         style="stop-color:#f8f8f8;stop-opacity:1;"
+         offset="1.000000"
+         id="stop562" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient553">
+      <stop
+         style="stop-color:#858785;stop-opacity:1;"
+         offset="0.000000"
+         id="stop554" />
+      <stop
+         style="stop-color:#f8f8f8;stop-opacity:1;"
+         offset="1.000000"
+         id="stop555" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient553"
+       id="linearGradient556"
+       x1="84.7499695"
+       y1="157.610916"
+       x2="84.7499695"
+       y2="49.0971413"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="pad" />
+    <radialGradient
+       xlink:href="#linearGradient553"
+       id="radialGradient558"
+       cx="82.4025040"
+       cy="82.8703995"
+       fx="82.4025040"
+       fy="82.8703995"
+       r="128.081253"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="pad" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     showgrid="true"
+     snaptogrid="false" />
+  <rect
+     style="font-size:12;fill:url(#radialGradient558);fill-rule:evenodd;stroke-width:1pt;fill-opacity:0.213873;"
+     id="rect557"
+     width="177.165344"
+     height="177.165375"
+     x="0.000011"
+     y="-0.175869"
+     ry="21.3285828" />
+  <rect
+     style="font-size:12;fill:url(#linearGradient556);fill-rule:evenodd;stroke-width:7.375;stroke:#000000;stroke-opacity:1;stroke-dasharray:none;"
+     id="rect552"
+     width="141.732300"
+     height="141.732269"
+     x="19.926666"
+     y="18.093208"
+     ry="16.5888977" />
+  <rect
+     style="font-size:12;fill:#010000;fill-rule:evenodd;stroke-width:1pt;fill-opacity:1;"
+     id="rect563"
+     width="108.959026"
+     height="14.762046"
+     x="28.618551"
+     y="119.574464"
+     ry="7.38102323"
+     transform="matrix(0.999999,-1.493206e-3,5.230137e-2,0.998631,0.000000,0.000000)" />
+</svg>

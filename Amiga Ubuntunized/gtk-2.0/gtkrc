@@ -1,0 +1,444 @@
+# Amiga Ubuntunized theme style
+# Aurora engine used
+#
+# BUGS: Evolution widgets looks ugly, ...
+#
+# Author: QkiZ
+# Theme website: www.qkiz.pl
+# Version: 0.5.5
+# Feel free to modify and share!
+
+# Wielkość ikon
+gtk-icon-sizes	= "gtk-button=24,24:gtk-menu=24,24:panel-button=24,24:panel-menu=24,24:gtk-large-toolbar=24,24"
+
+# Schematy kolorów
+gtk_color_scheme = "fg_color:#000000\nbg_color:#CFCFCF\nbase_color:#FFFFFF\ntext_color:#000000\nselected_bg_color:#6688BB\nselected_fg_color:#FFFFFF\ntooltip_bg_color:#6688BB\ntooltip_fg_color:#000\nbg_button:#D8D8D8"
+
+# Styl główny - na wszystko
+style "default"
+{
+	GtkButton      ::child-displacement-x = 1 # Przesunięcie napisu na przycisku w osi x po naciśnięciu
+	GtkButton      ::child-displacement-y = 1 # Przesunięcie napisu na przycisku w osi y po naciśnięciu
+	GtkButton      ::default-border       = { 0, 0, 0, 0 }
+	GtkCheckButton ::indicator-size       = 15 # Wielkość przycisków typu checkbox i radiobutton
+	GtkPaned       ::handle-size          = 6 # Odległość pomiędzy regulowanymi ręcznie polami wyboru (?)
+	GtkRange       ::trough-border        = 0 # Grubość ramki wokół slider'ów
+	GtkRange       ::slider-width         = 17 # Szerokość slider'a
+	GtkRange       ::stepper-size         = 17 # Wielkość przycisków do przesuwania slider'a
+	GtkRange       ::arrow-displacement-x = 1 # Przesunięcie strzałki na przycisku w osi x po naciśnięciu
+	GtkRange       ::arrow-displacement-y = 1 # Przesunięcie strzałki na przycisku w osi y po naciśnięciu
+	GtkScale       ::slider-length        = 25 # Długość slider'a w suwakach (do ustawiania wartości)
+	GtkScale       ::trough-side-details  = 0 # Głębokość osadzenia suwaka 
+	GtkScale       ::trough-border = 0 # Odległości miedzy sąsiadującymi suwakami
+	GtkScrollbar   ::min-slider-length    = 30 # Minimalna długość slider'a (?)
+	GtkScrollbar   ::has-secondary-backward-stepper = 1 # Włączenie drugiej strzałki zaraz obok pierwszej przy slider'ach listy
+	GtkMenuBar     ::internal-padding     = 0 # Odległość menu okna od krawędzi
+	GtkExpander    ::expander-size        = 13 # Wielkość expander'a (samej strzałki)
+	GtkToolbar     ::internal-padding     = 0 # Odległość przycisków na toolbar'ze od krawędzi
+	GtkTreeView    ::expander-size        = 10 # Wielkość expander'a (samej strzałki) na liście
+	GtkTreeView    ::vertical-separator   = 0 # Odległość pomiędzy rzędami na liście
+	GtkMenu        ::horizontal-padding   = 0 # Dodatkowa przestrzeń po lewej i prawej w menu (tym otwartym)
+	GtkMenu        ::vertical-padding     = 0 # Dodatkowa przestrzeń na górze i dole w menu (tym otwartym)
+	GtkMenuItem    ::arrow-scaling        = 0.5 # Wielkość strzałki kierującej do podmenu
+#	GtkMenuItem    ::selected-shadow-type = GTK_SHADOW_ETCHED_IN
+	GtkNotebook    ::tab-curvature = 3 # Zaokrąglenie tytułu karty
+	GtkNotebook    ::tab-overlap = 4 # Poziom zakrycia karty sąsiedniej przez aktywną
+	GtkScrolledWindow::scrollbar-spacing = 1 # Ramka wokół slider'a
+  GtkScrolledWindow::scrollbars-within-bevel = 1 # Włącza obramowanie wokół gadżetu listy ze sliderem
+	WnckTasklist   ::fade-overlay-rect = 0
+	WnckTasklist   ::fade-loop-time = 5.0 # 5 seconds
+	WnckTasklist   ::fade-opacity = 0.5 # final opacity
+
+
+# Szerokość niektórych gadżetów, np. separatorów
+#	xthickness = 1
+#	ythickness = 1
+
+# Definicje kolorów
+# Tło na wszystko
+	bg[NORMAL]		= "#B0B0B0"#@bg_color # poprawka do obwódki wokół paska postępu, ¡¡bug w silniku aurora!!
+	bg_pixmap[NORMAL]	= "Alloy-Dark.png"
+	bg[ACTIVE]		= @bg_button
+	bg[PRELIGHT]		= @bg_button
+	bg[SELECTED]		= @selected_bg_color
+	bg[INSENSITIVE]		= shade (0.9, @bg_color)
+
+	fg[NORMAL]		= @fg_color
+	fg[ACTIVE]		= "#000000"
+	fg[PRELIGHT]		= @fg_color
+	fg[SELECTED]		= @fg_color
+	fg[INSENSITIVE]		= shade (0.7, @bg_color)
+
+	base[NORMAL]		= @base_color
+	base[ACTIVE]		= @selected_bg_color
+	base[PRELIGHT]		= shade (1.2, @selected_fg_color)
+	base[SELECTED]		= shade (1.1, @selected_bg_color)
+	base[INSENSITIVE]	= shade (0.9, @bg_color)
+
+	text[NORMAL]		= @text_color
+	text[ACTIVE]		= @selected_fg_color
+	text[PRELIGHT]		= shade (0.3, @bg_button) # ¡¡bug - tu ustawia się kolor tekstu pod kursorem w combobox!!
+	text[SELECTED]		= @selected_fg_color
+	text[INSENSITIVE]	= shade (0.5, @bg_color)
+
+# Opcje silnika - ogólne
+	engine "aurora" 
+	{
+		menubarstyle    = 2 # 0 = flat, 1 = gradient, 2 = sunken
+		curvature       = 1.0
+		arrowsize       = 1.0 # controls combo_arrow circle size.  Diameter set by (11 + 2 * arrowsize)
+		old_arrowstyle  = FALSE #set to TRUE for original circled arrows
+		animation       = TRUE # FALSE = disabled, TRUE = enabled
+	}
+
+}
+# Poszczególne style:
+# Przyciski
+style "def-button"
+{
+	bg[NORMAL]	= shade (1.0, @bg_button) # normalny
+	bg[ACTIVE]	= shade (0.95, @bg_button) # wciśnięty
+	bg[PRELIGHT]	= shade (1.10, @bg_button) # pod kursorem
+	bg[SELECTED]	= "#247EB3" # podświetlenie aktywnego przycisku
+
+	engine "aurora" 
+	{
+		curvature = 1
+	}
+
+}
+
+# Ramki
+style "def-frame"
+{
+	engine "aurora" 
+	{
+		curvature = 3
+	}
+}
+
+# Toolbar
+style "def-toolbar"
+{
+	bg[NORMAL] = @bg_button
+}
+
+# Tło chwytaka toolbara
+style "def-handlebox"
+{
+	bg[NORMAL] = @bg_button
+}
+
+# Suwaki
+style "def-scale"
+{
+	bg[NORMAL] = @bg_button
+	bg[PRELIGHT] = shade (1.10, @bg_button) # pod kursorem
+	bg[SELECTED] = "#247EB3"#shade (1.0, @bg_button) # podświetlenie aktywnego suwaka
+}
+
+# Suwaki na liście
+style "def-range"
+{
+	bg[NORMAL] = shade (0.95, @bg_button)
+	bg[ACTIVE] = shade (0.8, @bg_button) # tło prowadnicy
+	bg[PRELIGHT] = shade (1.05, @bg_button) # pod kursorem
+
+	# Strzałki
+	text[NORMAL] = @text_color
+	text[PRELIGHT] = shade (0.4, @bg_button)
+	text[ACTIVE] = shade (2.0, @bg_button)
+	text[INSENSITIVE] = shade (0.85, @bg_button)
+	GtkRange       ::arrow-displacement-x = 0
+	GtkRange       ::arrow-displacement-y = 0
+}
+
+# Karty
+style "def-notebook"
+{
+	bg[NORMAL] = @bg_color # tło
+	fg[NORMAL] = @text_color # napis na aktywnej karcie
+	fg[ACTIVE] = shade (0.15, @bg_color) # napis na innych kartach
+	bg[ACTIVE] = shade (1.1, @bg_color) # tło pozostałych
+}
+
+# Regulacja pomiędzy polami wyboru
+style "def-paned"
+{
+	bg[PRELIGHT] = shade (1.1,@bg_color) # podświetlenie
+}
+
+# Panel
+style "def-panel"
+{
+	fg[NORMAL] = @text_color # napisy na zegarku i przełączniku użytkowników
+	bg[NORMAL] = shade (1.0, @bg_button) # tło nie wybranych okien na panelu, tło appletu przełącznika wirtualnych pulpitów, chwytak obszaru powiadamiania
+	bg[PRELIGHT] = shade (1.15, @bg_button) # podświetlenie nie wybranych okien na panelu, tło appletu przełącznika wirtualnych pulpitów, chwytak obszaru powiadamiania
+	fg[PRELIGHT] = shade (0.6, @selected_bg_color) # kolor tytułu okna w panelu wyboru okien
+	bg[SELECTED] = shade (1.2, @selected_bg_color) # podświetlenia w aplecie przełącznika wirtualnych pulpitów
+	text[PRELIGHT] = @selected_fg_color
+	text[SELECTED] = @selected_bg_color
+	text[NORMAL] = shade (1.1, @bg_color)
+	bg_pixmap[NORMAL] = "menubar.png" # tło pod panel
+}
+
+# Menu
+style "def-menu"
+{
+	bg[NORMAL] = shade (0.5, @bg_color) # obwódka wokół menu
+	text[PRELIGHT] 	 = shade (0.4, @bg_button) # kolor strzałek pod kursorem podczas przewijania menu
+	fg[PRELIGHT] 	 = @selected_fg_color
+	engine "aurora" 
+	{
+		curvature = 4 # zakrzywienie podświetlenia w pasku menu
+	}
+
+}
+
+# Elementy menu
+style "def-menu-item"
+{
+#	xthickness = 3
+#	ythickness = 3
+	text[PRELIGHT] 	 = shade (0.25, @bg_button) # kolor strzałek pod kursorem pod menu
+	fg[PRELIGHT] = @selected_fg_color # napis w menu pod kursorem 
+	engine "aurora" 
+	{
+		curvature = 4 # zakrzywienie podświetlenia w pasku menu
+	}
+}
+
+# Pasek menu
+style "def-menubar"
+
+{ 
+	bg[NORMAL] = shade (1.2, @bg_button) # tło paska menu
+}
+
+# Elementy menu
+style "def-menubar-item"
+{
+	fg[NORMAL] = @text_color #@selected_fg_color # kolor tekstu na pasku menu
+	text[PRELIGHT] = @selected_fg_color
+	fg[PRELIGHT] = @selected_fg_color # kolor naciśniętego tekstu w pasku menu
+	text[INSENSITIVE] = shade (0.85, @bg_button)
+	fg[INSENSITIVE] = shade (0.7, @bg_color)
+}
+
+# Lista (tabelka)
+style "def-tree"
+{
+#  font_name  = "Bold" # styl czcionki w nagłówku tabeli
+  GtkWidget::focus-padding = 0 # dodatkowa przestrzeń pomiędzy napisem a krawędzią w nagłówku tabeli
+
+	bg[NORMAL]   = @bg_color # tło nagłówka
+	bg[PRELIGHT] = shade (1.15,@bg_color)
+	bg[ACTIVE]   = mix(0.87,  shade (1.05,@bg_color), @selected_bg_color)
+
+}
+
+# ??
+style "def-tree-arrow"
+{
+	bg[NORMAL]   = @text_color
+	bg[PRELIGHT] = shade (0.4, @bg_button)
+}
+
+# Pasek postępu
+style "def-progressbar"
+{
+#xthickness = 0
+#ythickness = 0
+
+#font_name  = "Bold"
+	bg[NORMAL]   = shade (1.14,@bg_color) # kolor tła paska postępu
+	bg[SELECTED] = @selected_bg_color # kolor samego paska postępu
+	fg[PRELIGHT] = @text_color #@selected_fg_color # kolor napisy na pasku postępu
+#GtkProgressBar :: xspacing = 0
+#GtkProgressBar :: yspacing = 0
+
+}
+
+# Podpowiedzi
+style "def-tooltips"
+{
+	bg[NORMAL]    =  @tooltip_bg_color
+	fg[NORMAL]    =  @tooltip_fg_color
+	text[NORMAL]  =  @tooltip_fg_color
+}
+
+# Gadżet wprowadzania wartości numerycznej
+style "def-combo" = "def-button"
+{ 
+	xthickness = 2
+	ythickness = 2
+}
+
+# Przycisk z wyborem opcji (bez wprowadzania tekstu)
+style "def-combo-box"{
+#  xthickness = 3
+#  ythickness = 2
+
+}
+
+style "def-entry-combo-box"
+{
+#	bg[NORMAL]	= shade (1.0, @bg_button) # normalny
+#	bg[ACTIVE]	= shade (0.95, @bg_button) # 
+#	bg[PRELIGHT]	= shade (1.10, @bg_button) # pod kursorem
+#	bg[SELECTED]	= shade (0.9, @bg_button) # wciśnięty
+#	text[PRELIGHT] = @selected_fg_color
+}
+
+# Przyciski radio i check
+style "def-check-radio-buttons"
+{
+#  GtkWidget::interior-focus = 0
+#  GtkWidget::focus-padding = 1
+	text[SELECTED] = @selected_fg_color # kolor zaznaczenia opcji
+	text[INSENSITIVE] = shade (0.625,@bg_color) # to samo co wyżej tylko dla opcji nieaktywnej
+	base[PRELIGHT] = @selected_bg_color # tło gadżetu niewybranego, ale aktywnego pod kursorem
+	bg[INSENSITIVE]    = shade (1.10,@bg_color) #tło gadżetów nieaktywnych
+	bg[SELECTED] = @selected_bg_color # kolor tła zaznaczonego gadżetu i podświetlenia tekstu
+}
+
+# Kalendarz
+style "def-calendar"
+{
+#  xthickness = 2
+#  ythickness = 2
+	bg[NORMAL] = shade (0.92,@bg_color) # tło ramki wokół kalendarza, tło pod miesiącem i rokiem, dni pozostałych miesiący
+	bg[PRELIGHT] = shade (0.92,@bg_color) # kolor tła strzałek pod kursorem
+	bg[ACTIVE] = shade (0.85,@bg_color)
+	text[PRELIGHT] = @selected_fg_color # kolor strzałki
+}
+
+style "def-separator-menu-item"
+{
+#	GtkSeparatorMenuItem::horizontal-padding = 2
+#	# We are setting the desired height by using wide-separators
+#	# There is no other way to get the odd height ...
+#	GtkWidget::wide-separators = 1
+#	GtkWidget::separator-width = 1
+#	GtkWidget::separator-height = 5
+#	xthickness = 1
+#	ythickness = 0
+}
+
+
+
+
+# Przypisania styli do klas
+class "GtkWidget"	style "default"
+class "GtkFrame"        style "def-frame"
+class "GtkToolbar"      style "def-toolbar"
+class "GtkScale"        style "def-scale"
+class "GtkRange"        style "def-range"
+class "GtkPaned"        style "def-paned"
+class "GtkMenu"         style "def-menu"
+class "GtkMenuBar"      style "def-menubar"
+class "GtkProgressBar"  style "def-progressbar"
+class "GtkCalendar"     style "def-calendar"
+
+# poprawki od panelu
+widget "*PanelWidget*" 					style "def-panel"
+widget "*PanelApplet*" 					style "def-panel"
+widget "*fast-user-switch*"				style "def-panel" # workaround for Fast User Switch applet
+class "PanelApp*" 					style "def-panel"
+class "PanelToplevel*" 					style "def-panel"
+widget_class "*Mail*" 					style "def-panel"
+widget_class "*notif*" 					style "def-panel"
+widget_class "*Notif*" 					style "def-panel"
+
+widget "gtk-tooltip*"  style "def-tooltips"
+
+widget_class "*<GtkButton>"      style "def-button"
+widget_class "*<GtkHandleBox>"   style "def-handlebox"
+widget_class "*<GtkNotebook>"    style "def-notebook"
+widget_class "*<GtkNotebook>*<GtkEventBox>" style "def-notebook"
+widget_class "*<GtkNotebook>*<GtkDrawingArea>" style "def-notebook"
+widget_class "*<GtkNotebook>*<GtkLayout>" style "def-notebook"
+widget_class "*<GtkNotebook>*<GtkViewport>" style "def-notebook"
+widget_class "*<GtkNotebook>.<GtkLabel>*" style "def-notebook"
+widget_class "*<GtkMenuItem>*" style "def-menu-item"
+widget_class "*<GtkMenuBar>.<GtkMenuItem>*" style "def-menubar-item"
+widget_class "*<GtkTreeView>.<GtkButton>*" style "def-tree"
+widget_class "*<GtkCTree>.<GtkButton>*" 	style "def-tree"
+widget_class "*<GtkList>.<GtkButton>*" 	style "def-tree"
+widget_class "*<GtkCList>.<GtkButton>*" 	style "def-tree"
+widget_class "*<GtkTreeView>.<GtkButton>*<GtkArrow>" style "def-tree-arrow"
+widget_class "*<GtkCTree>.<GtkButton>*<GtkArrow>" 	style "def-tree-arrow"
+widget_class "*<GtkList>.<GtkButton>*<GtkArrow>" 	style "def-tree-arrow"
+widget_class "*<GtkCombo>*"    style "def-combo"
+widget_class "*<GtkSpinButton>*"    style "def-combo"
+widget_class "*<GtkComboBox>*<GtkButton>"    style "def-combo-box"
+widget_class "*<GtkComboBoxEntry>*" style "def-entry-combo-box"
+widget_class "*<GtkCheckButton>" style  "def-check-radio-buttons"
+widget_class "*<GtkSeparatorMenuItem>*" style "def-separator-menu-item"
+
+# Specyficzne poprawki
+widget_class "*.ETree.ECanvas" 	style "def-tree" #evolution
+widget_class "*.ETable.ECanvas" 	style "def-tree" #evolution
+
+style "panelbuttons" = "def-button"
+{
+  # as buttons are draw lower this helps center text
+  xthickness = 3
+  ythickness = 3
+}
+
+widget_class "*Panel*<GtkButton>*" style "panelbuttons"
+
+#nautilus search stripe and other specialties
+style "extra-view" = "default"{
+	bg[NORMAL] = shade(0.4,@bg_color)
+	fg[NORMAL] = @selected_fg_color
+}
+#nautilus search stripe
+widget "*.nautilus-extra-view-widget.*Button*.GtkLabel*" style:highest "def-button"
+widget "*.nautilus-extra-view-widget" style:highest "extra-view"
+widget "*.nautilus-extra-view-widget.*.GtkLabel*" style:highest "extra-view"
+
+# Poprawka do wyświetlania elementów z listy ComboBox (tak aby wyświetlały się jak w menu)
+style "combobox-text-color-workaround"
+{
+	text[NORMAL]      = @fg_color
+	text[PRELIGHT]    = @fg_color
+	text[ACTIVE]      = @fg_color
+	text[SELECTED]    = @selected_fg_color
+	text[INSENSITIVE] = shade (0.5, @bg_color)
+}
+widget_class "*.<GtkComboBox>.<GtkCellView>"		style "combobox-text-color-workaround"
+style "menuitem-text-is-fg-color-workaround"
+{
+	text[NORMAL]        = @fg_color
+	text[PRELIGHT]      = @selected_fg_color
+	text[ACTIVE]        = @fg_color
+	text[SELECTED]      = @selected_fg_color
+	text[INSENSITIVE]   = shade (0.5, @bg_color)
+}
+widget "*.gtk-combobox-popup-menu.*"   			style "menuitem-text-is-fg-color-workaround"
+
+# poprawek ciąg dalszy (??)
+style "fg-is-text-color-workaround"
+{
+	bg[SELECTED]    = mix(0.50, shade (1.05, @selected_bg_color), @tooltip_bg_color)
+	fg[NORMAL]      = @text_color
+	fg[PRELIGHT]    = @text_color
+	fg[ACTIVE]      = @selected_fg_color
+	fg[SELECTED]    = @selected_fg_color
+	fg[INSENSITIVE] = shade (0.7, @bg_color)
+}
+widget_class "*<GtkListItem>*" 				style "fg-is-text-color-workaround"
+
+widget_class "*<GtkCList>" 				style "fg-is-text-color-workaround"
+
+style "evo-new-button-workaround"
+{
+	engine "murrine"
+	{
+		toolbarstyle = 0
+	}
+}
+
+widget_class "EShellWindow.GtkVBox.BonoboDock.BonoboDockBand.BonoboDockItem*" style "evo-new-button-workaround"

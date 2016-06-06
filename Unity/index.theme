@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Unity
+Type=X-GNOME-Metatheme
+Comment=A smooth variation of the Clearlooks theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Unity
+MetacityTheme=Unity
+IconTheme=gnome-alternative

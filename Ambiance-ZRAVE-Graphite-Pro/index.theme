@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Ambiance-ZRAVE-Graphite-Pro
+Comment=Ubuntu Ambiance theme, In New Colors By RAVEfinity 14.04 Build
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Ambiance-ZRAVE-Graphite-Pro
+MetacityTheme=Ambiance-ZRAVE-Graphite-Pro
+IconTheme=ubuntu-mono-dark
+CursorTheme=DMZ-White
+ButtonLayout=close,minimize,maximize:

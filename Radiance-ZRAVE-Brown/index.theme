@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Radiance-ZRAVE-Brown
+Comment=Ubuntu Radiance theme, In New Colors By RAVEfinity 14.04 Build
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Radiance-ZRAVE-Brown
+MetacityTheme=Radiance-ZRAVE-Brown
+IconTheme=ubuntu-mono-light
+CursorTheme=DMZ-White
+ButtonLayout=close,minimize,maximize:

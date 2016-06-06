@@ -1,0 +1,16 @@
+# Spheres-and-Crystals metatheme
+# (c) 2002-2003  Christian Schaller <Uraeus@gnome.org>
+# (c) 2002-2003  Vadim Plessky <vplessky@users.sourceforge.net>
+# (c) 2002-2003  oprime <http://themes.freshmeat.net/~oprime/>
+# (c) 2002-2003  Everaldo Coelho <http://www.everaldo.com>
+# (c) 2002-2003  Spencer Wysinger <spencer@wysinger.com>
+[Desktop Entry]
+Name=SphereCrystal
+Type=X-GNOME-Metatheme
+Comment=Spheres and Crystals SVG theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=SphereCrystal
+MetacityTheme=SphereCrystal
+IconTheme=SphereCrystal

@@ -1,0 +1,79 @@
+# GNOME,XFCE,LXDE & GTK Desktop(S) PANEL SPECIFIC SETTINGS *SPECIFIC SETTINGS TO ENABLE PROPER FUNCTION ON XFCE/LXDE*
+# XFCE & LXDE Specific Patches By Benoit T And RAVEfinity.
+
+style "theme-panel" {
+	xthickness	= 0
+	ythickness	= 0
+
+	GtkWidget::focus-line-width = 1
+
+	engine "murrine" {
+		lightborder_shade	= 0.5
+		gradient_shades		= {1.15, 1.0, 1.0, 0.85}
+	}
+}
+
+style "panel-background-image" = "theme-panel" {
+
+	bg_pixmap[NORMAL]	= "img/panel.png"
+
+	engine "murrine" {
+		textstyle = 2
+	}
+}
+
+style "panel_task_button" = "theme-panel" {
+	xthickness = 3
+	ythickness = 3
+
+	bg[SELECTED] = shade (0.99, @bg_color)
+	bg[PRELIGHT] = shade (0.87, @bg_color)
+	bg[ACTIVE] = shade (0.83, @bg_color)
+
+	engine "murrine"
+	{
+		roundness   = 2
+		rgba = TRUE
+	}
+}
+
+
+widget "*PanelWidget*"			style "theme-panel"
+widget "*PanelApplet*"			style "theme-panel"
+widget "*fast-user-switch*"		style "theme-panel"
+widget "*CPUFreq*Applet*"		style "theme-panel"
+widget "*indicator-applet*"		style "theme-panel"
+class "PanelApp*"	                style "theme-panel"
+class "PanelToplevel*"			style "panel-background-image"
+widget_class "*PanelToplevel*"	        style "panel-background-image"
+widget_class "*notif*"			style "theme-panel"
+widget_class "*Notif*"			style "theme-panel"
+widget_class "*Tray*"			style "theme-panel" 
+widget_class "*tray*"			style "theme-panel"
+widget_class "*computertemp*"	        style "theme-panel"
+widget_class "*Applet*"			style "theme-panel"
+widget_class "*applet*"			style "theme-panel"
+
+# Fixes for tooltip text in some apps.
+widget_class "*Notif*Beagle*"	style "theme-panel"
+widget_class "*Notif*Brasero*"	style "theme-panel"
+
+# XFCE panel theming.
+widget "*Xfce*Panel*"				style "panel-background-image"
+class "*Xfce*Panel*"				style "panel-background-image"
+widget "*task*"				        style "panel_task_button"
+widget "*.tasklist-button"			style "panel_task_button"
+widget "*PanelApplet*TaskTitle*"	        style "panel_task_button"
+
+# lxpanel and fbpanel
+widget "*.tclock.*"			style "theme-panel"
+widget "*.taskbar.*"		        style "theme-panel"
+widget_class "*GtkBgbox*"	        style "theme-panel"
+
+# MintMenu applet
+widget "mintmenu*"			style "menu"
+
+# Fix gtk-entries in the panel
+class "GtkEntry"		    			style "comboboxentry"
+class "*SexyIconEntry*"					style:highest "comboboxentry"	# fixes dict-plugin
+widget "*xfce4-verve-plugin*GtkEntry"	                style:highest "comboboxentry"	# fixes verve-plugin

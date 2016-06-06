@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Radiance-XFCE-LXDE-Blue-Spring
+Comment=Ubuntu Radiance theme, In New Colors By RAVEfinity 14.04 Build
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Radiance-XFCE-LXDE-Blue-Spring
+MetacityTheme=Radiance-XFCE-LXDE-Blue-Spring
+IconTheme=ubuntu-mono-light
+CursorTheme=DMZ-White
+ButtonLayout=close,minimize,maximize:

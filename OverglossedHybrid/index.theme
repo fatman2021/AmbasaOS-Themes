@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Overglossed
+Type=X-GNOME-Metatheme
+Comment=Dark overglossy theme for gnome, million thanks to taner for making the exceptionally beatiful wallpaper!
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Overglossed
+MetacityTheme=Overglossed
+IconTheme=black-white_2-Style
+GtkColorScheme=fg_color:#d7d7d7d7d7d7,bg_color:#242424242424,text_color:#000000000000,base_color:#d7d7d7d7d7d7,selected_fg_color:#ffffffffffff,selected_bg_color:#1717b2b2ffff,tooltip_fg_color:#3d3d3d3d3d3d,tooltip_bg_color:#d7d7d7d7d7d7
+CursorTheme=default
+CursorSize=24
+BackgroundImage=/usr/share/themes/Overglossed/overglossed.jpg

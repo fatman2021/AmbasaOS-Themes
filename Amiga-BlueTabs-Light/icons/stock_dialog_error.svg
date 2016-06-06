@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.0"
+   x="0.0000000"
+   y="0.0000000"
+   width="60.000000"
+   height="60.000000"
+   id="svg900">
+  <defs
+     id="defs902">
+    <linearGradient
+       id="linearGradient942">
+      <stop
+         style="stop-color:#000000;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop943" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0.0000000;"
+         offset="1.0000000"
+         id="stop944" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient931">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop932" />
+      <stop
+         style="stop-color:#e3e3e8;stop-opacity:1.0000000;"
+         offset="1.0000000"
+         id="stop933" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient917">
+      <stop
+         style="stop-color:#d10000;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop918" />
+      <stop
+         style="stop-color:#a00000;stop-opacity:1.0000000;"
+         offset="1.0000000"
+         id="stop919" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient911">
+      <stop
+         style="stop-color:#8b1e00;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop912" />
+      <stop
+         style="stop-color:#210000;stop-opacity:1.0000000;"
+         offset="1.0000000"
+         id="stop913" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient914"
+       xlink:href="#linearGradient911" />
+    <radialGradient
+       cx="0.32093024"
+       cy="0.33177570"
+       r="0.61402458"
+       fx="0.30930233"
+       fy="0.32242990"
+       id="radialGradient916"
+       xlink:href="#linearGradient917" />
+    <linearGradient
+       x1="0.092063494"
+       y1="0.048387095"
+       x2="0.98730159"
+       y2="0.97580647"
+       id="linearGradient930"
+       xlink:href="#linearGradient931" />
+    <linearGradient
+       x1="0.98095238"
+       y1="0.91869920"
+       x2="0.028571429"
+       y2="0.024390243"
+       id="linearGradient934"
+       xlink:href="#linearGradient931" />
+    <radialGradient
+       cx="0.50476193"
+       cy="0.51041669"
+       r="0.41600347"
+       fx="0.62222224"
+       fy="0.61567986"
+       id="radialGradient941"
+       xlink:href="#linearGradient942" />
+  </defs>
+  <path
+     d="M 0.0000000,60.000000 L 60.307087,60.000000 C 60.307087,60.000000 60.307087,23.291339 60.307087,23.291339 C 60.307087,23.291339 2.6999196e-23,23.291338 0.0000000,23.291339 L 0.0000000,60.000000 z "
+     style="fill:url(#radialGradient941);fill-opacity:0.75000000;fill-rule:evenodd;stroke-width:1.0000000pt;"
+     id="path940" />
+  <path
+     d="M 47.196850 29.846457 A 22.287401 22.287401 0 1 0 2.6220474,29.846457 A 22.287401 22.287401 0 1 0 47.196850 29.846457 z"
+     transform="translate(0.750000,-0.749999)"
+     style="fill:url(#radialGradient916);fill-opacity:0.75000000;fill-rule:evenodd;stroke:url(#linearGradient914);stroke-width:1.5000000;"
+     id="path906" />
+  <path
+     d="M 11.569269,33.347096 L 39.546925,33.347096 L 39.546925,25.669717 L 11.569269,25.669717 L 11.569269,33.347096 z "
+     style="fill:url(#linearGradient930);fill-rule:evenodd;stroke:url(#linearGradient934);stroke-width:1.3750000;"
+     id="path929" />
+  <path
+     d="M 31.248351,9.1000213 C 20.115209,6.2892102 9.2596897,12.002357 5.7297300,23.567568"
+     style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.87500000;stroke-linecap:round;stroke-opacity:0.64625853;"
+     id="path935" />
+  <path
+     d="M 28.648648,49.837838 C 40.704460,47.946532 44.772556,38.346781 46.054054,34.054054"
+     style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:1.5000000;stroke-linecap:round;stroke-opacity:0.28571430;"
+     id="path936" />
+</svg>

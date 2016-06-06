@@ -1,0 +1,23 @@
+Name: Greenbird
+Summary: Desktop Suite for Xfce.
+URL: https://github.com/manjaro/artwork-greenbird
+
+Copyright 2013-2015 Manjaro Artwork Team
+Copyright 2009–2012 Simon Steinbeiß and Satyajit Sahoo
+Greenbird is dual-licensed as GPLv2 or later and CC-BY-SA 3.0 or later.
+
+Desktop Suite for Xfce.
+Greenbird is the default theme in Manjaro XFCE.
+
+The Greenbird desktop suite includes:
+– GTK2 theme
+– GTK3 theme
+– Xfwm4 themes (normal and compact)
+– xfce-notifyd theme
+– Metacity theme
+– Mutter theme
+– Unity support
+
+Dependencies of gtk3.2-branch (for Gtk3.2)
+– gtk2-engines-murrine (v0.90)
+- gtk3-engines-unico (v1.0.1)

@@ -1,0 +1,95 @@
+Changelog:
+0.01 fixed a bug where the "launcher editor" used panel style buttons and fixed a shutdown dialog problem. (thanks to user zinden for his help)
+
+0.1 after lots of hours of working on a fix for the volume icon problem without breaking the shutdown-dialog problem I think I finally got it right!!!!
+(please let me know if I broke something else :D)
+I also fixed a bug that made the panel tasklist buttons have same prelight effect ( no matter if active or not) , they have differrent now....
+Also made the panel 34px.
+
+0.2 Fixed the volume background that I destroyed with my last update,fixed so that pressed / active toolbarbuttons and buttons have different prelight effect, Fixed the menues better. Fixed so that the applications places system menu uses panel style , fixed the openoffice font problem :)
+
+0.3 Fixed the range problem, added some of the fixes provided by merlwiz79 , thanks for them!! Couldn't add all since that would have destroyed the launcher editor and some other things, but it should work on Xfce now :) ,if not, let me know. Added some kind of separator between file menu and titlebar (so that user easier knows where to click when wants to move window)
+
+0.4 Finally got around to make a try at the min , max , close buttons... Tell me what you think :) (second screenshot shows them)
+
+0.4.5 fixed the menues so that they are equally big and made new min, max, close buttons (didn't like the previous ones I made) close now has red glow.
+Plus I made some general beautification.
+
+0.4.6 Improved the overall look of the panel, I am happier with it now :)
+
+0.4.7 Made new scrollbars and menu icons
+are now size 16 again. (feedback on new scrollbars pls :)
+
+0.5 Improved the new scrollbars (lighter now) , Improved look of toolbar , better prelight effect on panel buttons, new check and radio buttons (different ones
+in menues ) other changes.
+
+0.5.1 fixed the default-button problem,
+made a new menu icon (now without any logo) improved panel style (a little :D )
+
+0.8 Fixed a lot of bugs, improved scrollbar sliders,
+wrote a index file, Added taners amazing
+slickness wallpaper!!!!
+
+0.8.1 Made new scrollbars.... again...now final, hope you like black :)
+
+0.9 Fixed a bug that showd white text on white background,
+improved look of buttons, made the range have
+some sort of focus, Removed the shadow on
+disabled text.
+
+1. Improved a lot of stuff, fixed a lot of bugs.
+Should now be fairly bugfree and I'm pretty
+happy with the look of it now :)
+
+1.1 fixed a bug that showd panel style on
+toolbar in archive manager, improved buttons
+style.
+
+1.2 New entries , changed tabs a little,
+better contrasts on widgets.
+
+1.4 New range, progressbar, improved some
+other things.
+
+1.5 Made new tabs, now better ones, thanks
+to code933k for suggesting I make them this way, Also fixed cpu frequency scaling
+monitor , thanks to twrock for that.
+Applyed the fix provided by microcz that
+fixes the white area on gimp menues!
+
+1.5.1 Added a firefox fix made by twrock
+
+1.6 Fixed the gimp bug, Made new range sliders,
+improved the arrows a little
+
+1.7 Fixed the cropped button bug, Fixed the
+fireftp user account manager bug, changed form color.
+"improved" the menues a little, fixed a arrow bug
+(thanks to twrock)
+
+1.8 Menues are back to black, Improved look of several 
+widgets, hardcoded some toolbarbuttons, fixed some bugs.
+
+1.9 Made a completely new panel, fixed the tomboy bug,
+fixed the bug about some tray icons being shown a pixel
+too low.
+
+2.0 Fixed the arrows, fixed most bugs with applets (panel related)
+Polished the panel (now final, feedback appreciated :) 
+
+2.1 Included the new Taner wallpaper!!!! (thanks a million for that!)
+fixed a mail bug, improved look of some widgets.
+
+2.2 Fixed panel applet issues, F-spot menu issue,gnome-control-center.
+Improved : sharper look on buttons and tabs (and some other widgets).
+forms (windows) are now a little darker (very little change)
+panelbuttons look a little better now.
+
+2.2.1 Fixed my previous F**kup. (at least I hope so)
+(it's been tested on ubunut 7.10). If anyone still
+has any kind of problem please be so kind and let me
+know!
+
+Calimero - 2.2.2
+Fixed the color of the text in firefox/thunderbird menus
+Fixed menu background in Qt

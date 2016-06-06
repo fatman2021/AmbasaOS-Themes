@@ -1,0 +1,963 @@
+# Amiga Newlook
+# (c)2012 Daniel c. Würl
+
+gtk-icon-sizes = "panel-menu=16,16:panel=16,16:gtk-button=16,16:gtk-large-toolbar=16,16"
+gtk-button-images = 1
+gtk-menu-images = 1
+gtk-panel-images = 0
+
+style "theme-default"
+{
+ GtkButton      ::default_border    = { 0, 0, 0, 0 }
+ GtkRange       ::trough_border     = 0
+ GtkPaned       ::handle_size       = 6
+ GtkRange       ::slider_width      = 16
+ GtkRange       ::stepper_size      = 16
+ 
+ GtkScrollbar   ::min_slider_length = 30
+ GtkCheckButton ::indicator_size    = 18
+ GtkRadioButton ::indicator_size    = 18
+ GtkMenuBar     ::internal-padding  = 0
+ GtkTreeView    ::expander_size     = 14
+ GtkExpander    ::expander_size     = 16
+ GtkScale       ::slider-length     = 27
+ 
+ GtkNotebook::tab-overlap			= -1
+ 
+ GtkProgressBar::min-horizontal-bar-height		= 16
+ GtkProgressBar::min-horizontal-bar-width		= 16
+ GtkProgressBar::min-vertical-bar-height		= 16
+ GtkProgressBar::min-vertical-bar-width			= 16
+ 
+ GtkScrollbar::min_slider_length				= 50
+ GtkScrollbar::has-forward-stepper				= 1
+ GtkScrollbar::has-backward-stepper				= 0
+ GtkScrollbar::has-secondary-forward-stepper	= 0
+ GtkScrollbar::has-secondary-backward-stepper	= 1
+ 
+ ThunarLocationButtons::spacing					= 0
+ 
+ #GtkToolbar::button-relief			= GTK_RELIEF_NORMAL
+  
+ xthickness = 1
+ ythickness = 1
+
+ fg[NORMAL] = "#353535"
+ fg[ACTIVE] = "#353535"
+ fg[PRELIGHT] = "#000000"
+ fg[SELECTED] = "#000000"
+ fg[INSENSITIVE] = "#9b9b9b"
+
+ bg[NORMAL] = "#e6e6e6"
+ bg[ACTIVE] = "#eeeeee"
+ bg[PRELIGHT] = "#f0f0f0"
+ bg[SELECTED] = "#c6c6c6"
+ bg[INSENSITIVE] = "#e0e0e0"
+
+ base[NORMAL] = "#d4d4d4"
+ base[ACTIVE] = "#a1b7d4"
+ base[PRELIGHT] = "#ffffff"
+ base[SELECTED]	= "#6e9ad5"
+ base[INSENSITIVE] = "#e6e6e6"
+
+ text[NORMAL] = "#000000"
+ text[ACTIVE] = "#505050"
+ text[PRELIGHT] = "#353535"
+ text[SELECTED] = "#000000"
+ text[INSENSITIVE] = "#9b9b9b"
+
+ engine "murrine" 
+ {
+  contrast = 1.0
+  gradient_shades = { 1.1, 1.0, 1.0, 1.1 }
+  menubarstyle = 2
+  menubaritemstyle = 1
+  listviewheaderstyle = 2
+  animation = TRUE
+  highlight_shade = 1.0
+  roundness = 1
+  menuitemstyle = 0
+  menustyle = 0
+  listviewstyle = 1
+  scrollbarstyle = 1
+  arrowstyle = 1
+  separatorstyle = 1
+  expanderstyle =2	
+  handlestyle = 1
+  sliderstyle = 1
+  spinbuttonstyle = 1
+  focusstyle = 0
+ }
+}
+
+style "theme-wide" = "theme-default"
+{
+ xthickness = 2
+ ythickness = 2
+ 
+ engine "murrine" 
+ {
+  highlight_shade = 1.0
+  gradient_shades = { 1.0, 1.0, 1.0, 1.0 }
+ }
+}
+
+style "theme-wider" = "theme-default"
+{
+ xthickness = 3
+ ythickness = 3
+ 
+ engine "murrine" 
+ {
+  highlight_shade = 1.0
+  gradient_shades = { 1.0, 1.0, 1.0, 1.0 }
+ }
+}
+
+style "theme-button" = "theme-wider"
+{
+ bg[NORMAL] = "#cccfcd"
+ bg[ACTIVE] = "#a1a1a1"
+ bg[PRELIGHT] = "#6e9ad5"
+ bg[SELECTED] = "#c6c6c6"
+ bg[INSENSITIVE] = "#e0e0e0"
+ 
+ xthickness = 2
+ ythickness = 0
+ 
+ engine "murrine" 
+ {
+  highlight_shade = 1.00
+  gradient_shades = { 0.8, 1.0, 1.0, 1.05 }
+  lightborder_shade = 2.3
+  contrast = 1.5
+  glazestyle = 2
+  glowstyle = 4
+  roundness = 1
+ }
+}
+
+style "theme-breadcrumbs" = "theme-button"
+{
+ xthickness = 0
+ ythickness = 0
+ 
+ engine "murrine" 
+ {
+  gradient_shades = { 1.15, 1.0, 1.1, 0.8 }
+  lightborder_shade = 1.5
+  contrast = 1.0
+  roundness = 0
+ }
+}
+
+style "theme-scale" = "theme-button"
+{
+ bg[NORMAL] = "#d8d8d8"
+ bg[ACTIVE] = "#6060a5"
+ 
+ engine "murrine" 
+  {
+  highlight_shade = 1.00
+  gradient_shades = { 0.8, 1.0, 1.0, 1.05 }
+  lightborder_shade = 2.3
+  contrast = 1.5
+  glazestyle = 2
+  glowstyle = 4
+  roundness = 1
+ }
+}
+
+style "theme-radiobutton"	= "theme-default"
+{
+
+  engine "pixmap" 
+    {
+ image 
+	{
+            function        		= OPTION
+            recolorable    		= TRUE
+            state 				= NORMAL
+            shadow          		= OUT
+            overlay_file    		= "Check-Radio/radio-normal-off.png"
+            overlay_stretch 	= FALSE
+    }
+ image 
+	{
+            function        		= OPTION
+            recolorable     		= TRUE
+            state 				= PRELIGHT
+            shadow          		= OUT
+            overlay_file    		= "Check-Radio/radio-prelight-off.png"
+            overlay_stretch 	= FALSE
+        }
+ image 
+	{
+            function        		= OPTION
+            recolorable     		= TRUE
+            state 				= ACTIVE
+            shadow          		= OUT
+            overlay_file    		= "Check-Radio/radio-active-off.png"
+            overlay_stretch 	= FALSE
+        }
+ image 
+	{
+            function        		= OPTION
+            recolorable     		= TRUE
+            state 				= INSENSITIVE
+            shadow         		= OUT
+            overlay_file    		= "Check-Radio/radio-insensitive-off.png"
+            overlay_stretch 	= FALSE
+        }
+ image 
+	{
+            function        		= OPTION
+            recolorable     		= TRUE
+	    	  state 				= NORMAL
+            shadow          		= IN
+            overlay_file    		= "Check-Radio/radio-normal-on.png"
+            overlay_stretch 	= FALSE
+        }
+  image 
+	{
+            function        		= OPTION
+            recolorable     		= TRUE
+	    	  state 				= PRELIGHT
+            shadow          		= IN
+            overlay_file    		= "Check-Radio/radio-prelight-on.png"
+            overlay_stretch 	= FALSE
+        }
+ image 
+	{
+            function        		= OPTION
+            recolorable     		= TRUE
+	    	  state 				= ACTIVE
+            shadow          		= IN
+            overlay_file    		= "Check-Radio/radio-active-on.png"
+            overlay_stretch 	= FALSE
+        }
+ image 
+	{
+            function        		= OPTION
+            recolorable     		= TRUE
+	   	  state 				= INSENSITIVE
+            shadow          		= IN
+            overlay_file    		= "Check-Radio/radio-insensitive-on.png"
+            overlay_stretch 	= FALSE
+        }
+    }
+}
+
+
+style "theme-checkbutton"	= "theme-default"
+{
+    bg[INSENSITIVE]   = "#eeeeec"
+    bg[NORMAL]        = "#eeeeec"
+    bg[PRELIGHT]      = "#eeeeec"
+    
+  	engine "pixmap" 
+    {
+ image 
+	{
+        function        	= CHECK
+        recolorable     	= TRUE
+        state 				= NORMAL
+        shadow          	= OUT
+        overlay_file    	= "Check-Radio/check-normal-off.png"
+        overlay_stretch 	= FALSE
+    }
+ image 
+	{
+        function        	= CHECK
+        recolorable     	= TRUE
+        state 				= PRELIGHT
+        shadow          	= OUT
+        overlay_file    	= "Check-Radio/check-prelight-off.png"
+        overlay_stretch 	= FALSE
+    }
+ image 
+	{
+        function        	= CHECK
+        recolorable     	= TRUE
+        state 				= ACTIVE
+        shadow          	= OUT
+        overlay_file    	= "Check-Radio/check-active-off.png"
+        overlay_stretch 	= FALSE
+    }
+ image 
+	{
+        function        	= CHECK
+        recolorable     	= TRUE
+        state 				= INSENSITIVE
+        shadow          	= OUT
+        overlay_file    	= "Check-Radio/check-insensitive-off.png"
+        overlay_stretch 	= FALSE
+    }
+ image 
+	{
+        function        	= CHECK
+        recolorable     	= TRUE
+	   	state 				= NORMAL
+        shadow          	= IN
+        overlay_file    	= "Check-Radio/check-normal-on.png"
+        overlay_stretch 	= FALSE
+    }
+  image 
+	{
+        function        	= CHECK
+        recolorable     	= TRUE
+	    state 				= PRELIGHT
+        shadow          	= IN
+        overlay_file    	= "Check-Radio/check-prelight-on.png"
+        overlay_stretch 	= FALSE
+    }
+ image 
+	{
+        function        	= CHECK
+        recolorable     	= TRUE
+	   	state 				= ACTIVE
+        shadow          	= IN
+        overlay_file    	= "Check-Radio/check-active-on.png"
+        overlay_stretch 	= FALSE
+    }
+ image 
+    {
+    	function        	= CHECK
+    	recolorable     	= TRUE
+       	state 				= INSENSITIVE
+       	shadow          	= IN
+       	overlay_file   		= "Check-Radio/check-insensitive-on.png"
+       	overlay_stretch 	= FALSE
+    }
+    
+  }
+}
+
+style "theme-scrollbar" = "default"
+{
+  engine "pixmap" 
+  {
+    image 
+    {
+      function			= BOX
+      recolorable		= TRUE
+      detail			= "trough"
+      file				= "Scrollbars/trough-scrollbar-horiz.png"
+      border			= { 2, 36, 2, 2 }
+      stretch			= TRUE
+      orientation		= HORIZONTAL
+    }
+    image 
+    {
+      function			= BOX
+      recolorable		= TRUE
+      detail			= "trough"
+      file				= "Scrollbars/trough-scrollbar-vert.png"
+      border			= { 2, 2, 3, 36 }
+      stretch			= TRUE
+      orientation		= VERTICAL
+    }
+	image 
+    {
+      function				= SLIDER
+      recolorable			= TRUE
+      state           		= NORMAL
+      file					= "Scrollbars/slider-horiz.png" 
+      border				= { 2, 3, 2, 2 }
+      stretch				= TRUE
+      overlay_file			= "Scrollbars/gripper-horiz.png"
+      overlay_stretch		= FALSE
+      orientation			= HORIZONTAL
+    }
+  image 
+    {
+      function				= SLIDER
+      recolorable			= TRUE
+      state           		= ACTIVE
+      shadow				= IN
+      file					= "Scrollbars/slider-horiz.png" 
+      border				= { 2, 3, 2, 2 }
+      stretch				= TRUE
+      overlay_file			= "Scrollbars/gripper-horiz.png"
+      overlay_stretch		= FALSE
+      orientation			= HORIZONTAL
+
+    }
+    image 
+    {
+      function				= SLIDER
+      recolorable			= TRUE
+      state           		= PRELIGHT
+      file					= "Scrollbars/slider-horiz-prelight.png" 
+      border				= { 2, 3, 2, 2 }
+      stretch				= TRUE
+      overlay_file			= "Scrollbars/gripper-horiz.png"
+      overlay_stretch		= FALSE
+      orientation			= HORIZONTAL
+
+    }
+    image 
+    {
+      function				= SLIDER
+      recolorable			= TRUE
+      state           		= INSENSITIVE
+      file					= "Scrollbars/slider-horiz-insens.png"
+      border				= { 2, 3, 2, 2 }
+      stretch				= TRUE
+      overlay_file			= "Scrollbars/gripper-horiz.png"
+      overlay_stretch		= FALSE
+      orientation			= HORIZONTAL
+
+    }
+	image 
+    {
+      function				= SLIDER
+      recolorable			= TRUE
+      state           		= NORMAL
+      file					= "Scrollbars/slider-vert.png" 
+      border				= { 2, 2, 2, 3 }
+      stretch				= TRUE
+      overlay_file			= "Scrollbars/gripper-vert.png"
+      overlay_stretch		= FALSE
+      orientation			= VERTICAL
+
+    }
+   image 
+    {
+      function				= SLIDER
+      recolorable			= TRUE
+      state           		= ACTIVE
+      shadow				= IN
+      file					= "Scrollbars/slider-vert.png" 
+      border				= { 2, 2, 2, 3 }
+      stretch				= TRUE
+      overlay_file			= "Scrollbars/gripper-vert.png"
+      overlay_stretch		= FALSE
+      orientation			= VERTICAL
+
+    }
+    image 
+    {
+      function				= SLIDER
+      recolorable			= TRUE
+      state           		= PRELIGHT
+      file					= "Scrollbars/slider-vert-prelight.png" 
+      border				= { 2, 2, 2, 3 }
+      stretch				= TRUE
+      overlay_file			= "Scrollbars/gripper-vert.png"
+      overlay_stretch		= FALSE
+      orientation			= VERTICAL
+
+    }
+    image 
+    {
+      function				= SLIDER
+      recolorable			= TRUE
+      state           		= INSENSITIVE
+      file					= "Scrollbars/slider-vert-insens.png"
+      border				= { 2, 2, 2, 3 }
+      stretch				= TRUE
+      overlay_file			= "Scrollbars/gripper-vert.png"
+      overlay_stretch		= FALSE
+      orientation			= VERTICAL
+
+    }
+	image 
+    {
+      function				= STEPPER
+      recolorable			= TRUE
+      state					= NORMAL
+      file					= "Scrollbars/stepper-up.png"
+      stretch				= TRUE
+      arrow_direction	= UP
+    }
+ image 
+    {
+      function				= STEPPER
+      recolorable			= TRUE
+      state					= PRELIGHT
+      file					= "Scrollbars/stepper-up-prelight.png"
+      stretch				= TRUE
+      arrow_direction	= UP
+    }
+ image 
+    {
+      function				= STEPPER
+      recolorable			= TRUE
+      state					= ACTIVE
+      file					= "Scrollbars/stepper-up-pressed.png"
+      stretch				= TRUE
+      arrow_direction	= UP
+    }
+ image 
+    {
+      function				= STEPPER
+      recolorable			= TRUE
+      state					= INSENSITIVE
+      file					= "Scrollbars/stepper-up-insens.png"
+      stretch				= TRUE
+      arrow_direction	= UP
+    }
+	image 
+    {
+      function				= STEPPER
+      recolorable			= TRUE
+      state					= NORMAL
+      file					= "Scrollbars/stepper-down.png"
+      stretch				= TRUE
+      arrow_direction	= DOWN
+    }
+ image 
+    {
+      function				= STEPPER
+      recolorable			= TRUE
+      state					= PRELIGHT
+      file					= "Scrollbars/stepper-down-prelight.png"
+      stretch				= TRUE
+      arrow_direction	= DOWN
+    }
+ image 
+    {
+      function				= STEPPER
+      recolorable			= TRUE
+      state					= ACTIVE
+      file					= "Scrollbars/stepper-down-pressed.png"
+      stretch				= TRUE
+      arrow_direction	= DOWN
+    }
+ image 
+    {
+      function				= STEPPER
+      recolorable			= TRUE
+      state					= INSENSITIVE
+      file					= "Scrollbars/stepper-down-insens.png"
+      stretch				= TRUE
+      arrow_direction	= DOWN
+    }
+	image 
+    {
+      function				= STEPPER
+      recolorable			= TRUE
+      state					= NORMAL
+      file					= "Scrollbars/stepper-right.png"
+      stretch				= TRUE
+      arrow_direction	= RIGHT
+    }
+ image 
+    {
+      function				= STEPPER
+      recolorable			= TRUE
+      state					= PRELIGHT
+      file					= "Scrollbars/stepper-right-prelight.png"
+      stretch				= TRUE
+      arrow_direction	= RIGHT
+    }
+ image 
+    {
+      function				= STEPPER
+      recolorable			= TRUE
+      state					= ACTIVE
+      file					= "Scrollbars/stepper-right-pressed.png"
+      stretch				= TRUE
+      arrow_direction	= RIGHT
+    }
+ image 
+    {
+      function				= STEPPER
+      recolorable			= TRUE
+      state					= INSENSITIVE
+      file					= "Scrollbars/stepper-right-insens.png"
+      stretch				= TRUE
+      arrow_direction	= RIGHT
+    }
+	image 
+    {
+      function				= STEPPER
+      recolorable			= TRUE
+      state					= NORMAL
+      file					= "Scrollbars/stepper-left.png"
+      stretch				= TRUE
+      arrow_direction	= LEFT
+    }
+  image 
+    {
+      function				= STEPPER
+      recolorable			= TRUE
+      state					= PRELIGHT
+      file					= "Scrollbars/stepper-left-prelight.png"
+      stretch				= TRUE
+      arrow_direction	= LEFT
+    }
+  image 
+    {
+      function				= STEPPER
+      recolorable			= TRUE
+      state					= ACTIVE
+      file					= "Scrollbars/stepper-left-pressed.png"
+      stretch				= TRUE
+      arrow_direction	= LEFT
+    }
+  image 
+    {
+      function				= STEPPER
+      recolorable			= TRUE
+      state					= INSENSITIVE
+      file					= "Scrollbars/stepper-left-insens.png"
+      stretch				= TRUE
+      arrow_direction	= LEFT
+    }
+  }
+}
+
+style "theme-range" = "theme-default"
+{
+ xthickness = 3
+ ythickness = 3
+}
+
+style "theme-notebook"		= "theme-default"
+{
+
+  xthickness            			= 2
+  ythickness            			= 2
+  engine "pixmap" 
+    {
+    image 
+      {
+     function			= EXTENSION
+	recolorable		= TRUE
+	state				= ACTIVE
+	file					= "Tabs/tab-bottom.png"
+	border			= { 4,4,4,4}
+	stretch			= TRUE
+	gap_side			= TOP
+      }
+    image 
+      {
+     function			= EXTENSION
+	recolorable		= TRUE
+	state				= ACTIVE
+	file					= "Tabs/tab-top.png"
+	border			= {  7,7,7,0}
+	stretch			= TRUE
+	gap_side			= BOTTOM
+      }
+    image 
+      {
+     function			= EXTENSION
+	recolorable		= TRUE
+	state				= ACTIVE
+	file					= "Tabs/tab-left.png"
+	border			= {  4,4,4,4}
+	stretch			= TRUE
+	gap_side			= RIGHT
+      }
+    image 
+      {
+     function			= EXTENSION
+	recolorable		= TRUE
+	state				= ACTIVE
+	file					= "Tabs/tab-right.png"
+	border			= { 4,4,4,4}
+	stretch			= TRUE
+	gap_side			= LEFT
+      }	
+    image 
+      {
+     function			= EXTENSION
+	recolorable		= TRUE
+	file					= "Tabs/tab-top-active.png"
+	border			= { 7,7,10,0}
+	stretch			= TRUE
+	gap_side			= BOTTOM
+      }
+    image 
+      {
+     function			= EXTENSION
+	recolorable		= TRUE
+	file					= "Tabs/tab-bottom-active.png"
+	border			= { 4,4,4,4}
+	stretch			= TRUE
+	gap_side			= TOP
+      }
+    image 
+      {
+     function			= EXTENSION
+	recolorable		= TRUE
+	file					= "Tabs/tab-left-active.png"
+	border			= {  4,4,4,4}
+	stretch			= TRUE
+	gap_side			= RIGHT
+      }
+    image 
+      {
+     function			= EXTENSION
+	recolorable		= TRUE
+	file					= "Tabs/tab-right-active.png"
+	border			= {  4,4,4,4}
+	stretch			= TRUE
+	gap_side			= LEFT
+      }
+	image 
+      {
+     function				= BOX_GAP
+	recolorable			= TRUE
+	file				= "Tabs/notebook-top.png" 
+	border				= { 3, 3, 7, 4 }
+	stretch				= TRUE
+	gap_file			= "Tabs/gap-top.png"
+	gap_border     			= { 5, 5, 5, 5 }
+	gap_start_file			= "Others/null.png"
+	gap_start_border		= { 0, 0, 0, 0 }
+	gap_end_file			= "Others/null.png"
+	gap_end_border			= { 0, 0, 0, 0 }
+	gap_side			= TOP
+      }
+    image 
+      {
+     function				= BOX_GAP
+	recolorable			= TRUE
+	file				= "Tabs/notebook-bottom.png"
+	border				= { 3, 3, 4, 7 }
+	stretch				= TRUE
+	gap_file			= "Tabs/gap-bottom.png"
+	gap_border			= { 5, 5, 5, 5 }
+	gap_start_file			= "Others/null.png"
+	gap_start_border		= { 0, 0, 0, 0 }
+	gap_end_file			= "Others/null.png"
+	gap_end_border			= { 0, 0, 0, 0 }
+	gap_side			= BOTTOM
+      }
+    image 
+      {
+     function				= BOX_GAP
+	recolorable			= TRUE
+	file				= "Tabs/notebook-left.png"
+	border				= { 7, 4, 3, 3 }
+	stretch				= TRUE
+	gap_file			= "Tabs/gap-left.png"
+	gap_border			= { 5, 5, 5, 5 }
+	gap_start_file			= "Others/null.png"
+	gap_start_border		= { 0, 0, 0, 0 }
+	gap_end_file			= "Others/null.png"
+	gap_end_border			= { 0, 0, 0, 0 }
+	gap_side			= LEFT
+      }
+    image 
+      {
+     function				= BOX_GAP
+	recolorable			= TRUE
+	file				= "Tabs/notebook-right.png" 
+	border				= { 4, 7, 3, 3 }
+	stretch				= TRUE
+	gap_file			= "Tabs/gap-right.png"
+	gap_border			= { 5, 5, 5, 5 }
+	gap_start_file			= "Others/null.png"
+	gap_start_border		= { 0, 0, 0, 0 }
+	gap_end_file			= "Others/null.png"
+	gap_end_border			= { 0, 0, 0, 0 }
+	gap_side			= RIGHT
+      }
+	image 
+      {
+     function			= BOX
+	recolorable		= TRUE
+	file					= "Tabs/notebook.png"
+	border			= { 6,6,6,6 }
+	stretch			= TRUE
+      }
+  }
+}
+
+style "theme-tasklist" = "theme-default"
+{
+ xthickness = 5
+ ythickness = 3
+}
+
+style "theme-menu" = "theme-default"
+{
+ xthickness = 2
+ ythickness = 1
+ bg[NORMAL] = "#f3f3f3"
+ 
+}
+
+style "theme-menu-item" = "theme-default"
+{
+ xthickness = 3
+ ythickness = 1
+ 
+ bg[NORMAL] = "#cccfcd"
+ bg[ACTIVE] = "#6e9ad5"
+ bg[PRELIGHT] = "#6e9ad5"
+ bg[SELECTED] = "#6e9ad5"
+ bg[INSENSITIVE] = "#e0e0e0"
+ 
+ engine "murrine" 
+ {
+  highlight_shade = 1.07
+  gradient_shades = { 1.2, 1.0, 1.0, 1.2 }
+  lightborder_shade = 2.3
+  contrast = 1.0
+  glazestyle = 3
+  glowstyle = 2
+  roundness = 0
+ }
+}
+
+style "theme-menubar-item" = "theme-default"
+{
+ xthickness = 3
+ ythickness = 1
+ 
+ bg[NORMAL] = "#cccfcd"
+ bg[ACTIVE] = "#6e9ad5"
+ bg[PRELIGHT] = "#6e9ad5"
+ bg[SELECTED] = "#6e9ad5"
+ bg[INSENSITIVE] = "#e0e0e0"
+ 
+ engine "murrine" 
+ {
+  highlight_shade = 1.0
+  gradient_shades = { 1.0, 1.0, 1.0, 1.0 }
+  lightborder_shade = 1.3
+  contrast = 1.0
+  glazestyle = 3
+  glowstyle = 2
+  roundness = 0
+ }
+}
+
+style "theme-menubar" = "theme-default"
+{
+ xthickness = 2
+ ythickness = 0
+ bg[NORMAL] = "#cccfcd"
+}
+
+style "theme-toolbutton" = "theme-wider"
+{
+ bg[NORMAL] = "#cccfcd"
+ bg[ACTIVE] = "#6060a5"
+ bg[PRELIGHT] = "#6e9ad5"
+ bg[SELECTED] = "#c6c6c6"
+ bg[INSENSITIVE] = "#e0e0e0"
+ 
+ xthickness = 2
+ ythickness = 2
+ 
+ engine "murrine" 
+ {
+  highlight_shade = 1.00
+  gradient_shades = { 0.8, 1.0, 1.0, 1.05 }
+  lightborder_shade = 2.3
+  contrast = 1.5
+  glazestyle = 2
+  glowstyle = 4
+  roundness = 2
+ }
+}
+
+style "theme-tree" = "theme-default"
+{
+ xthickness = 2
+ ythickness = 2
+ bg[NORMAL] = "#e8e8e8"
+}
+
+style "theme-frame-title" = "theme-default"
+{
+ fg[NORMAL] = "#404040"
+}
+
+style "theme-tooltips" = "theme-default"
+{
+  xthickness = 4
+  ythickness = 4
+  
+  bg[NORMAL] = "#dddddd"
+}
+
+style "theme-progressbar" = "theme-wide"
+{
+ xthickness = 1
+ ythickness = 1
+
+
+ bg[ACTIVE] = "#dedede"
+ bg[SELECTED] = "#6e9ad5"
+
+ 
+ engine "murrine" 
+ {
+  highlight_shade = 1.25
+  gradient_shades = { 1.1, 1.0, 1.0, 1.4 }
+  lightborder_shade = 2.3
+  lightborderstyle = 0
+  contrast = 1.0
+  glazestyle = 3
+  glowstyle = 4
+  roundness = 20
+  progressbarstyle = 1
+ }
+}
+
+style "theme-combo" = "theme-button"
+{
+}
+
+style "metacity-frame" = "theme-default"
+{
+ bg[SELECTED] = "#9e9e9e"
+}
+
+# widget styles
+class "GtkWidget"      style "theme-default"
+class "GtkButton"      style "theme-button"
+widget_class "*.GtkRadioButton"    style "theme-radiobutton"
+widget_class "*GtkCheckButton*"    style "theme-checkbutton"
+class "GtkScale"       style "theme-range"
+class "GtkCombo"       style "theme-button"
+class "GtkScale"       style "theme-scale"
+class "GtkScrollbar"   style "theme-scrollbar"
+class "GtkRange"       style "theme-wide"
+class "GtkFrame"       style "theme-wide"
+class "GtkMenu"        style "theme-menu"
+class "GtkEntry"       style "theme-wider"
+class "GtkMenuItem"    style "theme-menu-item"
+class "GtkNotebook"    style "theme-notebook"
+class "GtkProgressBar" style "theme-progressbar"
+class "*MenuBar*"      style "theme-menubar"
+class "GtkToolbar"     style "theme-toolbutton"	
+widget_class "*Tool*GtkToggleButton"	style "theme-toolbutton"
+widget_class "*Tool*GtkButton"			style "theme-toolbutton"
+
+widget_class "*MenuItem.*" style "theme-menu-item"
+widget_class "*MenuBar.*"  style "theme-menubar-item"
+
+# combobox stuff
+widget_class "*.GtkComboBox.GtkButton" style "theme-combo"
+widget_class "*.GtkCombo.GtkButton" style "theme-combo"
+
+# tooltips stuff
+widget_class "*.tooltips.*.GtkToggleButton" style "theme-tasklist"
+widget "gtk-tooltips" style "theme-tooltips"
+
+# treeview stuff
+widget_class "*.GtkTreeView.GtkButton" style "theme-tree"
+widget_class "*.GtkCTree.GtkButton" style "theme-tree"
+widget_class "*.GtkList.GtkButton" style "theme-tree"
+widget_class "*.GtkCList.GtkButton" style "theme-tree"
+widget_class "*.GtkFrame.GtkLabel" style "theme-frame-title"
+
+# notebook stuff
+widget_class "*.GtkNotebook.*.GtkEventBox" style "theme-notebook"
+widget_class "*.GtkNotebook.*.GtkViewport" style "theme-notebook"
+
+# wm stuff
+class "MetaFrames" style "metacity-frame"
+class "GtkWindow" style "metacity-frame"
+
+#Breadcrumbs
+widget_class "*.ThunarLocationButtons*" style "theme-breadcrumbs"

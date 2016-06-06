@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Amiga-2.0
+Type=X-GNOME-Metatheme
+Comment=
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Simple
+MetacityTheme=Amiga-2.0
+IconTheme=Mist
+CursorTheme=default
+CursorSize=36

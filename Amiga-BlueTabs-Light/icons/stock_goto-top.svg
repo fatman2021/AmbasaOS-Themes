@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.0"
+   x="0.0000000"
+   y="0.0000000"
+   width="29.999969"
+   height="29.999969"
+   viewBox="0 0 24 24"
+   id="svg574">
+  <defs
+     id="defs577">
+    <linearGradient
+       id="linearGradient609">
+      <stop
+         style="stop-color:#99a8da;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop610" />
+      <stop
+         style="stop-color:#5f72ae;stop-opacity:1.0000000;"
+         offset="1.0000000"
+         id="stop611" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient606">
+      <stop
+         style="stop-color:#97c890;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop607" />
+      <stop
+         style="stop-color:#407240;stop-opacity:1.0000000;"
+         offset="1.0000000"
+         id="stop608" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient603">
+      <stop
+         style="stop-color:#97c890;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop604" />
+      <stop
+         style="stop-color:#407240;stop-opacity:1.0000000;"
+         offset="1.0000000"
+         id="stop605" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient600">
+      <stop
+         style="stop-color:#97c890;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop601" />
+      <stop
+         style="stop-color:#407240;stop-opacity:1.0000000;"
+         offset="1.0000000"
+         id="stop602" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient578">
+      <stop
+         style="stop-color:#97c890;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop579" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1.0000000;"
+         offset="1.0000000"
+         id="stop580" />
+    </linearGradient>
+    <linearGradient
+       x1="0.46875000"
+       y1="0.39252335"
+       x2="0.53125000"
+       y2="0.39252335"
+       id="linearGradient581"
+       xlink:href="#linearGradient609" />
+    <linearGradient
+       x1="0.38711718"
+       y1="0.49532709"
+       x2="0.67570251"
+       y2="0.49532709"
+       id="linearGradient1000"
+       xlink:href="#linearGradient609" />
+  </defs>
+  <path
+     d="M 3.6026709,2.1283385 C 3.6026709,2.1283385 19.633403,2.1283395 19.633403,2.1283395 C 19.633403,2.1283395 19.633403,5.1136376 19.633403,5.1136376 C 19.633403,5.1136376 11.239639,5.0984936 11.239639,5.0984936 C 11.239639,5.0984936 19.512245,14.159073 19.512245,14.159073 C 19.512245,14.159073 15.572824,14.159073 15.572824,14.159073 C 15.572824,14.159073 15.542534,20.916755 15.542534,20.916755 C 15.542534,20.916755 7.6935397,20.916755 7.6935397,20.916755 C 7.6935397,20.916755 7.7238293,14.159073 7.7238293,14.159073 C 7.7238293,14.159073 3.6026708,14.159073 3.6026708,14.159073 C 3.6026708,14.159073 12.238753,5.0984936 12.238753,5.0984936 C 12.238753,5.0984936 3.6026709,5.0984936 3.6026709,5.0984936 C 3.6026709,5.0984936 3.6026709,2.1283385 3.6026709,2.1283385 z "
+     style="font-size:12.000000;fill:url(#linearGradient1000);stroke:#000000;stroke-width:0.90000093;stroke-miterlimit:4.0000000"
+     id="path998" />
+  <path
+     d="M 4.4092602,2.8205727 C 4.4092602,2.8205727 4.4013595,4.3837864 4.4013595,4.3837864 M 8.4988306,13.954751 C 8.4988306,13.954751 8.4988306,20.261352 8.4988306,20.261352 M 11.754145,6.6437334 C 11.754145,6.6437334 5.0505935,13.686263 5.0505935,13.686263"
+     style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.80000079;stroke-linecap:round"
+     id="path872" />
+  <path
+     d="M 8.1206462,19.716874 L 14.299723,19.707229 L 14.311927,12.943541 L 17.313487,13.355012 L 11.662147,7.1028866 M 18.945820,4.5406402 L 5.7561650,4.5008628"
+     style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:2.1500022;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.0000000;stroke-opacity:0.10999996"
+     id="path875" />
+</svg>

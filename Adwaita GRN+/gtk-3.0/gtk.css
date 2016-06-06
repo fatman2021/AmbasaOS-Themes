@@ -1,0 +1,20 @@
+/* Default color scheme */
+@define-color theme_base_color #ffffff;
+@define-color theme_text_color #2e3436;
+@define-color theme_bg_color #eeeeec;
+@define-color theme_fg_color @theme_text_color;
+@define-color theme_tooltip_bg_color #babdb6;
+@define-color theme_tooltip_fg_color @theme_text_color;
+
+@define-color subdued_color #d3d7cf;
+@define-color border_color #888a85;
+@define-color internal_element_color #888a85;
+
+@define-color placeholder_text_color @internal_element_color;
+
+@import url("gtk-common.css");
+@import url("gtk-widgets-assets.css");
+@import url("gtk-widgets-backgrounds-and-texts.css");
+@import url("gtk-widgets-borders.css");
+@import url("gtk-widgets.css");
+@import url("gnome-applications.css");

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.0"
+   x="0.0000000"
+   y="0.0000000"
+   width="29.999969"
+   height="29.999969"
+   viewBox="0 0 24 24"
+   id="svg574">
+  <defs
+     id="defs577">
+    <linearGradient
+       id="linearGradient609">
+      <stop
+         style="stop-color:#99a8db;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop610" />
+      <stop
+         style="stop-color:#5e70ae;stop-opacity:1.0000000;"
+         offset="1.0000000"
+         id="stop611" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient606">
+      <stop
+         style="stop-color:#97c890;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop607" />
+      <stop
+         style="stop-color:#407240;stop-opacity:1.0000000;"
+         offset="1.0000000"
+         id="stop608" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient603">
+      <stop
+         style="stop-color:#97c890;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop604" />
+      <stop
+         style="stop-color:#407240;stop-opacity:1.0000000;"
+         offset="1.0000000"
+         id="stop605" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient600">
+      <stop
+         style="stop-color:#97c890;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop601" />
+      <stop
+         style="stop-color:#407240;stop-opacity:1.0000000;"
+         offset="1.0000000"
+         id="stop602" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient578">
+      <stop
+         style="stop-color:#97c890;stop-opacity:1.0000000;"
+         offset="0.0000000"
+         id="stop579" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1.0000000;"
+         offset="1.0000000"
+         id="stop580" />
+    </linearGradient>
+    <linearGradient
+       x1="0.39255449"
+       y1="0.46999356"
+       x2="0.62973022"
+       y2="0.47663549"
+       id="linearGradient581"
+       xlink:href="#linearGradient609" />
+  </defs>
+  <path
+     d="M 12.039012,19.336946 C 12.039012,19.336946 19.899241,10.972384 19.899241,10.972384 C 19.899241,10.972384 16.026049,10.972384 16.026049,10.972384 C 16.026049,10.972384 16.019055,4.2197161 16.019055,4.2197161 C 16.019055,4.2197161 8.1774711,4.2301551 8.1774711,4.2301551 C 8.1774711,4.2301551 8.1926016,10.967264 8.1926016,10.967264 C 8.1926016,10.967264 4.1432001,10.967264 4.1432001,10.967264 C 4.1432001,10.967264 12.039012,19.336946 12.039012,19.336946 z "
+     style="font-size:12.000000;fill:url(#linearGradient581);stroke:#000000;stroke-width:0.90000093;stroke-miterlimit:4.0000000"
+     id="selection_to_path" />
+  <path
+     d="M 5.4453445,11.759079 C 5.4453445,11.759079 9.0167444,11.736572 9.0167444,11.736572 C 9.0167444,11.736572 9.0103313,4.8795340 9.0103313,4.8795340"
+     style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.80000079;stroke-linecap:round"
+     id="path872" />
+  <path
+     d="M 14.691789,5.3537564 L 14.703993,10.635105 M 17.376348,11.608337 L 11.791585,17.636021"
+     style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:2.1500022;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.0000000;stroke-opacity:0.10999996"
+     id="path869" />
+</svg>

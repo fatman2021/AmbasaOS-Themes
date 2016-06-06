@@ -1,0 +1,196 @@
+/*
+* this file is part of the oxygen gtk engine
+* Copyright (c) 2010 Hugo Pereira Da Costa <hugo.pereira@free.fr>
+* Copyright (c) 2010 Ruslan Kabatsayev <b7.10110111@gmail.com>
+*
+* This library is free software; you can redistribute it and/or
+* modify it under the terms of the GNU Lesser General Public
+* License as published by the Free Software Foundation; either
+* version 2 of the License, or( at your option ) any later version.
+*
+* This library is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+* Lesser General Public License for more details.
+*
+* You should have received a copy of the GNU Lesser General Public
+* License along with this library; if not, write to the Free
+* Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston,
+* MA 02110-1301, USA.
+*/
+/*
+hard coded colors for infobars
+these used to have valid default values set by Gtk,
+but is not the case anymore.
+TODO: use the same colors as KDE's message boxes
+*/
+
+@define-color info_fg_color black;
+@define-color info_bg_color rgb (252, 252, 189);
+
+@define-color warning_fg_color black;
+@define-color warning_bg_color rgb (250, 173, 61);
+
+@define-color question_fg_color white;
+@define-color question_bg_color rgb (138, 173, 212);
+
+@define-color error_fg_color white;
+@define-color error_bg_color rgb (237, 54, 54);
+
+/*
+INFO: css border and padding ordering is either:
+   - all-sides;
+   - top/bottom left/right;
+   - top left/right bottom;
+   - top right bottom left;
+*/
+
+* {
+    -GtkPaned-handle-size: 3px;
+    -GtkButton-child_displacement_x: 0;
+    -GtkButton-child_displacement_y: 0;
+
+    -GtkButton-default_border: 0;
+    -GtkButton-default_outside_border: 0;
+
+    -GtkComboBox-appears-as-list: 1;
+
+    -GtkMenu-horizontal-offset: -7px;
+    -GtkMenuBar-internal-padding: 0;
+
+    -GtkScrolledWindow-scrollbar-spacing: 1px;
+
+    -GtkCheckButton-indicator-size: 18px;
+    -GtkCheckMenuItem-indicator-size: 16px;
+    -GtkExpander-expander-size: 15px;
+    -GtkTreeView-expander-size: 15px;
+
+    -GtkTreeView-allow-rules: 1px;
+
+    -GtkStatusbar-shadow-type: none;
+    -GtkMenubar-shadow-type: none;
+    -GtkToolbar-shadow-type: none;
+
+    -GtkWindow-resize-grip-height: 0;
+    -GtkWindow-resize-grip-width: 0;
+
+    -GtkWidget-wide-separators: 1;
+    -GtkWidget-separator-width: 3;
+    -GtkWidget-separator-height: 3;
+
+    engine: oxygen-gtk;
+}
+
+/* customize border styles */
+.toolbar { border-style: none; }
+.menubar { border-style: none; }
+GtkStatusBar { border-style: none; }
+
+/* sliders and scrollbars */
+.scale
+{
+    -GtkRange-slider-width: 23px;
+    -GtkScale-slider-length: 21px;
+}
+
+.scrollbar
+{
+    -GtkRange-stepper-size: 12px;
+    -GtkRange-trough-border: 0;
+}
+
+/* menuitems padding */
+.menubar
+{
+    padding: 0;
+    border-width: 0;
+}
+
+GtkMenuBar>GtkMenuItem { padding: 4px 5px; }
+
+/* menu toolbutton */
+GtkMenuToolButton, GtkMenuToolButton *
+{
+    border-width: 0;
+    -GtkButton-focus-padding: 0;
+    -GtkWidget-focus-line-width: 0;
+}
+
+/* notebooks */
+.notebook
+{
+    padding: 6px 8px 2px 8px;
+    border-width: 2px 0 6px 0;
+    border-style: outset;
+}
+
+/* notebooks */
+.notebook.header { border-style: none; }
+
+/* option menu */
+GtkOptionMenu { padding: 0 4px; }
+
+/* separators */
+.separator
+{
+    border-style: solid;
+    border-width: 3px;
+}
+
+/* frames */
+GtkFrame { padding: 4px; }
+GtkScrolledWindow.frame
+{
+    border-style: inset;
+    border-width: 1px;
+    padding: 1px;
+}
+
+.progressbar { padding: 0; }
+GtkViewport { padding: 0; }
+GtkAssistant .sidebar { padding: 4px; }
+
+GtkInfoBar
+{
+    border-style: solid;
+    border-width: 8px;
+}
+
+GtkCalendar.view { border-style: inset; }
+
+/* switchs */
+GtkSwitch { padding: 0; }
+
+/* combo boxes */
+GtkComboBox { padding: 0; }
+GtkComboBox>GtkFrame { padding: 0 0 0 4px; }
+
+/* tooltips */
+.tooltip { padding: 0; }
+
+/* buttons */
+.button { padding: 6px 6px 4px; }
+
+/* header buttons */
+column-header.button
+{
+    border-width: 0 2px;
+    border-style: solid;
+}
+
+/* entry */
+.entry { padding: 4px 7px; }
+
+/* menu */
+.menu
+{
+    padding: 5px;
+    border-width: 0;
+}
+
+GtkMenu>GtkMenuItem { padding: 5px 4px; }
+GtkMenu>GtkSeparatorMenuItem { padding: 1px 4px; }
+
+/* import spinner code */
+@import url("gtk-spinner.css");
+@import url("gtk-csd.css");

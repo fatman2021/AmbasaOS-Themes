@@ -1,0 +1,94 @@
+style "theme-notebook"	= "default"
+{
+		xthickness = 3
+		ythickness = 3
+		GtkNotebook::tab_overlap	= 2
+		GtkNotebook::tab_curvature	= 6
+ 		
+	engine "pixmap"{
+		
+		image{
+			function	= FOCUS
+		}
+		
+		image{
+			function	= EXTENSION
+			recolorable	= TRUE
+			state		= ACTIVE
+			file		= "Tabs/notebook-tab-top-normal.png"
+			border		= { 12, 12, 4, 0 }
+			stretch		= TRUE
+			gap_side	= BOTTOM
+		}
+
+		image{
+			function	= EXTENSION
+			recolorable	= TRUE
+			state		= ACTIVE
+			file		= "Tabs/notebook-tab-bottom-normal.png"
+			border		= { 12, 12, 4, 0 }
+			stretch		= TRUE
+			gap_side	= TOP
+		}
+
+		image{
+			function	= EXTENSION
+			recolorable	= TRUE
+			state		= NORMAL
+			file		= "Tabs/notebook-tab-top-active.png"
+			border		= { 12, 12, 4, 0 }
+			stretch		= TRUE
+			gap_side	= BOTTOM
+		}
+
+		image{
+			function	= EXTENSION
+			recolorable	= TRUE
+			state		= NORMAL
+			file		= "Tabs/notebook-tab-bottom-active.png"
+			border		= { 12, 12, 4, 0 }
+			stretch		= TRUE
+			gap_side	= TOP
+		}
+
+		image{
+			function	= BOX_GAP
+			recolorable	= TRUE
+			state		= NORMAL
+			file		= "Tabs/notebook-tab-bottom.png"
+			border		= { 2, 2, 2, 4 }
+			stretch		= TRUE
+			gap_file	= "Tabs/notebook-tab-bottom-gap.png"
+			#gap_border
+			gap_start_file	= "Tabs/notebook-tab-bottom-gap-end.png"
+			gap_end_file	= "Tabs/notebook-tab-bottom-gap-end.png"
+			gap_side	= BOTTOM
+		}
+
+		image{
+			function	= BOX_GAP
+			recolorable	= TRUE
+			state		= NORMAL
+			file		= "Tabs/notebook-tab-top.png"
+			border		= { 15, 15, 15, 15 }
+			stretch		= TRUE
+			gap_file	= "Tabs/notebook-tab-top-gap.png"
+			#gap_border
+			gap_start_file	= "Tabs/notebook-tab-top-gap-end.png"
+			gap_end_file	= "Tabs/notebook-tab-top-gap-end.png"
+			gap_side	= TOP
+		}
+
+		image{
+			function	= BOX
+			recolorable	= TRUE
+			state		= NORMAL
+			file		= "Tabs/notebook.png"
+			border		= { 3, 3, 2, 4 }
+			stretch		= TRUE
+		}
+	}
+	
+}
+
+class "GtkNotebook"     style "theme-notebook"

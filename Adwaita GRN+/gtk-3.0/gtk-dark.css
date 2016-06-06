@@ -1,0 +1,20 @@
+/* Dark color scheme */
+@define-color theme_base_color #555753;
+@define-color theme_text_color #eeeeec;
+@define-color theme_bg_color mix(#555753, #2e3436, 0.5);
+@define-color theme_fg_color @theme_text_color;
+@define-color theme_tooltip_bg_color mix(#2e3436, #000000, 0.5);
+@define-color theme_tooltip_fg_color @theme_text_color;
+
+@define-color subdued_color #2e3436;
+@define-color border_color #000000;
+@define-color internal_element_color #babdb6;
+
+@define-color placeholder_text_color @internal_element_color;
+
+@import url("gtk-common.css");
+@import url("gtk-widgets-assets-dark.css");
+@import url("gtk-widgets-backgrounds-and-texts.css");
+@import url("gtk-widgets-borders.css");
+@import url("gtk-widgets.css");
+@import url("gnome-applications.css");

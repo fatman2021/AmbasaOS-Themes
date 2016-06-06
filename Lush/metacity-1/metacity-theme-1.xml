@@ -1,0 +1,733 @@
+<metacity_theme>
+	<info>
+		<name>Lush</name>
+		<author>MandrakeSoft Graphic team;</author>
+		<copyright>&#194; 2003 MandrakeSoft</copyright>
+		<date>Feb 13, 2003</date>
+		<description>Based onMandrakeLinux Galaxy theme</description>
+	</info>
+	<!-- define constants -->
+	<constant name="LeftTitleTextPad" value="6"/>
+
+
+	<frame_geometry name="normal" rounded_top_left="true" rounded_top_right="true" rounded_bottom_left="true" rounded_bottom_right="true">
+		<distance name="left_width" value="6"/>
+		<distance name="right_width" value="6"/>
+		<distance name="bottom_height" value="6"/>
+		<distance name="left_titlebar_edge" value="5"/>
+		<distance name="right_titlebar_edge" value="5"/>
+		<distance name="title_vertical_pad" value="5"/>
+		<border name="title_border" left="0" right="0" top="0" bottom="0"/>
+		<border name="button_border" left="2" right="2" top="3" bottom="3"/>
+		<distance name="button_width" value="19"/>
+		<distance name="button_height" value="19"/>
+	</frame_geometry>
+
+	<!-- strip borders off the normal geometry -->
+	<frame_geometry name="normal_maximized" parent="normal" rounded_top_left="false" rounded_top_right="false" rounded_bottom_left="false" rounded_bottom_right="false">
+		<distance name="left_width" value="6"/>
+		<distance name="right_width" value="6"/>
+		<distance name="bottom_height" value="6"/>
+		<distance name="left_titlebar_edge" value="5"/>
+		<distance name="right_titlebar_edge" value="5"/>
+	</frame_geometry>
+
+	<frame_geometry name="utility" title_scale="small" rounded_top_left="true" rounded_top_right="true" rounded_bottom_left="true" rounded_bottom_right="true">
+		<distance name="left_width" value="6"/>
+		<distance name="right_width" value="6"/>
+		<distance name="bottom_height" value="6"/>
+		<distance name="left_titlebar_edge" value="0"/>
+		<distance name="right_titlebar_edge" value="5"/>
+		<distance name="title_vertical_pad" value="4"/>
+		<border name="title_border" left="0" right="0" top="1" bottom="0"/>
+		<border name="button_border" left="0" right="0" top="1" bottom="0"/>
+		<aspect_ratio name="button" value="0.75"/>
+	</frame_geometry>
+
+	<frame_geometry name="border" has_title="false">
+		<distance name="left_width" value="4"/>
+		<distance name="right_width" value="4"/>
+		<distance name="bottom_height" value="4"/>
+		<distance name="left_titlebar_edge" value="0"/>
+		<distance name="right_titlebar_edge" value="5"/>
+		<distance name="button_width" value="0"/>
+		<distance name="button_height" value="0"/>
+		<distance name="title_vertical_pad" value="4"/>
+		<border name="title_border" left="0" right="0" top="0" bottom="0"/>
+		<border name="button_border" left="0" right="0" top="0" bottom="0"/>
+	</frame_geometry>
+
+	<draw_ops name="titlebar_bg_gray">
+		<image filename="degrade-color.png"
+				alpha="0.5"
+			x="0"
+			y="0"
+			width="width"
+			height="height"/>
+	</draw_ops>
+	<draw_ops name="titlebar_bg_blue">
+		<image filename="degrade-color.png"
+			x="0"
+			y="0"
+			width="width"
+			height="height"
+		colorize="gtk:bg[SELECTED]"
+			/>
+	</draw_ops>
+
+
+
+	<!-- Buttons -->
+
+	<draw_ops name="top_right_corner_outline">
+		<!-- fix up the black edging -->
+		<line color="#3c3c3c" x1="width-1" y1="0" x2="width-1" y2="height"/>
+		<line color="#3c3c3c" x1="width-5" y1="1" x2="width-4" y2="1"/>
+		<line color="#3c3c3c" x1="width-3" y1="2" x2="width-3" y2="2"/>
+		<line color="#3c3c3c" x1="width-2" y1="3" x2="width-2" y2="4"/>
+	</draw_ops>
+
+	<draw_ops name="top_left_corner_outline">
+		<!-- fix up the black edging -->
+		<line color="#3c3c3c" x1="0" y1="0" x2="0" y2="height"/>
+		<line color="#3c3c3c" x1="1" y1="3" x2="1" y2="4"/>
+		<line color="#3c3c3c" x1="2" y1="2" x2="2" y2="2"/>
+		<line color="#3c3c3c" x1="3" y1="1" x2="4" y2="1"/>
+	</draw_ops>
+
+	<draw_ops name="bottom_right_corner_outline">
+		<!-- fix up the black edging -->
+		<line color="#3c3c3c" x1="width-5" y1="height-2" x2="width-4" y2="height-2"/>
+		<line color="#3c3c3c" x1="width-3" y1="height-3" x2="width-3" y2="height-3"/>
+		<line color="#3c3c3c" x1="width-2" y1="height-5" x2="width-2" y2="height-4"/>
+	</draw_ops>
+
+	<draw_ops name="bottom_left_corner_outline">
+		<!-- fix up the black edging -->
+		<line color="#3c3c3c" x1="1" y1="height-5" x2="1" y2="height-3"/>
+		<line color="#3c3c3c" x1="2" y1="height-3" x2="2" y2="height-3"/>
+		<line color="#3c3c3c" x1="3" y1="height-2" x2="4" y2="height-2"/>
+	</draw_ops>
+	<draw_ops name="button_background">
+		<image filename="BT-neutre.png"
+			x="(width - object_width) / 2"
+			y="(height - object_height) / 2"
+			width="object_width"
+			height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="button_background_prelight">
+		<image filename="BT-neutre.png"
+			colorize="shade/gtk:bg[INSENSITIVE]/0.8"
+			x="(width - object_width) / 2"
+			y="(height - object_height) / 2"
+			width="object_width"
+			height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="button_background_unfocused">
+		<image filename="BT-neutre.png"
+			colorize="gtk:fg[INSENSITIVE]"
+			x="(width - object_width) / 2"
+			y="(height - object_height) / 2"
+			width="object_width"
+			height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="button_background_pressed">
+		<image filename="BT-neutre.png"
+			colorize="#666666"
+			x="(width - object_width) / 2"
+			y="(height - object_height) / 2"
+			width="object_width"
+			height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="minimize_icon">
+		<image filename="BT-reduire.png"
+			colorize="gtk:bg[SELECTED]"
+			x="(width - object_width) / 2"
+			y="(height - object_height) / 2"
+			width="object_width"
+			height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="menu_icon">
+		<icon x="3" y="3" width="width*0.8" height="height*0.8"/>
+	</draw_ops>
+
+
+	<draw_ops name="menu_icon_prelight">
+		<icon x="3" y="3" width="width*0.8" height="height*0.8" alpha="0.7"/>
+	</draw_ops>
+
+	<draw_ops name="menu_icon_unfocused">
+		<icon alpha="0.7" x="3" y="3" width="width*0.8" height="height*0.8"/>	
+	</draw_ops>
+
+	<draw_ops name="maximize_icon">
+		<image filename="BT-agrandirfenetre.png"
+			colorize="gtk:bg[SELECTED]"
+			x="(width - object_width) / 2"
+			y="(height - object_height) / 2-1"
+			width="object_width"
+			height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="restore_icon">
+		<image filename="BT-reduirefenetre.png"
+			colorize="gtk:bg[SELECTED]"
+			x="(width - object_width) / 2"
+			y="(height - object_height) / 2"
+			width="object_width"
+			height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="close_icon">
+		<image filename="BT-fermer.png"
+			colorize="gtk:bg[SELECTED]"
+			x="(width - object_width) / 2"
+			y="(height - object_height) / 2"
+			width="object_width"
+			height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="minimize_icon_unfocused">
+		<image filename="BT-reduire.png"
+			alpha="0.7"
+			x="(width - object_width) / 2"
+			y="(height - object_height) / 2"
+			width="object_width"
+			height="object_height"/>
+	</draw_ops>
+
+
+	<draw_ops name="maximize_icon_unfocused">
+		<image filename="BT-agrandirfenetre.png"
+			alpha="0.7"
+			x="((width - object_width) / 2)"
+			y="(height - object_height) / 2-1"
+			width="object_width"
+			height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="restore_icon_unfocused">
+		<image filename="BT-reduirefenetre.png"
+			alpha="0.7"
+			x="(width - object_width) / 2"
+			y="(height - object_height) / 2"
+			width="object_width"
+			height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="close_icon_unfocused">
+		<image filename="BT-fermer.png"
+			alpha="0.7"
+			x="(width - object_width) / 2"
+			y="(height - object_height) / 2"
+			width="object_width"
+			height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="menu_button">
+		<include name="menu_icon"/>
+	</draw_ops>
+
+	<draw_ops name="menu_button_prelight">
+		<include name="menu_icon_prelight" />
+	</draw_ops>
+
+	<draw_ops name="menu_button_pressed">
+		<include name="menu_icon" />
+	</draw_ops>
+
+	<draw_ops name="menu_button_maximized">
+		<include name="menu_icon"/>
+	</draw_ops>
+
+	<draw_ops name="menu_button_maximized_pressed">
+		<include name="menu_icon"/>
+	</draw_ops>
+
+	<draw_ops name="menu_button_maximized_prelight">
+		<include name="menu_icon"/>
+	</draw_ops>
+
+	<draw_ops name="menu_button_unfocused">
+		<include name="menu_icon_unfocused"/>
+	</draw_ops>
+
+	<draw_ops name="menu_button_maximized_unfocused">
+		<include name="menu_icon_unfocused"/>
+	</draw_ops>
+
+	<draw_ops name="minimize_button">
+		<include name="button_background"/>
+		<include name="minimize_icon"/>
+	</draw_ops>
+
+	<draw_ops name="minimize_button_prelight">
+		<include name="button_background_prelight"/>
+		<include name="minimize_icon"/>
+	</draw_ops>
+
+	<draw_ops name="minimize_button_pressed">
+		<include name="button_background_pressed"/>
+		<include name="minimize_icon"/>
+	</draw_ops>
+
+	<draw_ops name="minimize_button_unfocused">
+		<include name="button_background_unfocused"/>
+		<include name="minimize_icon_unfocused"/>
+	</draw_ops>
+
+	<draw_ops name="maximize_button">
+		<include name="button_background"/>
+		<include name="maximize_icon" y="1"/>
+	</draw_ops>
+
+	<draw_ops name="maximize_button_prelight">
+		<include name="button_background_prelight"/>
+		<include name="maximize_icon" y="1"/>
+	</draw_ops>
+
+	<draw_ops name="maximize_button_pressed">
+		<include name="button_background_pressed"/>
+		<include name="maximize_icon" y="1"/>
+	</draw_ops>
+
+	<draw_ops name="maximize_button_unfocused">
+		<include name="button_background_unfocused"/>
+		<include name="maximize_icon_unfocused" y="1"/>
+	</draw_ops>
+
+	<draw_ops name="restore_button">
+		<include name="button_background"/>
+		<include name="restore_icon"/>
+	</draw_ops>
+
+	<draw_ops name="restore_button_prelight">
+		<include name="button_background_prelight"/>
+		<include name="restore_icon"/>
+	</draw_ops>
+
+	<draw_ops name="restore_button_pressed">
+		<include name="button_background_pressed"/>
+		<include name="restore_icon"/>
+	</draw_ops>
+
+	<draw_ops name="restore_button_unfocused">
+		<include name="button_background_unfocused"/>
+		<include name="restore_icon_unfocused"/>
+	</draw_ops>
+
+	<draw_ops name="close_button">
+		<include name="button_background"/>
+		<include name="close_icon"/>
+	</draw_ops>
+
+	<draw_ops name="close_button_prelight">
+		<include name="button_background_prelight"/>
+		<include name="close_icon"/>
+	</draw_ops>
+
+	<draw_ops name="close_button_pressed">
+		<include name="button_background_pressed"/>
+		<include name="close_icon"/>
+	</draw_ops>
+
+	<draw_ops name="close_button_maximized">
+		<include name="button_background"/>
+		<include name="close_icon"/>
+	</draw_ops>
+
+	<draw_ops name="close_button_maximized_unfocused">
+		<include name="button_background_unfocused"/>
+		<include name="close_icon_unfocused"/>
+	</draw_ops>
+
+	<draw_ops name="close_button_maximized_pressed">
+		<include name="button_background_pressed"/>
+		<include name="close_icon"/>
+	</draw_ops>
+
+	<draw_ops name="close_button_maximized_prelight">
+		<include name="button_background_prelight"/>
+		<include name="close_icon"/>
+	</draw_ops>
+
+	<draw_ops name="close_button_unfocused">
+		<include name="button_background_unfocused"/>
+		<include name="close_icon_unfocused"/>
+	</draw_ops>
+
+
+	<draw_ops name="corners_unfocused">
+		<!-- corners (unfocused) -->
+		<image filename="coingauche-bas.png" 
+			x="0" 
+			y="height-object_height" 
+			width="object_width" 
+			height="object_height"
+			/> 
+		<image filename="coindroit-bas.png" 
+			x="width-object_width" 
+			y="height-object_height" 
+			width="object_width" 
+			height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="corners_focused">
+		<!-- corners -->
+		<image filename="coingauche-bas.png" 
+			x="0" y="height-object_height" 
+			width="object_width" 
+			height="object_height"
+			colorize="gtk:bg[SELECTED]"
+			/> 
+		<image filename="coindroit-bas.png" 
+			x="width-object_width" 
+			y="height-object_height" 
+			width="object_width" 
+			height="object_height"
+			colorize="gtk:bg[SELECTED]"
+			/>
+	</draw_ops>
+
+
+	<draw_ops name="blank">
+		<!-- nothing -->
+	</draw_ops>
+
+	<draw_ops name="focus_outline">
+		<rectangle color="#3c3c3c"
+			x="left_width-1" y="top_height-1"
+			width="width-left_width-right_width+1"
+			height="height-top_height-bottom_height+1"/>
+	</draw_ops>
+
+	<draw_ops name="unfocus_outline">
+		<rectangle color="#848684"
+			x="left_width-1" y="top_height-1"
+			width="width-left_width-right_width+1"
+			height="height-top_height-bottom_height+1"/>
+	</draw_ops>
+
+	<draw_ops name="sides_background">
+	<image filename="cote-gauche.png"
+			x="0" 
+			y="top_height+17" 
+			width="object_width" 
+			height="height"/>
+		<image filename="cote-droit.png" 
+			x="width-object_width"
+			y="top_height" 
+			width="object_width" 
+			height="height"/>
+		<image filename="barre-grise-bas.png"
+			x="18"
+			y="height-object_height"
+			width="width"
+			height="object_height"/>
+	</draw_ops>
+
+	<draw_ops name="focus_background">
+		<include name="corners_focused"/>
+		<include name="sides_background"/>
+		<include name="corners_focused"/>
+
+		<image filename="cote_suitearrondi.png" 
+			x="0" 
+			y="top_height" 
+			width="object_width" 
+			height="object_height"
+			colorize="gtk:bg[SELECTED]"
+			/>
+		<image filename="cote_suitearrondi.png" 
+			x="width-object_width" 
+			y="top_height" 
+			width="object_width" 
+			height="object_height"
+			colorize="gtk:bg[SELECTED]"
+			/>
+		<include name="bottom_left_corner_outline"/>
+		<include name="bottom_right_corner_outline"/>
+	</draw_ops>
+
+	<draw_ops name="unfocus_background">
+		<include name="sides_background"/>
+		<include name="corners_unfocused"/>
+		<image filename="cote_suitearrondi.png" 
+			alpha="0.6"
+			x="0" 
+			y="top_height" 
+			width="object_width" 
+			height="object_height"/>
+		<image filename="cote_suitearrondi.png" 
+			alpha="0.6"
+			x="width-object_width" 
+			y="top_height" 
+			width="object_width" 
+			height="object_height"/>
+		<include name="bottom_left_corner_outline"/>
+		<include name="bottom_right_corner_outline"/>
+	</draw_ops>
+
+
+
+	<draw_ops name="title_text_focused_no_icon">
+		<clip x="0" y="0" width="width-8" height="height"/>
+		<title color="blend/gtk:fg[NORMAL]/gtk:bg[SELECTED]/0.7"
+			x="LeftTitleTextPad+1"
+			y="(((height - title_height) / 2) `max` 0)+1"/>
+		<title color="gtk:fg[SELECTED]"
+			x="LeftTitleTextPad"
+			y="((height - title_height) / 2) `max` 0"/>
+	</draw_ops>
+
+	<draw_ops name="title_text_no_icon">
+		<clip x="0" y="0" width="width-8" height="height"/>
+		<title color="gtk:fg[SELECTED]"
+			x="LeftTitleTextPad"
+			y="((height - title_height) / 2) `max` 0"/>
+	</draw_ops>
+
+	<draw_ops name="title_normal">
+		<include name="title_text_no_icon"/>
+	</draw_ops>
+
+	<draw_ops name="title_focused">
+	
+		<include name="title_text_focused_no_icon"/>
+
+	</draw_ops>
+
+	
+
+	<draw_ops name="title_utility">
+		<include name="title_text_no_icon"/>
+	</draw_ops>
+
+	<draw_ops name="title_utility_focused">
+		<include name="titlebar_bg_blue"/>
+		<include name="title_text_focused_no_icon"/>
+		<line color="blend/gtk:bg[SELECTED]/#000000/0.4" x1="0" y1="0" x2="0" y2="height"/>
+		<line color="blend/gtk:bg[SELECTED]/#000000/0.4" x1="width-1" y1="0" x2="width-1" y2="height"/>
+	</draw_ops>
+
+
+
+	<draw_ops name="titlebar_unfocused">
+		<include name="titlebar_bg_gray"/>
+	</draw_ops>
+
+	<draw_ops name="titlebar_focused">
+		<include name="titlebar_bg_blue"/>
+	</draw_ops>
+
+	<draw_ops name="right_titlebar_edge_unfocused">
+		<include name="titlebar_bg_gray"/>
+		<include name="top_right_corner_outline"/>
+	</draw_ops>
+
+	<draw_ops name="right_titlebar_edge_focused">
+		<include name="titlebar_bg_blue"/>
+		<include name="top_right_corner_outline"/>
+	</draw_ops>
+
+	<draw_ops name="right_titlebar_edge_maximized_unfocused">
+		<include name="titlebar_bg_gray"/>
+		<line color="#3c3c3c" x1="width-1" y1="0" x2="width-1" y2="height"/>
+	</draw_ops>
+
+	<draw_ops name="right_titlebar_edge_maximized_focused">
+		<include name="titlebar_bg_blue"/>
+		<line color="#3c3c3c" x1="width-1" y1="0" x2="width-1" y2="height"/>
+	</draw_ops>
+
+	<draw_ops name="left_titlebar_edge_maximized_unfocused">
+		<line color="#3c3c3c" x1="0" y1="0" x2="0" y2="height"/>
+	</draw_ops>
+
+	<draw_ops name="left_titlebar_edge_maximized">
+		<include name="titlebar_bg_blue"/>
+		
+	</draw_ops>
+
+
+	<draw_ops name="left_titlebar_edge_unfocused">
+		<include name="top_left_corner_outline"/>
+	</draw_ops>
+
+	<draw_ops name="left_titlebar_edge_focused">
+		<include name="titlebar_bg_blue"/>
+		<include name="top_left_corner_outline"/>
+	</draw_ops>
+
+
+	<draw_ops name="borders">
+		<rectangle color="#3c3c3c" x="0" y="0" width="width-1" height="height-1"/>
+	</draw_ops>
+
+	<draw_ops name="borders_unfocused">
+		<include name="borders"/>
+		<include name="unfocus_outline"/>
+	</draw_ops>
+
+	<draw_ops name="borders_focused">
+		<include name="borders"/>
+		<include name="focus_outline"/>
+	</draw_ops>
+
+	<frame_style name="normal_unfocused" geometry="normal">
+		<piece position="entire_background" draw_ops="unfocus_background"/>
+
+		<piece position="title" draw_ops="title_normal"/>
+
+		<piece position="titlebar"
+			draw_ops="titlebar_unfocused"/>
+
+		<piece position="left_titlebar_edge"
+			draw_ops="left_titlebar_edge_unfocused"/>
+
+		<piece position="right_titlebar_edge"
+			draw_ops="right_titlebar_edge_unfocused"/>
+
+		<piece position="overlay" draw_ops="borders_unfocused"/>
+
+		<!-- we don't specify for prelight, so normal is used -->
+		<button function="minimize" state="normal" draw_ops="minimize_button_unfocused"/>
+		<button function="minimize" state="pressed" draw_ops="minimize_button_pressed"/>
+		<button function="maximize" state="normal" draw_ops="maximize_button_unfocused"/>
+		<button function="maximize" state="pressed" draw_ops="maximize_button_pressed"/>
+		<button function="menu" state="normal" draw_ops="menu_button_unfocused"/>
+		<button function="menu" state="pressed" draw_ops="menu_button_pressed"/>
+		<button function="close" state="normal" draw_ops="close_button_unfocused"/>
+		<button function="close" state="pressed" draw_ops="close_button_pressed"/>
+
+		<button function="minimize" state="prelight" draw_ops="minimize_button_prelight"/>
+		<button function="maximize" state="prelight" draw_ops="maximize_button_prelight"/>
+		<button function="menu" state="prelight" draw_ops="menu_button_prelight"/>
+		<button function="close" state="prelight" draw_ops="close_button_prelight"/>
+	</frame_style>
+
+	<frame_style name="normal_focused" geometry="normal"
+parent="normal_unfocused">
+		<button function="minimize" state="normal" draw_ops="minimize_button"/>
+		<button function="maximize" state="normal" draw_ops="maximize_button"/>
+		<button function="menu" state="normal" draw_ops="menu_button"/>
+		<button function="close" state="normal" draw_ops="close_button"/>
+		<piece position="entire_background" draw_ops="focus_background"/>
+		<piece position="left_titlebar_edge" draw_ops="left_titlebar_edge_focused"/>
+		<piece position="right_titlebar_edge" draw_ops="right_titlebar_edge_focused"/>
+
+		<piece position="titlebar"
+			draw_ops="titlebar_focused"/>
+		<piece position="title" draw_ops="title_focused"/>
+		<piece position="overlay" draw_ops="borders_focused"/>
+	</frame_style>
+
+	<frame_style name="maximized_unfocused"
+geometry="normal_maximized" parent="normal_unfocused">
+	<piece position="left_titlebar_edge" draw_ops="left_titlebar_edge_maximized_unfocused"/>
+	<piece position="right_titlebar_edge" draw_ops="right_titlebar_edge_maximized_unfocused"/>
+		<button function="menu" state="normal" draw_ops="menu_button_maximized_unfocused"/>
+		<button function="close" state="normal" draw_ops="close_button_maximized_unfocused"/>
+		<button function="maximize" state="normal" draw_ops="restore_button_unfocused"/>
+		<button function="maximize" state="pressed" draw_ops="restore_button_pressed"/>
+		<button function="maximize" state="prelight" draw_ops="restore_button_prelight"/>
+	</frame_style>
+
+	<frame_style name="maximized_focused"
+geometry="normal_maximized" parent="normal_focused">
+		<piece position="right_titlebar_edge" draw_ops="right_titlebar_edge_maximized_focused"/>
+		<piece position="left_titlebar_edge" draw_ops="left_titlebar_edge_maximized"/>
+		<button function="maximize" state="normal" draw_ops="restore_button"/>
+		<button function="maximize" state="pressed" draw_ops="restore_button_pressed"/>
+		<button function="maximize" state="prelight" draw_ops="restore_button_prelight"/>
+		<button function="menu" state="normal" draw_ops="menu_button_maximized"/>
+		<button function="menu" state="pressed" draw_ops="menu_button_maximized_pressed"/>
+		<button function="menu" state="prelight" draw_ops="menu_button_maximized_prelight"/>
+		<button function="close" state="normal" draw_ops="close_button_maximized"/>
+		<button function="close" state="pressed" draw_ops="close_button_maximized_pressed"/>
+		<button function="close" state="prelight" draw_ops="close_button_maximized_prelight"/>
+	</frame_style>
+
+	<frame_style name="utility_unfocused" geometry="utility" parent="normal_unfocused">
+		<piece position="title" draw_ops="title_utility"/>
+	</frame_style>
+
+	<frame_style name="utility_focused" geometry="utility" parent="normal_focused">
+		<piece position="title" draw_ops="title_utility_focused"/>
+	</frame_style>
+
+	<!-- shaded states -->
+	<frame_style name="normal_unfocused_shaded" geometry="normal" parent="normal_unfocused">
+	</frame_style>
+
+	<frame_style name="normal_focused_shaded" geometry="normal" parent="normal_focused">
+	</frame_style>
+
+	<frame_style name="maximized_unfocused_shaded" geometry="normal_maximized" parent="maximized_unfocused">
+	</frame_style>
+
+	<frame_style name="maximized_focused_shaded" geometry="normal_maximized" parent="maximized_focused">
+	</frame_style>
+
+	<frame_style name="utility_unfocused_shaded" geometry="utility" parent="utility_unfocused">
+	</frame_style>
+
+	<frame_style name="utility_focused_shaded" geometry="utility" parent="utility_focused">
+	</frame_style>
+
+	<frame_style name="border" geometry="border" parent="normal_unfocused">
+		<piece position="title" draw_ops="blank"/>
+	</frame_style>
+
+	<frame_style_set name="normal">
+		<frame focus="yes" state="normal" resize="both" style="normal_focused"/>
+		<frame focus="no" state="normal" resize="both" style="normal_unfocused"/>
+		<frame focus="yes" state="maximized" style="maximized_focused"/>
+		<frame focus="no" state="maximized" style="maximized_unfocused"/>
+		<frame focus="yes" state="shaded" style="normal_focused_shaded"/>
+		<frame focus="no" state="shaded" style="normal_unfocused_shaded"/>
+		<frame focus="yes" state="maximized_and_shaded" style="maximized_focused_shaded"/>
+		<frame focus="no" state="maximized_and_shaded" style="maximized_unfocused_shaded"/>
+	</frame_style_set>
+
+	<frame_style_set name="utility" parent="normal">
+		<frame focus="yes" state="normal" resize="both" style="utility_focused"/>
+		<frame focus="no" state="normal" resize="both" style="utility_unfocused"/>
+		<!-- this is a bunch of crack since utility windows shouldn't be maximized -->
+		<frame focus="yes" state="maximized" style="utility_focused"/>
+		<frame focus="no" state="maximized" style="utility_unfocused"/>
+		<frame focus="yes" state="shaded" style="utility_focused_shaded"/>
+		<frame focus="no" state="shaded" style="utility_unfocused_shaded"/>
+		<frame focus="yes" state="maximized_and_shaded" style="utility_focused_shaded"/>
+		<frame focus="no" state="maximized_and_shaded" style="utility_unfocused_shaded"/>
+	</frame_style_set>
+
+	<frame_style_set name="border">
+		<frame focus="yes" state="normal" resize="both" style="border"/>
+		<frame focus="no" state="normal" resize="both" style="border"/>
+		<frame focus="yes" state="maximized" style="border"/>
+		<frame focus="no" state="maximized" style="border"/>
+		<frame focus="yes" state="shaded" style="border"/>
+		<frame focus="no" state="shaded" style="border"/>
+		<frame focus="yes" state="maximized_and_shaded" style="border"/>
+		<frame focus="no" state="maximized_and_shaded" style="border"/>
+	</frame_style_set>
+
+	<window type="normal" style_set="normal"/>
+	<window type="dialog" style_set="normal"/>
+	<window type="modal_dialog" style_set="normal"/>
+	<window type="menu" style_set="normal"/>
+	<window type="utility" style_set="utility"/>
+	<window type="border" style_set="border"/>
+	
+	<menu_icon function="close" state="normal" draw_ops="close_icon"/>
+	<menu_icon function="maximize" state="normal" draw_ops="maximize_icon"/>
+	<menu_icon function="unmaximize" state="normal" draw_ops="restore_icon"/>
+	<menu_icon function="minimize" state="normal" draw_ops="minimize_icon"/>
+
+</metacity_theme>

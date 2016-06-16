@@ -9,7 +9,7 @@
 #Note: we just use the LargePrint icons for now, they will be scaled
 #to the correct size
 
-pixmap_path "/usr/local/share/themes/ContrastHighInverse/pixmaps"
+pixmap_path "/usr/share/themes/ContrastHighLargePrintInverse/pixmaps"
 
 #TODO: move sun-jds style downstream
 style "sun-jds"
@@ -45,7 +45,7 @@ style "default"
 
 # GtkWidget::cursor_aspect_ratio = 0.1
   GtkWidget::focus-line-pattern = "\4\2"
-  GtkWidget::focus-line-width = 0
+  GtkWidget::focus-line-width = 2
   GtkWidget::focus-padding = 0
   GtkWidget::interior_focus = 1
   GtkWidget::link-color = "#80ccff"
@@ -66,18 +66,18 @@ style "default"
 
   fg[NORMAL]      = "#ffffff"
   text[NORMAL]      = "#ffffff"
-  bg[NORMAL]      = "#000000"
-  base[NORMAL]    = "#000000"
+  bg[NORMAL]      = "#000033" 
+  base[NORMAL]    = "#000033"
 
   fg[INSENSITIVE]      = "#999999"
   bg[INSENSITIVE]      = "#333333"
   text[INSENSITIVE]      = "#999999"
   base[INSENSITIVE]      = "#333333"
 
-  fg[PRELIGHT]    = "#ffffff"
+  fg[PRELIGHT]    = "#003333"
   text[PRELIGHT]    = "#003333"
-  bg[PRELIGHT]    = "#666699"
-  base[PRELIGHT]    = "#003333"
+  bg[PRELIGHT]    = "#ffffff"
+  base[PRELIGHT]    = "#ffffff"
 
   fg[ACTIVE]      = "#ffffff"
   text[ACTIVE]      = "#ffffff"
@@ -264,7 +264,7 @@ class "GtkWidget" style "media-icons"
 
 style "caja-location"
 {
-	bg[NORMAL]  = "#000000"
+	bg[NORMAL]  = mix (0.60, shade (1.05, "#000033"), "#000033")
 }
 
 widget "*.caja-extra-view-widget" style : highest "caja-location"

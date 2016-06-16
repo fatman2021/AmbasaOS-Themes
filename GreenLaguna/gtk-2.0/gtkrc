@@ -92,7 +92,6 @@ style "murrine-default"
     {
 	#rgba = FALSE
 	focus_color = "#ADC6A6"
-	focusstyle = 0
 	glazestyle = 4
 	#contrast = 0.5
 	highlight_shade = 1.0
@@ -240,36 +239,19 @@ style "murrine-progressbar"
 {
 	xthickness = 0
 	ythickness = 0
-	bg[SELECTED] = shade (0.75, @bg_color)	# sets the progressbar color
+	bg[SELECTED] = "#C3C5C3"	# sets the progressbar color
 
 	engine "murrine" 
 	{
 		glazestyle = 1
 		highlight_shade = 1.1
 		glow_shade = 2.0
-		gradient_shades = {1.4, 1.0, 1.0, 1.4}
-		progressbarstyle = 0	# 0 = nothing, 1 = striped, 2 = cells
+		gradient_shades = {3.0, 1.0, 1.0, 3.0}
+		progressbarstyle = 1	# 0 = nothing, 1 = striped, 2 = cells
         	contrast = 1.130 # Darken unfilled progressbar background
         	roundness = 12
 		#animation = TRUE
     	}
-}
-
-style "murrine-statusbar" {
-	xthickness = 0
-	engine "pixmap"
-	{
-	    image
-	    {
-		function		= RESIZE_GRIP
-		recolorable		= TRUE
-		state			= NORMAL
-		detail			= "statusbar"
-		overlay_file	= "resize-grip.png"
-		overlay_border	= {0,0,0,0 }
-		overlay_stretch	= FALSE
-	    }
-	}
 }
 
 style "murrine-scale"
@@ -310,7 +292,7 @@ style "scrollbar"
 		glowstyle = 0    # 0=top, 1=bottom, 2=top and bottom, 3=center (vertical), 4=center (horizontal) 
 		highlight_shade = 1.0  # set highlight amount for buttons or widgets
 		lightborder_shade = 1.2   # sets lightborder amount for buttons or widgets
-		gradient_shades = {0.77, 0.93, 0.93, 0.77}
+		gradient_shades = {1.1, 1.0, 0.93, 0.87}
 		roundness = 8
 		trough_shades = {1.0, 1.0} #{0.77, 2.0}
 		contrast = 0.0
@@ -517,7 +499,6 @@ class "GtkCheckButton"	style:highest "murrine-radiocheck"
 
 widget_class "*<GtkMenuItem>*"			style "menuitem"
 widget_class "*<GtkMenuBar>.<GtkMenuItem>*"	style "menubar-menuitem"
-widget_class "*<GtkStatusbar>*"	style "murrine-statusbar"
 ########################################
 # Tooltips
 ###########

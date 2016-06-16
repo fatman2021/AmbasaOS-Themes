@@ -39,15 +39,15 @@
 
 <frame_geometry name="utility" title_scale="small" parent="normal"/>
 
-<frame_geometry name="border" has_title="false" rounded_top_left="false" rounded_top_right="false"  rounded_bottom_left="false" rounded_bottom_right="false">
-  <distance name="left_width" value="2"/>
-  <distance name="right_width" value="2"/>
-  <distance name="bottom_height" value="2"/>
+<frame_geometry name="border" has_title="false">
+  <distance name="left_width" value="4"/>
+  <distance name="right_width" value="4"/>
+  <distance name="bottom_height" value="4"/>
   <distance name="left_titlebar_edge" value="0"/>
   <distance name="right_titlebar_edge" value="0"/>
   <distance name="button_width" value="0"/>
   <distance name="button_height" value="0"/>
-  <distance name="title_vertical_pad" value="2"/>
+  <distance name="title_vertical_pad" value="4"/>
   <border name="title_border" left="0" right="0" top="0" bottom="0"/>
   <border name="button_border" left="0" right="0" top="0" bottom="0"/>
 </frame_geometry>
@@ -482,15 +482,15 @@
 <frame focus="no" state="maximized_and_shaded" style="utility_unfocused"/>
 </frame_style_set>
 
-<frame_style_set name="border">
+<frame_style_set name="border" parent="normal">
 <frame focus="yes" state="normal" resize="both" style="border"/>
 <frame focus="no" state="normal" resize="both" style="border"/>
-<frame focus="yes" state="maximized" style="border"/>
-<frame focus="no" state="maximized" style="border"/>
-<frame focus="yes" state="shaded" style="border"/>
-<frame focus="no" state="shaded" style="border"/>
-<frame focus="yes" state="maximized_and_shaded" style="border"/>
-<frame focus="no" state="maximized_and_shaded" style="border"/>
+<frame focus="yes" state="maximized" style="utility_focused"/>
+<frame focus="no" state="maximized" style="utility_unfocused"/>
+<frame focus="yes" state="shaded" style="utility_focused"/>
+<frame focus="no" state="shaded" style="utility_unfocused"/>
+<frame focus="yes" state="maximized_and_shaded" style="utility_focused"/>
+<frame focus="no" state="maximized_and_shaded" style="utility_unfocused"/>
 </frame_style_set>
 
 <window type="normal" style_set="normal"/>

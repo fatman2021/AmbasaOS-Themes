@@ -1,37 +1,14 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
 Name=TraditionalGreen
-Comment=Green port of Clearlooks-Phenix
-Comment[be]=Зялёная адаптацыя Clearlooks-Phenix
-Comment[bg]=Зелена адаптация на Clearlooks-Phenix тема
-Comment[ca]=Adaptació verda de Clearlooks-Phenix
-Comment[da]=Grøn port af Clearlooks-Phenix
-Comment[de]=Grüne Übertragung von Clearlooks-Phenix
-Comment[en_AU]=Green port of Clearlooks-Phenix
-Comment[en_GB]=Green port of Clearlooks-Phenix
-Comment[es]=Porte en verde de Clearlooks-Phenix
-Comment[fr]=Adaptation verte de Clearlooks-Phenix
-Comment[hr]=Zelena prenesena tema Clearlooks-Phenix
-Comment[hu]=A Clearlooks-Phenix asztaltéma zöld színű változata
-Comment[id]=Porting warna hijau dari Clearlooks-Phenix
-Comment[ko]=녹색 계열 클리어룩스-피닉스
-Comment[lt]=Clearlooks-Phenix perkelta į žalią
-Comment[ms]=Port hijau Clearlooks-Phenix
-Comment[nb]=Grønn port av Clearlooks-Phenix
-Comment[nl]=Green port of Clearlooks-Phenix
-Comment[pl]=Zielony port motywu Clearlooks-Phenix
-Comment[pt_BR]=Porte verde do Clearlooks-Phenix
-Comment[ru]=Зелёный порт Clearlook-Phenix
-Comment[sk]=Port témy Clearlooks-Phenix v zelenej farbe
-Comment[sl]=Zelena priredba Clearlooks-Phenix teme
-Comment[sr]=Зелена изведба Феникса чистог изгледа
-Comment[tr]=Clearlooks-Phenix'in yeşil uyarlaması
-Comment[uk]=Зелений порт Clearlook-Phenix
-Comment[zh_CN]=Clearlooks-Phenix 的绿色移植版本
-Comment[zh_TW]=Clearlooks-Phenix 的綠色版本
+Comment=Green port of Clearlooks-Phenex
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
+_Name=TraditionalGreen
+Type=X-GNOME-Metatheme
+_Comment=Green port of Clearlooks-Phenex
+Encoding=UTF-8
 GtkTheme=TraditionalGreen
 MetacityTheme=TraditionalGreen
 IconTheme=menta

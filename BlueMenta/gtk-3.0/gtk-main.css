@@ -167,7 +167,7 @@
 
 @define-color selection_toolbar_suggested_button_a @theme_base_color;
 @define-color selection_toolbar_suggested_button_b @theme_bg_color;
-@define-color selection_toolbar_suggested_button_c #F3F3F4;
+@define-color selection_toolbar_suggested_button_c #f3f4f3;
 @define-color selection_toolbar_suggested_button_fg @theme_text_color;
 @define-color selection_toolbar_suggested_button_border @selection_toolbar_button_border;
 @define-color selection_toolbar_suggested_button_border_backdrop @selection_toolbar_button_border_backdrop;
@@ -175,18 +175,6 @@
 @define-color selection_menu_fg @selection_toolbar_fg;
 @define-color selection_menu_hover shade(@selection_menu_fg, 0.80);
 @define-color selection_menu_active shade(@selection_menu_fg, 0.60);
-
-/************************
- * overshoot/undershoot *
- ************************/
-
-@define-color overshoot_bg_color alpha (@theme_selected_bg_color, 0.55);
-@define-color overshoot_backdrop_bg_color #96C8FA;
-
-/**************
- * MATE Apps  *
- **************/
-@define-color cluebar_color shade (@theme_base_color, 0.9);
 
 /**************
  * GNOME Apps *
@@ -201,14 +189,12 @@
 @define-color wm_unfocused_title @theme_unfocused_fg_color;
 @define-color wm_highlight #ffffff;
 @define-color wm_title_highlight_dark alpha(#ffffff, 0.0);
-@define-color wm_title_highlight #ffffff;
 @define-color wm_title_shadow @wm_title_highlight;
 
 @define-color wm_bg_a shade (@theme_bg_color, 1.1);
 @define-color wm_bg_b @theme_bg_color;
 
 @define-color wm_shadow alpha(black, 0.5);
-@define-color wm_border alpha(black,0.18);
 
 @define-color wm_button_bg_a shade (@theme_bg_color, 1.0);
 @define-color wm_button_bg_b shade (@theme_bg_color, 0.85);
@@ -224,16 +210,11 @@
 @define-color wm_button_bg_active_b shade (@theme_bg_color, 0.9);
 @define-color wm_button_bg_active_c shade (@theme_bg_color, 0.9);
 
-/* csd border */
-@define-color wm_csd_solid_border_color shade (#3c3c3c, 1.2);
-
 @import url("gtk-main-common.css");
 @import url("gtk-widgets-backgrounds.css");
 @import url("gtk-widgets-borders.css");
 @import url("gtk-widgets-assets.css");
 @import url("gtk-widgets.css");
 @import url("gnome-applications.css");
-@import url("mate-applications.css");
 @import url("other-applications.css");
 @import url("unity.css");
-@import url("window-controls.css");

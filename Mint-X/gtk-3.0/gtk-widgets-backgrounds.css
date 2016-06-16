@@ -3,48 +3,28 @@
  **********/
 
 .button,
-.button.flat:hover,
-GtkComboBox .button,
-.header-bar GtkComboBox .button,
-.header-bar.titlebar GtkMenuButton.button.titlebutton:hover,
-.inline-toolbar GtkToolButton > .button {
+.toolbar .button.raised,
+.toolbar .raised .button,
+.toolbar GtkComboBox .button,
+.primary-toolbar .button:hover,
+.spinbutton.vertical .button {
     background-color: transparent;
     background-image: linear-gradient(to bottom,
                             @button_bg_a,
                             @button_bg_b);
 }
 
-.button.flat,
-.button.flat:insensitive,
-.sidebar-button.button,
-.sidebar-button.button:insensitive,
-.header-bar .titlebutton.button,
-.titlebar .titlebutton.button,
-.titlebar .titlebutton.button:hover,
-.titlebar .titlebutton.button:active,
-.titlebar .titlebutton.button:checked,
-.header-bar.titlebar GtkMenuButton.button.titlebutton {
+.primary-toolbar .button,
+.primary-toolbar .button:insensitive {
     background-color: transparent;
     background-image: none;
 }
 
-.primary-toolbar .raised .button,
-.primary-toolbar .button.raised {
-    background-color: transparent;
-    background-image: linear-gradient(to bottom,
-                            @button_raised_bg_a,
-                            @button_raised_bg_b);
-}
-
-.primary-toolbar .raised .button:hover,
-.primary-toolbar .button.raised:hover {
-    background-color: transparent;
-    background-image: linear-gradient(to bottom,
-                            @button_hover_raised_bg_a,
-                            @button_hover_raised_bg_b);
-}
-
-.button:hover {
+.button:hover,
+.toolbar .button.raised:hover,
+.toolbar .raised .button:hover,
+.toolbar GtkComboBox .button:hover,
+.spinbutton.vertical .button:hover {
     background-color: transparent;
     background-image: linear-gradient(to bottom,
                             @button_hover_bg_a,
@@ -52,13 +32,11 @@ GtkComboBox .button,
 }
 
 .button:active,
-.button:checked,
-.header-bar.titlebar GtkMenuButton.button.titlebutton:active,
-.header-bar.titlebar GtkMenuButton.button.titlebutton:checked,
-.primary-toolbar .raised .button:active,
-.primary-toolbar .raised .button:checked,
-.primary-toolbar .button.raised:active,
-.primary-toolbar .button.raised:checked {
+.toolbar .button.raised:active,
+.toolbar .raised .button:active,
+.toolbar GtkComboBox .button:active,
+.primary-toolbar .button:active,
+.spinbutton.vertical .button:active {
     background-color: transparent;
     background-image: linear-gradient(to bottom,
                             @button_active_bg_a,
@@ -67,13 +45,11 @@ GtkComboBox .button,
 }
 
 .button:active:hover,
-.button:checked:hover,
-.header-bar.titlebar GtkMenuButton.button.titlebutton:active:hover,
-.header-bar.titlebar GtkMenuButton.button.titlebutton:checked:hover,
-.primary-toolbar .raised .button:active:hover,
-.primary-toolbar .raised .button:checked:hover,
-.primary-toolbar .button.raised:active:hover,
-.primary-toolbar .button.raised:checked:hover {
+.toolbar .button.raised:active:hover,
+.toolbar .raised .button:active:hover,
+.toolbar GtkComboBox .button:active:hover,
+.primary-toolbar .button:active:hover,
+.spinbutton.vertical .button:active:hover {
     background-color: transparent;
     background-image: linear-gradient(to bottom,
                             @button_active_hover_bg_a,
@@ -82,8 +58,10 @@ GtkComboBox .button,
 }
 
 .button:insensitive,
-.primary-toolbar .raised .button:insensitive,
-.primary-toolbar .button.raised:insensitive {
+.toolbar .button.raised:insensitive,
+.toolbar .raised .button:insensitive,
+.toolbar GtkComboBox .button:insensitive,
+.spinbutton.vertical .button:insensitive {
     background-color: transparent;
     background-image: linear-gradient(to bottom,
                             @button_insensitive_bg_a,
@@ -91,7 +69,11 @@ GtkComboBox .button,
 }
 
 .button:insensitive:active,
-.button:insensitive:checked {
+.toolbar .button.raised:insensitive:active,
+.toolbar .raised .button:insensitive:active,
+.toolbar GtkComboBox .button:insensitive:active,
+.primary-toolbar .button:insensitive:active,
+.spinbutton.vertical .button:insensitive:active {
     background-color: transparent;
     background-image: linear-gradient(to bottom,
                             @button_insensitive_active_bg_a,
@@ -170,8 +152,7 @@ GtkSwitch.slider:insensitive {
  ***********/
 
 .primary-toolbar .toolbar,
-.primary-toolbar.toolbar,
-.header-bar {
+.primary-toolbar.toolbar {
     background-color: transparent;
     background-image: linear-gradient(to bottom,
                             @toolbar_bg_a,

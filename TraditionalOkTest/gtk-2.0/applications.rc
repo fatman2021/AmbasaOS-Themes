@@ -1,11 +1,3 @@
-style "workspace-switcher"
-{
-	bg[SELECTED] = shade (1.0, @selected_bg_color)
-	bg[PRELIGHT] = shade (1.0, @selected_bg_color)
-}
-
-widget "*WnckPager*"	    	    style "workspace-switcher"
-
 # Workaround for the evolution ETable (bug #527532)
 widget_class "*.<ETable>.<ECanvas>" style "treeview_header"
 # Workaround for the evolution ETree
@@ -51,22 +43,5 @@ style "chromium_toolbar_button" {
 	}
 }
 
-style "chrome-hacks"
-{
-	ChromeGtkFrame::frame-color = "#f57900"
-	ChromeGtkFrame::frame-gradient-color = "#F77A00"
-	ChromeGtkFrame::frame-gradient-size = 16
-	ChromeGtkFrame::inactive-frame-color = "#dedcda"
-	ChromeGtkFrame::inactive-frame-gradient-color = "#e3e2e0"
-	ChromeGtkFrame::incognito-frame-color = "#AD8156"
-	ChromeGtkFrame::incognito-frame-gradient-color = shade (1.02, "#AD8156")
-	ChromeGtkFrame::incognito-inactive-frame-color = "#d5d3d1"
-	ChromeGtkFrame::incognito-inactive-frame-gradient-color = shade (1.02, "#d5d3d1")
-	ChromeGtkFrame::scrollbar-trough-color = shade (0.9, "#edeceb")
-	ChromeGtkFrame::scrollbar-slider-prelight-color = shade (1.05, "#f57900")
-	ChromeGtkFrame::scrollbar-slider-normal-color = "#f57900"
-}
-
-class "ChromeGtkFrame" style "chrome-hacks"
 widget_class "*Chrom*Button*" style "chromium_toolbar_button"
 

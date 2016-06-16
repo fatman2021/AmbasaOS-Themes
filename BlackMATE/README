@@ -70,8 +70,8 @@ table.headmeta {color: #fff;}
 	color: #000;
 }
 
-Ubuntu Software Center
-======================
+Ubuntu Software Center (thanks to Marcelo Ruiz)
+===============================================
 Find the following definitions in '/usr/share/software-center/ui/gtk3/css/softwarecenter.css':
 
 @define-color light-aubergine
